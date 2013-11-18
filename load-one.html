@@ -213,11 +213,20 @@
 
 	function addAirplane( geometry, craft ) {
         //console.log(geometry );
-		material = new THREE.MeshNormalMaterial();
+		material = new THREE.MeshNormalMaterial( { shading: THREE.SmoothShading } );
+		
+		
 		mesh = new THREE.Mesh( geometry, material );
         randx = -35;
         randy = 35;
         randz = 35;
+		
+
+mesh.geometry.computeFaceNormals();
+mesh.geometry.computeVertexNormals();
+// mesh.geometry.computeTangents();
+mesh.geometry.computeMorphNormals();
+		mesh.geometry.verticesNeedUpdate = true;
 		mesh.position.set( randx, randy, randz );
 		mesh.scale.multiplyScalar( 8.5 );
 		mesh.receiveShadow = true;
