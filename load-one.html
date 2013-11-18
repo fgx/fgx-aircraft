@@ -22,7 +22,7 @@
 
 	var renderer, scene, camera, controls, stats;
 	var mesh, cube, plane, colors = [];
-    var randx, randy, randz;
+    // var randx, randy, randz;
 	var group = new THREE.Object3D();
     var planenum = 0;
     var planesrc;
@@ -30,13 +30,14 @@
     // MISSING PARTS:
     // "uh1" - missing rotor, doors,
     // "A380" - only the fuselarge no wings or tail
-    
+ /*   
     var REDO_planes = new Array(  "707", "727-230", "737-700", "747-8i", "757-200",
         "767-300", "A-10-model", "A340", "A340-600-Models", "A380", "A-6E", "boeing747-200",
         "Dragonfly", "harrier" );
     var NEED_FIX_panes = new Array(  "A10-004-015l3", "f14", "f14b", "f-14b", "PC-9M", "SenecaII",
         "XB-70" );
-    
+*/
+   
     var myplanes = new Array( "14bis", "21", "717-200",
         "737-100", "737-200", "737-300", "777-200", "777-200ER", "777-200LR",
         "777-300", "777-300ER", "a6m2", "B1900D", "bluebird-osg", "bo105",
@@ -95,7 +96,7 @@
 		//scene.add( light );
 
  		light = new THREE.DirectionalLight( 0xffffff, 1 );
-		light.position.set( 0, 200, 0 );
+		light.position.set( 0, 300, 0 );
 		light.castShadow = true;
 		light.shadowMapWidth = light.shadowMapHeight = 1024;
 
@@ -143,7 +144,8 @@
 		info = document.createElement( 'div' );
 		document.body.appendChild( info );
 		info.style.cssText = 'margin 0 0 0 100px: auto; position: absolute; top: 0px; width: 100% ';
-		info.innerHTML = '<p>load-one - <a href="load-all.html">load-all</a> - <a href="index.htm.">index</a><br>' +
+		info.innerHTML = '<h1>FGx Aircraft</h1>' +
+			'<p>load-one - <a href="load-all.html">load-all</a> - <a href="index.htm.">index</a><br>' +
             '<button onclick="back();" >back</button> ' +
 			'x:<input type="range" id="spin" min="-50" max="50" onchange="randx=this.value;group.position.x=randx;" step="5" value="' + group.position.x + '" > ' +
 			'y:<input type="range" id="spin" min="0" max="50" onchange="randy=this.value;group.position.y=randy;" step="5" value="' + group.position.y + '" > ' +
