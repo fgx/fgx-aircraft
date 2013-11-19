@@ -1,7 +1,10 @@
 FGx AirCraft
 ============
 
-# Preamble:
+Barely working viewer; <http://fgx.github.io/fgx-aircraft/load-one.html>
+
+
+## Preamble:
 
 Theo pointed the way to load Three.js json models (3js) into a global scene. The initial, very manual way to get this 3js was to load the flightgear ac3d (.ac) model into blender, then export it as dae, then load that dae and export it as 3js. It works, but is quite cumbersome. And the blender UI take some understanding...
 
@@ -29,7 +32,7 @@ And bingo we have the desired web 3js model file. Some of this process is aided 
 
 So excluding the manual review step 2, I was able to create a big list of FG model ac file - aclist-ac.txt - and use a batch file to process them ALL. This gave me a set of 435 3js files to load and view. They range in size from the small 5,310 byte paperairplane.js, to the massive 73,155,108 byte Vostok-1-TDU.js
 
-# Viewer:
+## Viewer:
 
 One-by-one - Load an view each of the 435 models separately. It sports a [next] and [back] links, and a small GUI to select any of the 435 models, with some display options.
 
