@@ -11,12 +11,7 @@
 <script src='http://mrdoob.github.com/three.js/build/three.min.js'></script>
 <script src='http://mrdoob.github.com/three.js/examples/js/controls/TrackballControls.js'></script>
 <script src='http://mrdoob.github.com/three.js/examples/js/libs/stats.min.js'></script>
-<!--
-<script src='../../three.js/examples/js/Detector.js'></script>
-<script src='../../three.js/build/three.min.js'></script>
-<script src='../../three.js/examples/js/controls/TrackballControls.js'></script>
-<script src='../../three.js/examples/js/libs/stats.min.js'></script>
--->
+
 <script>
 	if ( ! Detector.webgl ) { Detector.addGetWebGLMessage(); }
 
@@ -95,8 +90,7 @@
 		document.body.appendChild( info );
 
 		info.style.cssText = 'left: 0; margin: auto; position: absolute; right: 0; top: 0px; width: 50%; ';
-		info.innerHTML = info.txt = '<h1>FGx Aircraft Viewer  ~ <a href=# onclick=toggleInfo() ><large>&#x24D8;</large></a></h1>' + '</h1>' +
-			'<p><a href="../../index.html">index</a><br>' +
+		info.innerHTML = info.txt = '<h1><a href="../../index.html">FGx</a> &raquo; Aircraft Viewer  ~ <a href=# onclick=toggleInfo() ><large>&#x24D8;</large></a></h1>' + '</h1>' +
             '<button onclick=loadAircraft(selAircraft.selectedIndex-1); >previous</button> ' +
 			'<select id=selAircraft onchange=loadAircraft(this.selectedIndex); ></select>' +
 			'<button onclick=loadAircraft(selAircraft.selectedIndex+1); >next</button> ' +
@@ -112,9 +106,9 @@
 		mesh.castShadow = true;
 		scene.add( mesh );
 
-		aircrafts = requestFile( '../../ac-01.csv' );
+		aircrafts = requestFile( '../../aircraft/aircraft.csv' );
 		aircrafts = aircrafts.split(/\r\n|\n/);
-console.log( aircrafts );
+// console.log( aircrafts );
 		loader = new THREE.JSONLoader();
 
 		for ( var i = 0, len = aircrafts.length; i < len; i++ ) {
@@ -123,9 +117,9 @@ console.log( aircrafts );
 			option.innerText = aircrafts[i];
 			selAircraft.appendChild( option );
 		}
-		selAircraft.selectedIndex = 0;  
+		selAircraft.selectedIndex = 94;  
 		info.txt = info.innerHTML;
-        loadAircraft( 0 );
+        loadAircraft( 94 );
 	}
 
 	function animate() {
@@ -142,7 +136,7 @@ console.log( aircrafts );
 			id = aircrafts.length - 1;
 		}
 		selAircraft.selectedIndex = id;
-		var aircraftData = '../../ac-01/' + aircrafts[ id ];
+		var aircraftData = '../../aircraft/' + aircrafts[ id ];
 		loader.load( aircraftData, function( geometry ) {
 			addAircraft( geometry );
 		});
@@ -189,7 +183,9 @@ console.log( aircrafts );
 		index= selAircraft.selectedIndex;
 		info.innerHTML = info.txt +
 			'<div onclick=info.innerHTML=info.txt;selAircraft.selectedIndex=index; style=background-color:#ccc;opacity:0.7;padding:10px;text-align:left; >' +
-			'FGx Aircreaft Viewer<br><br>' +		
+			'FGx Aircreaft Viewer<br><br>' +	
+
+			
 			'<a href="https://github.com/fgx/fgx-aircraft/tree/gh-pages/" target="_blank">Source code at github/com/fgx.</a><br><br>' +
 			'<small>credits: <a href="http://threejs.org" target="_blank">three.js</a> - ' +
 			'<a href="http://khronos.org/webgl/" target="_blank">webgl</a> - ' +

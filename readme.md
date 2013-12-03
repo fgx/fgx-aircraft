@@ -25,22 +25,13 @@ Bugs on browsers other than Chrome need not be reported until such as the work s
 
 
 
-### Aircraft Road Map
-* Meld duplicate vertices and redefine normals for each aircraft using Blender. Perhaps can build Python utility to help
-* Ascertain original scale and rescale planes so they are all at the same scale
-* Point all planes in the same direction
-* Agree a suitable base point (the nose or most forward point of the body of an aircraft?) and apply to each aircraft
-* Create directories for each plane
-* Add thumbnails, license and original authors notes for each plane
-* Add readme for each plane with link to source in fgdata on Gitorious
-* Investigate adding Livery bitmaps
+### Aircraft Read Me
+See [FGx Aircraft Read Me](../aircraft/readme.md)
 
 
-### Aircraft Viewer Road Map
-* Add slide-show replay capability
-* Add pre-loading of next file
-* Camera movement starts of no user interaction for 20 seconds.
-* Start adding limited piloting capabilities  
+### Aircraft Viewer Read Me
+See [FGx Aircraft Viewer Read Me](../aircraft-viewer/readme.md)
+
 
 
 ### Copyright and License
@@ -48,6 +39,10 @@ copyright &copy; 2013 FGx authors ~ All work herein is under the [GPL 2.0 Licens
 
 
 ### Change Log
+
+2013-12-03 ~ Theo
+* Add Aircraft Read Me
+* Add Aircraft Viewer Read me
 
 2013-12-02 ~ Theo
 * Viewer renamed to 'FGx Aircraft Viewer'
