@@ -7,8 +7,8 @@ Latest revision of aircraft viewer: [Fgx Aircraft Viewer R2](http://fgx.github.i
 
 You have two ways of viewing the FGx Aircraft files:  
 
-* Code hosted on GitHub: [fgx.github.io]( http://fgx.github.io/fgx-aircraft "view the files as apps." ) <input value="<< You are now probably here." size=28 style="font:bold 12pt monospace;border-width:0;" >  
-* Source code on GitHub: [github.com/fgx]( https://github.com/fgx/fgx-aircraft/ "View the files as source code." ) <scan style=display:none ><< You are now probably here.</scan>
+* Code hosted on GitHub: [fgx.github.io/fgx-aircraft]( http://fgx.github.io/fgx-aircraft/ "view the files as apps." ) <input value="<< You are now probably here." size=28 style="font:bold 12pt monospace;border-width:0;" >  
+* Source code on GitHub: [github.com/fgx/fgx-aircraft/]( https://github.com/fgx/fgx-aircraft/ "View the files as source code." ) <scan style=display:none ><< You are now probably here.</scan>
 
 
 ### System Requirements
