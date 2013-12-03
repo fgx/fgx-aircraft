@@ -1,0 +1,84 @@
+English/Français
+
+[English]
+----------
+
+A little history
+================
+
+De Havilland DHC 3
+==================
+
+Manufacturer                  : 
+Type                          : 
+Year                          : 
+Powerplant                    : 
+Wingspan                      : 
+Length                        : 
+Height                        : 
+weight                        : 
+Cruise speed                  : 
+Range                         : 
+Crew                          : 
+
+Some useful keys:
+=================
+
+d Open/close crew doors
+D Open/close pasagers doors
+
+Thanks
+======
+
+Pierre GEOFFROY for help on the FDM
+
+===============
+BARANGER Emmanuel
+February, 10, 2008. 
+April, 03, 2011
+
+http://helijah.free.fr/flightgear/hangar.htm
+embaranger@free.fr
+
+
+[Français]
+----------
+
+Un peu d'histoire
+=================
+
+De Havilland DHC 3
+====================
+
+Constructeur                  :
+Type                          :
+Année                         :
+Moteur                        :
+Envergure                     :
+Longueur                      :
+Hauteur                       :
+Poids                         :
+Vitesse de croisière          :
+Autonomie                     :
+Equipage                      :
+
+
+Quelques touches utiles :
+=========================
+
+d Ouvrir/fermer les portes avant
+D Ouvrir/fermer les portes arrière
+
+Remerciements
+=============
+
+Pierre GEOFFROY pour l'aide sur le FDM
+
+===============
+BARANGER Emmanuel
+10 Février 2008.
+03 Avril 2011.
+
+http://helijah.free.fr/flightgear/hangar.htm
+embaranger@free.fr
+

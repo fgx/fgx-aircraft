@@ -1,0 +1,62 @@
+---------------------------------------------------------------------------
+
+Changes July 2013 by D-NXKT:
+
+- accurate speed polar for flap positions 1-4
+- good stall characteristic
+- tailspin
+- weight and balance
+- rain impact on performance
+- ground effect
+- wing failure
+- improved wing bending (aerodynamic and structural loads) 
+- accurate control surface deflections
+- side-string
+- improved cockpit
+- animated wing view
+- additional sounds
+- checklists
+- fuselage length (rear part) adjusted
+- few improvements for winch and towing but still experimental
+
+
+---------------------------------------------------------------------------
+
+Changes January 2013 by D-NXKT:
+
+- fdm converted from UIUC to JSBSim
+- add speedbrakes (model)
+- add flaps (model + fdm)
+- add gear (fdm)
+- add water ballast ( rough animation + fdm)
+- animate modell including (rough) wing deflection
+- add necessary instruments (quick and dirty copy paste from 
+  already existing instruments)
+- include experimental winch, towing, drag-robot functionality 
+  from DG101G (Nikolaus Kerner) without modifications   
+  
+- make JSBSim-Version the default (asw20-set.xml)
+- enable multiplayer (incl. wing deflection and water dumping)
+- add splash.png
+
+
+Note: 
+- all aero-coefficients from UIUC adopted (except flaps)
+- rough assumptions for missing aero-coefficients 
+  (gear drag, flap lift+drag, speedbrake lift)
+- glider flight performance not yet checked! However UIUC-part seems reasonable.
+- outstanding calibration with origin glider performance data
+_ model: span is 16m (original 15m); fuselage length ca. 1m shorter 
+  compared to real plane
+- it is highly appreciated if someone else wants to improve the cockpit!
+
+
+---------------------------------------------------------------------------
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+[English]
+----------
+
+A little history
+================
+
+Eastbourne Monoplane
+===============================
+
+Manufacturer                  : Eastbourne Aircraft Company Ltd.
+Type                          : Trainer Monoplane
+Year                          : 1912
+Powerplant                    : 35 H.P. Anzani "Y" radial
+Wingspan                      : 29.46
+Length                        : 21.1
+Height                        : 7.2
+weight max                    : 702
+Cruise speed                  : 62 knots
+Range                         : N/A
+Crew                          : Pilot only 
+
+
+
+===============
+LesterBoffo
+Oct, 12, 2011. 
+

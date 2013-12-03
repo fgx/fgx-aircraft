@@ -1,0 +1,24 @@
+Anders Gidenstam  (anders(at)gidenstam.org)
+  - ZF Navy free balloon FlightGear configuration
+  - ZF Navy free balloon Flight Dynamics Model Configuration
+  - ZF Navy free balloon 3d model
+
+The model borrows content from the following authors' contributions
+to FlightGear:
+
+AJ MacLeod
+  - Wicker texture. (From FlightGear/Aircraft/sopwithCamel)
+
+Detlef Faber
+  - Pilot 3d model. (From FlightGear/Aircraft/F4U/)
+
+Syd Adams
+  - Template for the Nasal electrical system.
+
+Dependencies:
+
+Aircraft/Short_Empire (altimeter)
+Aircraft/Spitfire     (clock)
+Aircraft/spitfireIX   (vsi)
+Aircraft/ZLT-NT       (thermometer)
+

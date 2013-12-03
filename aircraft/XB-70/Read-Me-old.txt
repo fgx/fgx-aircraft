@@ -1,0 +1,43 @@
+﻿XB-70(North American Valkyrie)_version 2
+-------------
+
+Changes in this version:
+
+-Respond time of ailerons,elevons and rudders had been increased to simulate the attitude of a heavy bomber(Note: These values decreases when the aircraft reaches max speed)
+
+-Respond time of engines had been increased a bit too.(I couldn't go further with that as the Yasim FDM seems to have some limitations).
+
+-Added afterburber flames.
+
+
+
+This is my second airplane for Flight gear.I hope people who were looking for this mythic
+"white big bird" will not be disappointed with it as it is easy to use and there is no 
+difficult operations in the take off or landing process.
+But I think I should here to explain some steps needed for making a safe and successful fly:
+
+-Only a 5 % of throttle or less is needed to take off smoothly as the combination of six powerful engines guarantee this.
+
+-Do not exceed 10% of throttle when the aircraft is still on the runway it may become unstable and crash.
+
+So be careful and press keypad (page\up) one time for one second only.To abort the take off or make a taxiing press immediately (page\down) To reduce the throttle and (b) to brake.
+
+-To go to a desired direction when you are at subsonic speed or if you want to align the airplane with a runway,use first the ailerons(numpad 4 and 6) to roll it 40 dgrees or more on the left or on the right (the value of roll depends here on the distance and the position of your targeted airport).Then start using the rudders(numpad 0 and Entr) to head it to your desired course.And do not forget to reset the rudders after that in order to begin going straight.
+
+-This airplane doesn't glide as some delta shaped ones.If you reduce the throttle to 0% it
+will start stalling. 
+
+
+-For landing,a 170 mph or a bit less is a safe speed.And you can use the drag chutes(Ctrl-b)  and the brakes(b) after touchdown to reduce velocity.
+
+-When the aircraft is completely or almost stopped you'll need to go to the next operation:
+Taxiing of course which is a bit difficult here because of the power of the engines.
+First press keypad(page\up) for a half second then instantly press (page\down) and use brakes(b) as many times as needed and use the rudders to head to a hangar(There is a lot of airport equiped with nice hangars mainly in the europe's scenery you have to find a large one indeed).
+
+ 
+Enjoy
+-----
+
+                                                                 Pierre Duval
+                                                                 ------------
+                                                                 July 2012

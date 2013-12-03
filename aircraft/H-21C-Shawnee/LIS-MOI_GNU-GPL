@@ -1,0 +1,67 @@
+Ce document est une copie texte du Contenu du lien suivant:
+
+http://fsffrance.org/gpl/multitudes-gpl.fr.html
+
+Il est destiné aux lecteurs de Nationalité Française , pour les aider à une meilleurs compréhension de la GNU GPL
+
+
+
+FSF France Logo         Promouvoir et soutenir le logiciel libre
+[ Français ]
+
+    Bref propos relatif à la valeur juridique de la GNU GPL
+
+    La GNU GPL ou la GNU General Public License (Licence Publique Générale de GNU) émane de la méthode du copyleft ou « gauche d'auteur » créée sur l'initiative de Richard M. Stallman. Le copyleft utilise les lois du copyright non de manière à privatiser le logiciel mais de manière à le laisser « libre ».
+
+    Dans le premier cas, la licence du logiciel (appelée communément licence propriétaire) organise la réservation de ce dernier, c'est-à-dire que l'auteur va se prévaloir de son droit exclusif. Au contraire, dans le second cas la GNU GPL permet d'effacer les remparts qui entraveraient le libre usage du logiciel.
+
+    L'originalité de la GPL déroute car elle renverse l'usage établi du monopole de l'auteur sur son oeuvre. Elle peut conduire certains à penser qu'il s'agit purement et simplement d'une remise en cause des droits de propriété intellectuelle et donc considérer que la GNU GPL n'est pas valable dans les états dotés d'un régime de protection des créations. Mais, n'est-ce pas conclure un peu vite ? Cette originalité suppose, en toute hypothèse, de produire un effort important pour bien percevoir le sens de la GPL afin de déterminer exactement la volonté des parties et finalement en apprécier la valeur juridique.
+
+    L'interprétation de la GNU GPL n'est pas aisée à plus d'un titre : d'une part, elle emprunte la forme « sauvage »1 des contrats américains et d'autre part elle emploie des termes techniques. Ces deux obstacles rendent parfois mal aisée la compréhension des stipulations. Par ailleurs, la GPL est rédigée en anglais, nonobstant l'exigence légale de l'emploi de la langue française2, la traduction du texte peut conduire l'interprète à commettre des confusions voire des contresens3.
+
+    La question de l'interprétation de la GPL est d'autant plus sensible que l'usage de cette licence en France est relativement récent. Cela explique en partie que la doctrine juridique est plutôt silencieuse à son sujet. De plus, aucun tribunal n'a eu à la connaître.
+
+    Selon les termes d'Eben Moglen4, l'objet de la GNU GPL « est de rendre le logiciel libre en créant un fonds commun auquel chacun peut ajouter, mais duquel personne ne peut retrancher ». Ainsi non seulement, elle autorise quiconque à copier, modifier, diffuser le logiciel et garantit l'accès du code source, mais elle définit également les conditions de distribution afin d'empêcher que le logiciel GNU soit transformé en logiciel propriétaire.
+
+    L'auteur d'un logiciel est a priori libre de conférer aux utilisateurs autant de liberté qu'il souhaite. En effet, le code de la propriété intellectuelle dispose que l'auteur a le droit d'autoriser, "la reproduction permanente ou provisoire d'un logiciel en tout ou partie, par tout moyen, et sous toute forme(...); la traduction, l'adaptation, l'arrangement ou toute autre modification d'un logiciel et la reproduction du logiciel en résultant ; la mise sur le marché à titre onéreux ou gratuit (...)"(article L 122-6 CPI).
+
+    Toutefois, l'auteur ne peut pas valablement renoncer ou céder ses droits moraux car ces derniers sont perpétuels, inaliénables et imprescriptibles (article L 121-1 CPI). Ainsi n'est-il pas vain de se demander si la GPL, en raison de l'étendue de l'autorisation qu'elle confère aux utilisateurs, constitue ou non une renonciation ou une donation des droits moraux, auxquels cas, elle serait considérée comme nulle.
+
+    Avant tout, rappelons que les droits moraux, en matière de logiciels ont été réduits à une peau de chagrin. En effet, « sauf stipulation contraire, l'auteur ne peut pas s'opposer à la modification du logiciel » (article L121-7 CPI), de plus, il ne dispose pas de droit de repentir ni de retrait. Il reste à l'auteur le droit de paternité, ainsi que le droit de divulgation.
+
+    La GPL ne contrevient pas au droit de divulgation appartenant à l'auteur, car elle caractérise par définition sa volonté de divulguer sa création, ni ne méconnaît le droit de paternité étant donné qu'elle prévoit et même organise la manière dont doit être indiqué le copyright de tous les contributeurs.
+
+    Enfin, il semble douteux que l'on puisse interpréter la GPL comme une cession des droits de propriété intellectuelle par l'auteur : non seulement, la cession, selon le Code de la propriété intellectuelle, ne se présume pas, mais de plus, l'objet et les dispositions de la licence supposent que l'auteur entend exercer lui-même ses droits et non les céder. En effet, l'auteur doit pouvoir contrôler l'utilisation du logiciel afin d'empêcher quiconque d'entraver sa libre évolution. C'est ainsi que la GPL stipule que si l'utilisateur veut intégrer le logiciel dans un ensemble libre mais soumis à des conditions différentes, il doit obtenir l'autorisation de l'auteur. Dès lors, contrairement à une idée reçue, les droits ne sont pas cédés, qu'ils soient patrimoniaux ou moraux. La GPL respecte par conséquent la règle d'inaliénabilité du droit moral.
+
+    Les dispositions légales de la propriété intellectuelle qui viennent encadrer l'exploitation des oeuvres de l'esprit, notamment en vue de protéger l'auteur, considéré comme la partie « faible » au contrat contre les tiers et contre lui-même, sont respectées par la GPL.
+
+    À l'instar de tous les contrats, la GPL doit être valablement formée. Cela suppose, notamment qu'il y ait eu consentement des parties. Or, il a été reproché à la GPL de ne prévoir qu'un consentement tacite de l'utilisateur par le simple usage du logiciel. Cette objection renvoie au débat relatif à la pratique américaine « shrink-wrap license » en matière de progiciel5. En effet, s'il est admis que pour être valable le consentement peut être simplement perceptible, il doit toutefois être éclairé par la possibilité d'étudier les termes de la licence ainsi que leur signification. C'est pourquoi, les dispositions de la GPL qui soumettent la liberté de diffuser le logiciel à l'obligation de joindre la licence sont essentielles à la validité de la formation du contrat.
+
+    Finalement, la GNU GPL illustre parfaitement que la rigueur juridique ne fait pas obstacle à la création contractuelle.
+
+    Mélanie Clément-Fontaine
+
+    Doctorante en droit privé
+
+    1 Contrat « sauvage » désigne en l'espèce, le contrat dans lequel les clauses ne sont pas rangées en rubriques.
+
+    2 Voir à ce sujet " La Licence publique générale de GNU", M. Clément-Fontaine, Mémoire de DEA, Montpellier, 1999, http://www.crao.net/gpl, n° 42.
+
+    3 La comparaison des traductions non officielles de la GPL illustre parfaitement les différences d'interprétation possibles.
+
+    4 Avocat de la Free Software Foundation, http://moglen.law.columbia.edu
+
+    5 M. Vivant et C. Le Stanc, Lamy droit de l'informatique et des réseaux, la vente sous emballage, édition 1998, n° 545, p 509.
+
+    Article publié dans la revue Multitudes, n° 5, paru le 16 mai 2001 : Propriété intellectuelle, logiciels libres, des subjectivités de l'Internet.
+
+    Disponible en librairie, ou par correspondance : 115 Francs franco de port aux Éditions EXILS 2 Rue du Regard 75006 Paris.
+
+                
+
+Guide GNU
+         contact@fsffrance.org
+Copyright (C) 2003-2006 FSF France, 12 boulevard Magenta, 75010 Paris, France
+La reproduction exacte et la distribution intégrale de cet article sont permises sur n'importe quel support d'archivage, pourvu que cette notice soit préservée.
+Le présent site a fait l'objet d'une déclaration a la CNIL sous le numéro 1134545. Conformément à la législation française en vigueur et plus particulièrement à la loi du 6 janvier 1978 Informatique et liberté, vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression sur ces données que vous pouvez exercer en écrivant à l'adresse de courriel suivante contact@fsffrance.org ou au siège social de l'association.    
+Mis à jour: $Date$ $Author$ 

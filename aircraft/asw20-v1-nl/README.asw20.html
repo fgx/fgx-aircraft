@@ -1,0 +1,142 @@
+<pre>
+======================================================
+= ASW 20                                             =
+= 15-meter class sailplane                           =
+= for FlightGear with LaRCsim and the UIUC Aeromodel =
+=                                                    =
+= Flight model by:                                   =
+= Michael Selig, et al. (m-selig@uiuc.edu)           =
+= <a href="http://www.aae.uiuc.edu/m-selig/apasim.html">http://www.aae.uiuc.edu/m-selig/apasim.html</a>     =
+=                                                    =
+= External model by:                                 =
+= Roland Stuck (rstuck@evc.net)                      =
+======================================================
+
+To run, try:
+
+fgfs --aircraft=asw20-v1-nl-uiuc
+
+Files and directory structure required in $FG_ROOT/Aircraft/ to fly the
+model:
+
+asw20-v1-nl-uiuc-set.xml
+asw20/Models/uiuc/asw20-stuck/asw20-stuck-model.xml
+asw20/Models/uiuc/asw20-stuck/asw20.mdl
+asw20/Models/uiuc/asw20-stuck/asw20mp_.0af
+asw20/Models/uiuc/asw20-stuck/asw20mp_.1af
+asw20/Models/uiuc/asw20-stuck/asw20mp_.2af
+asw20/Models/uiuc/asw20-stuck/asw20mp_.3af
+asw20/Models/uiuc/asw20-stuck/asw20mp_.4af
+asw20/Models/uiuc/asw20-stuck/asw20mp_.5af
+asw20/Models/uiuc/asw20-stuck/asw20mp_.6af
+asw20/Models/uiuc/asw20-stuck/asw20mp_.7af
+asw20/Models/uiuc/asw20-stuck/asw20mp_.8af
+asw20/Models/uiuc/asw20-stuck/asw20mp_.9af
+asw20/Models/uiuc/asw20-stuck/asw20mp_.aaf
+asw20/Models/uiuc/asw20-stuck/asw20mp_.baf
+asw20/Models/uiuc/asw20-stuck/asw20mp_.caf
+asw20/Models/uiuc/asw20-stuck/asw20mp_.daf
+asw20/Models/uiuc/asw20-stuck/asw20mp_.eaf
+asw20/Sounds/uiuc/asw20-sound.xml
+UIUC/asw20-v1-nl/CDfa-01.dat
+UIUC/asw20-v1-nl/CLfa-01.dat
+UIUC/asw20-v1-nl/Cmfa-01.dat
+UIUC/asw20-v1-nl/Cmfade-01.dat
+UIUC/asw20-v1-nl/aircraft.dat
+
+These files above come with the FlightGear base package.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Model description and updates:
+
+6/8/03: - Update: 
+
+* Added spoilers using j/k keys to close/open spoilers.
+  Added flaps    using [/] keys to raise/drop flaps
+
+* Set control deflections to be like ASW 27 for now.  Still looking
+  for ASW 20 manual.
+       
+12/25/02 - Update: 
+       
+* Elevator deflections up/down were swapped. Fixed w/ this one.
+
+* Add wind noises to sound file.
+
+11/8/2002 - First release: v1-nl
+
+* Roland Struck (rstuck@evc.net) has granted FlightGear permission to
+  use and release the external model files with FlightGear under the
+  GNU GPL.
+
+* This flight dynamics model simulates an ASW 20 15-meter sailplane.  
+
+* A weights and balance was performed to arrive at an allowable
+  c.g. location and from that data, mass moments of inertia were
+  calculated.
+
+* Lift, drag and pitching moment data is modeled from -180 to +180
+  deg.  In general, the aerodynamics are modeled using various sources
+  too numerous to mention here.
+
+* Apparent mass effects are modeled.
+
+* The simulation starts on the ground.  To simulate being tow, the
+  throttle can be used.  The "thrust" was tuned to simulate a
+  reasonable line tension and max rate of climb while on tow.
+  Alternatively, Ctrl-U can be used to jump up in 1000-ft increments.
+
+* Interesting flight characteristics to note:
+
+  - When starting out, quickly change views to see the external
+    aircraft.  The wings will start out level, and then one side will
+    drop.  For whatever reason, the left wing drops first even though
+    the data in the model is symmetrical.
+
+  - Taking off requires careful control of the rudder and ailerons.
+    Use rudder to line up with the runway and ailerons to level the
+    wings.  It is easy to over correct (especially without a
+    headwind), and the consequences should be reminiscent of being
+    towed in a real sailplane.  [I am speaking from experience, being
+    a sailplane pilot and having part owned a Pegasus (~ASW 19)].
+
+  - The max lift-to-drag ratio is approx 42:1.  This means that from a
+    height of 1 mile, the gliding distance is 42 miles.  This
+    efficiency is most readily apparent when flying and landing.
+    Adding spoilers is a high priority for the next update.
+
+  - The long wings produce an over banking tendency when circling as
+    would be done in thermals.  "Top aileron" is required to keep the
+    wings from over-banking.  In addition extra rudder is then
+    required to stay coordinated.
+
+  - Tail slides and hammer heads appear to be quite realistic.  This
+    is one bonus that comes from modeling key aerodynamic data from
+    +-180 deg.
+
+* What is not yet simulated: water ballast, flaps, spoilers.
+
+* Drag due to rudder deflection, aileron deflection, and side slip are
+  not yet added.  When these are added, slipping on landing will be
+  more realistic.
+  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+**************************************************
+ Prof. Michael S. Selig
+ Dept. of Aerospace Engineering
+ University of Illinois at Urbana-Champaign
+ 306 Talbot Laboratory
+ 104 South Wright Street
+ Urbana, IL 61801-2935
+ (217) 244-5757 (o), (509) 691-1373 (fax)
+ m-selig@uiuc.edu
+ <a href="http://www.aae.uiuc.edu/m-selig">http://www.aae.uiuc.edu/m-selig</a>
+**************************************************
+
+</pre>
+

@@ -1,0 +1,81 @@
+
+
+-----------------------------------------------------------------------------Déjà fait :-------------------------------------------------------------------------
+-Rajout de tout un tas de load. (Matra MICA, AIM120, Matra R550 Magic 2, aim-9, GBU16, GBU12, AGM65, SCALP, Sea Eagle, AIM-54, MATRA-R530, R74)
+-Voir la possibilité de lancer des missiles, de mettre le code en générique pour que cela soit facilement adaptable sur d'autre appareils ou d’autres missiles. Cela se fera en relation avec les load.
+-possibilité de larguer les réservoirs.
+-Rajouter des boutons pour "load rapide" comme les boutons "FAD" du f14
+-Amélioration du son.
+-Amélioration de la texture old (plus de décalage des aérofrein du dessous)
+-Amélioration du tir au canon (que j'ai du réduire de moitié de vitesse pour conserver les fps)
+-Amélioration du HUD, (agrandissement et suppression des décalages des ronds "radar" avec plusieurs modes sélectionnables, des indications supplémentaires qui s'affichent de façon conditionnelles (mach, Agl, frein, Gear) ...
+-Possibilité d'avoir pour l'appareil le plus proche, le callsign, altitude, cap de l'appareil, position par rapport au 2000, vitesse au sol (parce que je ne trouve pas la fonction X^X nécessaire au calcul de la vitesse KEAS à un altitude donnée...)
+-Possibilité de démarrer le réacteur... Script de Ryan Miller (basé sur celui de Syd Adams)
+-Revoir le radar, et les ronds hud qui restent en parasites quand on diminue la portée du radar etc (Ca a été changé sur le code source du HUD de base, donc pas moi qui l'ai fait mais merci au bonhomme qui l'a fait)
+-Changer l'affichage du radar central, avec des traits moins gros...(mais vu que j'arrive à rien avec blender....) et corriger le code d'affichage (ça je peux faire)
+- Autopilot + suivi d'avion en mode auto
+- Regarder comment faire "apparaître" le model sans fumée et l'explosion (de façon graphique...J'ai les modèles mais il faut que je code)
+-Amelioration du contrail (temps, -40, humidité >65% et augmentation du volume du contrail)
+-Ajout d'un bruit de turbine au démarrage
+
+
+
+-d'autre truc ?
+(Merci à tous ceux qui m'ont aidé -et qui m'aideront peut etre encore :-)  )
+
+Pour moi et pour ceux qui veulent bien :
+
+-------------------------------------------------------------------To Do list :-------------------------------------------------------------------------------------
+LOAD
+- Rendre visible les load en multijoueur
+-Essayer de moins charger d'objet 3D (dans les load, car cela peut ralentir les fps)
+-(Peut être limiter les chargements aux armes Matra ... ? ...)
+-Rajouter le missile Exocet et ASMP
+
+SUBMODELS
+-Regarder comment partager un submodel (que les multi puissent voir un tir canon, de la fumée ou encore le largage de reservoir...)
+-Voir si en multijoueur, un missile lancé par un avion tiers peut être visible...
+
+INSTRUMENTS
+
+(Vu que le code est repris un petit peu sur le f14, faire en sorte que les 2 avions puissent communiquer (même type de variables sur notament ECM et detection de missile lancé)
+-Faire marcher les differents mode hud, par exemple le rond pour le tir Canon, le rond du lock mode, rajouter un mode de virtualisation des pistes d'atterrissage (existe dans les hud) ou encore gestion de waypoint (existe aussi)
+-Finir de rajouter les instruments qui manquent : manche, manette de gaz, selection des armes, ECM, radio plus cliquable, autopilot cliquable  ...  Siege éjectable (+bloquer la vu sur le siège éjecté+bloquer les commandes de l'avion)
+
+-Rajouter plus d'instruments dans le cockpit ( en sachant que cela necessite un modeleur 3D parce que moi je n'arrive vraiment à rien avec Blender)
+-Rajouter gestion du carburant (reprise potentiellement sur l'Eurofighter, parce qu'elle est pas mal), gestion du moteur (avec données nécessaires) et affichage des load, sur les MFD
+-Corriger le MFD central... (peut etre un problème de transparence...à vérifier avec Helijah)
+-Mixer la boucle du Télémètre avec celle du radar pour un nombre trop important de boucles qui tournent en même temps (d'autant que les 2 boucles font quasiment la même chose)
+SON :
+-Étudier les sons, et les cônes de dispersions rendu possible par le xml. Cela permettrai d'avoir le son seulement "après"  l'appareil quand la vitesse du son est dépassé..(voir même de diminuer le cône de dispersion quand mach 2 est atteint.)
+
+AUTOPILOT :
+
+-Possibilité de rendre cliquable les boutons de l'autopilot dans le cockpit
+
+TANKER :
+-Quand on commande un tanker, il n'est pas visible en multijoueur...
+
+LIGHT:
+-Mettre des boutons pour les lights...(ou sur le MFD ou en recupérer d'ailleurs ....ce serais bien d'avoir 3 ou 4 option de light)
+-Les phares principaux ne font pas de lumière...(parking)
+
+MISSILE :
+- Gerer les missiles semi actifs
+- Comprendre le problème avec la ground detection des missiles A/G
+- Ne pas pouvoir shooter une cible en vol avec une A/G
+- Interaction avec bombable
+- Interdiction de pouvoir charger des missiles en plein vol (ben oui !!)
+- Rajouter les models de missiles Russes, Anglais etc (Indiens si des gars sont motivé pour me donner un model 3D...)
+- Rajouter des missiles pour Helico (style air sol)
+- Faire depplier les ailes du Apache/scalp (et faire une livrée SCALP)
+- Faire réagir les missiles au contre mesures... (type flare....)
+- Corriger certains petits bugs
+- Si vous avez des idées ...
+- Pod de designation laser -> vue plus possibilité de "creer" un cible en sniper vu et de cliquer pour la selectionner
+
+COMMUNICATION :
+-Realisation d'une fiche avion.
+
+Merci à tous ceux qui m'ont aidé : Helijah, Buckaroo, Koubi, FG-TUX, Ray, Anusil, XIII, la f16 team, la CitationX team, tout ceux qui ont developpé en libre les missiles que j'ai pu récupérer, Nico, Thomas et tout les autres que j'ai peut être oublié.
+Tous ensemble on a fait (et on fera j'espère) un super boulot. Ce mirage 2000-5, il est énorme !!

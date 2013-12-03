@@ -1,0 +1,424 @@
+Version# Vertices PolygonFaces Comments
+2010.Mar.01
+10.4		no change to models
+	Update splash screen for shader effects and FG 2.0 release.
+	Fix instrument lighting, specular effects.
+	Fix homing dialog to close upon correct click.
+	Fix minor bug in 'jump to helm.'
+	Add homing airport to right display.
+	Add experimental ground-slope orientation.
+
+2009.Dec.20
+10.31		no change to models
+	Add conditions to display of text messages.
+
+2009.Sep.02
+10.3		replace nav-sphere
+	FIX Left gear: missing one line for axis definition since 10.0
+	Change how nav-sphere scales, and shows for fgviewer.
+
+2009.Jul.12
+10.21		replace nav-sphere
+	Fix nav sphere size to scale at different field-of-view.
+
+2009.Jul.09
+10.2	Add new sphere model to increase visibility range for nav lights.
+	Add Waldo Walker to tracking display.
+	Fix initialization of tracking display to remember units preference.
+	Add trigger detail to walker animation dialog.
+	Fix shape of Waldo's head.
+	Fix timeout delay for popup info box.
+	Fix property path to /sim/time for multiplayer compatibility.
+
+2009.Jun.29
+10.1		no change to models
+	Fix bug when walker steps out underground.
+	Fix lighting mapping for inside rear doors.
+	Consolidate some aircraft specific sections for walker.
+
+2009.Jun.05
+10.0	23635	17794	replace bluebird model
+	Separate interior objects into new shadow lighting layout.
+	Add some texturing to interior.
+	New calculations for lighting on interior surfaces.
+
+2009.May.22
+9.1	Add timer to reduce particle drain after crash.
+	Restrict tracking text visibility to cockpit view.
+	Change particle spray pattern from dust.
+	Remove need to manually edit which version of FlightGear is being run for ambient and emission levels.
+	Restructure ambient and emission properties for interior lighting.
+	Fix reset of tracking display upon reset.
+	FIX: Walker can walk under bridges.
+	     Requires CVS build after 2009.Mar.18
+	FIX: Hover up to reset after hard landing.
+
+2009.Apr.10
+9.0	22686	17528	Changes to all .ac model files
+	Fix ambient values to match rgb colors.
+	Change ambient and emission levels to match new lighting levels in Development CVS.
+	Update all livery files.
+	Fix bug in right landing gear color.
+	Add hover control to middle mouse button.
+	Adjust deceleration upon skidding of unpowered landing.
+
+2009.Feb.09
+8.93-AI	Update AI Multiplayer models to get in sync with primary package.
+
+2009.Feb.07
+8.93	Restore missing [k] key to input.
+	Restore looking forward upon cockpit rotation.
+	Other minor nasal cleanup.
+
+2009.Feb.05
+8.92	Update pilot dialog to newest animation code.
+	Fix several minor bugs in combinations of walking positions
+	  and animation defects.
+	Add new animation choice for standing still.
+	Convert all images to PNG and remove support for 0.9.10 and 1.0.
+
+2009.Feb.04
+8.91	Cleanup of nasal to seek performance improvements
+
+2009.Feb.03
+8.9		updated walker model
+	Fixed collar of waldo.
+	Change to listener callback functions.
+	Find workaround for alpha ordering limitation in 1.0 and earlier.
+	  Restore texture to pilot and walker in version 1.0.
+
+2009.Feb.03
+8.8		updated walker and parachute models
+	Change method of loading walker model.
+	Add posing dialog for animating walker.
+	Add animation sequence manager.
+	Add walker orbit camera.
+	Adjust nav and strobe lights for smoother distance visibility.
+	Rescale engine status bar 3.
+	Replace walker model with Waldo Walker.
+	Add rubbing sound for touching ground without proper vertical clearance first.
+	Reduce the crash smoke density.
+	Add help and basic tutorials for Walker animations.
+	Add Animations button to primary configuration dialog.
+
+2008.Dec.16
+8.7	Fix autopilot mapping on keyboard.
+	Fix elevator-trim upon autopilot deactivation.
+	Fix inconsistancy in walking sideways.
+	Simplify walk triggers, from the various Fg versions, to one method.
+	Sync with ai model. Update file path in ai model.
+	Fix vapor trails bug introduced in 8.6.
+
+2008.Dec.12
+8.6		updated center instrument panel
+	Add collective control to joystick axis-4 (hat left-right)
+	  right next to hover vertical control (hat up-down)
+	Add autopilot to buttons on instrument panel.
+	Clean up variable declarations for conserving memory space.
+	Include new instrument in damage rotation.
+	Added precision to heading display.
+	Removed leading zeros.
+	Add other autopilot settings to instrument checking.
+	Fix blinking light introduced by variable change to float.
+	Fix consistancy and on/off control of vapor trail.
+
+2008.Dec.10
+8.5	Add elevation indicator (z-bearing) to VOR tracking instrument.
+	Fix trig bug in homing heading because of latitude on a sphere.
+	Fix calculations across international date line.
+
+2008.Dec.09
+8.4	Add aircraft and airport VOR to center instrument panel.
+	  provides tracking and homing for top AI and MultiPlayer aircraft
+	  and homing to nearest airport, and selected airport.
+	Add loop checking to fix doubling.
+	Fix Nearest Aircraft screen updating bug.
+
+2008.Dec.05
+8.3	22690	17528	update to bluebird
+	Add multiplayer capabilities.
+	   (Low poly model must be downloaded separately and placed in the AI directory)
+	   Fully supported for version 1.9 and OSG
+	   while version 1.0 will not look correct.
+	Add multiplayer aircraft to left screen #2.
+	Fix small hole in gear mesh.
+	Remove extra polygons from wings.
+
+2008.Dec.02
+8.2	Fix landing of skydiver.
+	Fix reset of walker when getting in.
+	Fix checkbox for walker visibility.
+	Add position reporting to the preferences menu.
+
+2008.Nov.30
+8.1	24224	20248	update to bluebird, pilot, and walker 3d models
+	Fix missing objects and nasal differences for 0.9.10 and 1.0
+	Fix jumping walker from sitting position.
+	Fix running speed in 1.0
+	Create pilot without textures to fix alpha ordering limitation in 1.0 and earlier.
+
+2008.Nov.28
+8.0	24216	20243	updated all models
+	Add cockpit chair movement.
+	Resize cockpit controls for pilot.
+	Add pilot model and walker models.
+	Add parachute to walker model.
+	Improve ground detection for walker, for falling from ground objects.
+	Jump and hop down hills.
+	Fix bug when jumping from an aircraft climbing or descending.
+	Scale walker speed based on hardware frame-rate, for consistant walking speed.
+	Add walking from 3rd person perspective. 
+	  Best 3rd person control, near aircraft, is from Fly-by View.
+	Normalize nacelle thickness of caterpillar coils.
+	Replace navigation glows with starburst design.
+	Add nearest aircraft display to left screen #2.
+
+2008.Nov.03
+7.5	for testing development of walker model
+
+2008.Nov.01
+7.41	change location of reference to particle smoke.png
+
+2008.Oct.29
+7.4	Adjust window transparency.
+	Add particles for dust, vapor, and smoke in OSG.
+	Rotate front wheel when turning.
+	Place sounds in proper 3d space, and limit volume by distance.
+	Change jumper parachute to [j]
+	Add vertical trajectory to walker upon exiting aircraft.
+	  (Walker should now work with aircraft with ejection seats.)
+	Walker now exits relative to aircraft pitch and roll instead
+	  of leaving at the center line.
+	Update url of my hanger to reflect change in hosting.
+
+2008.Jul.22
+7.3	Increase volume for rumble sound.
+	Make doors sound effects volume relative to view position.
+	Increase amplitude of 2 wav files.
+	Have skydiver land on face if parachute is not open.
+
+2008.Jun.28
+7.2	same content as 7.1, except reorganization was refused for cvs.
+	 reverted filenames and locations for panels and hotspot files
+
+2008.Jun.27
+7.1	24190	20230	updated
+	Add condition for pick hotspot helpers to draw conditionally.
+	Fix hotspot map for console-1Left and Right.
+
+2008.Jun.26
+7.0	24200	20236	new base model
+	Fix bug when clicking wheels button.
+	Fix external view of hover-up to be smooth again.
+	Remove unused wheel property.
+	Reshape display screens to accept text at a readable angle.
+	Add text messages to display screens.
+	Separate panels from models directory.
+	Clean up tiny holes and imperfections around doors, and gear.
+	Add some texturing to inside walls, and forward cockpit chair.
+	Smoothen some hull surfaces.
+	Add pick buttons for clearer hotspot illumination with ctrl-c
+	Move panel and hotspot files to single Panels directory.
+
+2008.Jun.05
+6.5	Restore original binding for ctrl-c, move "jump to helm" to alt-c
+
+2008.May.20
+6.4	Change key mappings for WASD pattern.
+	Add walk sideways left/right.
+
+2008.May.19
+6.3	Fix vertical offset
+	Add trig calculations to re-enter cabin from outside.
+	Solidify the remaining inside walls and doors.
+
+6.27	Add acceleration to hovering on keyboard controls.
+	Add running to walker when outside.
+	Fix keyboard problem with mod-up, for walker and hover functions.
+	Disable view limits.
+
+2008.May.17
+6.26	Fine tune the physics of falling for smoothness in all 3 dimensions.
+
+2008.May.16
+6.25	Add parachute for falling sky diving walker to land safely.
+
+2008.May.15
+6.24	Add calculations for terminal velocity and free fall,
+	and use correct physics formulas for the path of a sky diver.
+	Fix accuracy for east longitude and southern latitudes.
+	Include vertical velocity in crash damage.
+
+2008.May.13
+6.23	Finish complex trigonometry for conversion from x,y to latitude,longitude.
+	Fix exiting from doors and hatches.
+	Fix correct orientation including Backing out the door
+
+2008.May.07
+6.22	Fix ground-near-plane setting for FlightGear version 1.0
+	Fix key bindings for version 1.0 compiled with glut.
+
+2008.May.06
+6.21	Solidify doors, regain equilibrium after jumping out of moving aircraft. (stop leaning)
+	Import changes I made for ufo in March to add acceleration to hovering.
+
+2008.May.06
+6.2	23337	19664	no change to primary model, minor changes to digital instruments.
+	Add walker for outside on terrain.
+	Add boundaries for walking inside around cabin.
+	Add thresholds at the doors and hatches to go outside by walking out the door.
+	Add altitude and heading autopilot-like hold buttons (non-functional for now).
+	Fix key description for Home/End keys.
+	Fix button emmissions on engineering panel.
+	Remove some repetitive comments.
+	Add hot (height over terrain) tags to hatches. experimental or non-functional.
+
+2008.Feb.29
+6.1	Replace splash screen
+	Remove experimental radar properties.
+	Remember instrumentation configuration.
+	Separate repetitive sections from nasal files.
+	Separate configuration from systems dialogs.
+	Fix beacon in 0.9.10 version.
+
+6.01	Update splash screen
+
+2008.Feb.23
+6.0	23337	19664	new model and texture files
+	Split up some more objects for proper lighting/colors.
+	Add more labels and lights to instrument buttons.
+	Rewrite panel button lighting and color tinting, much faster.
+	Update and replace shadow shape.
+	Add the other seating positions to the [e] key.
+	Fix [E] so it does jump to cockpit view.
+	Realign power graph for more realistic settings.
+	Add functionality to collective lever, to change countergrav power factor.
+	Adjust hotspots to fit the buttons better.
+	Fix some routines from being called every cycle.
+	Brighten instruments during daytime.
+	Fix slant and readability of a few instrument indicators.
+	Remove a couple unnecessary leading zero digits.
+	Add MACH to velocity display.
+
+5.1	23239	19644
+	Fix landing lights connection from panel to dialog button.
+	Adjust maximum speed to reflect atmospheric boundaries.
+	Clean up all text files and separate repetitive sections.
+	Add the remaining interior surfaces to include proper tinting.
+	Replace landing gear timing with proper built-in functions.
+
+2008.Jan.19
+5.0	23239	19644	change all model origins and center references
+	Fix long standing bug in jumping when too close to ground.
+	Add wheels to landing gear.
+	 drive on roads (with hover and main engines off)
+	Fix yoke movement for hover up and down.
+	Fix rear hatch to be at ground level for cargo loading.
+	Fix responsiveness of hover up from cold start.
+	Adjust minimum speed for aerodynamics/flying without counter-grav on.
+	Adjust triggers for skidding and landing sound effects.
+	Remove gear sound at startup.
+	Enable rumble sound at startup.
+
+2008.Jan.11
+4.4	18881	15357	change to instruments and aircraft model
+	Fix extra line in instruments.
+	Fix instrument pick definitions.
+	Fix walking button [w] to be repeatable so it can be held down.
+	Fix overlapping surface missing proper color and shadow.
+
+2008.Jan.08
+4.3	18887	15363
+	Add buttons to door frames.
+	Big change for walking around in direction of looking.
+	Fix gear animation for osg version.
+	Remove extra edge from instruments.
+	Add basic instructions to the readme file.
+
+2008.Jan.06
+4.2	18678	15302	change to instruments
+	Fix hotspot and pick errors.
+
+2008.Jan.05
+4.1	18678	15302	no change to 3d models
+	Fix serious property name error that affected primary engines.
+
+2008.Jan.04
+4.0	18678	15302	change is in 3d-instruments
+	Fix minor property duplication.
+	Fix crash handling and detection.
+	Fix interior lighting over-tinting.
+	Fix sound pitch for engine level.
+	Handle more negative numbers on instrument panel.
+
+2008.Jan.03
+3.4	18678	15302	no change to 3d model
+	Add bounds checking for orbital velocities.
+
+2008.Jan.03
+3.3	18678	15302	major change to instrument panel
+	Integrate major improvement for terrain following.
+	Adjust property paths for multiplayer support.
+	Replace digital instruments with hi-res digital-glass type instruments.
+	Finally fix a long-standing bug causing excessively sticky ground with gear up.
+
+2007.Dec.27
+3.2	18678	15302	no change to 3d model
+	Improve venting submodels. 
+	Fix mis-alignment in livery-template texture. 
+
+2007.Dec.25
+3.1	18678	15302	no change to 3d model
+	Fix bug in calculating interior lighting 
+	 introduced by adding textures to inside livery.
+	Fix other minor inconsistancies between newly introduced 0.9 and OSG versions.
+
+2007.Dec.23
+3.01	18678	15302	no change to 3d model
+	Add support for older version 0.9.10
+
+2007.Dec.22
+3.0	18678	15302
+	Add livery and color setting dialogs.
+	Remember livery choice.
+	Map textures to hull and interior flooring.
+	Fix condition checking for cockpit walk-around.
+	Simplify debug logging.
+	Add submodel effects for damage.
+	Add pick support for OSG.
+
+2007.Dec.13
+2.0	17222	15287
+	Modify for compatibility with latest release, version 1.0.
+	Add buttons to popup dialog to duplicate all panel buttons.
+	Fix display bug in GPS digital instrument.
+	Synchronize Autopilot settings for Lat/Lon with GPS display mode.
+	Move property definitions and startup values to the -set.xml file.
+	Change ramp grooves to polygons.
+	Add Engine detail under hull covers.
+	Separate 2d "fast and simple" shadow from the rendering options 3d shadow.
+	Mute VOR background by setting instrument frequencies to zero.
+
+2007.Dec.01
+1.2	14304	12720
+	Fix lighting/emissions bug in door.
+
+2007.Dec.01
+1.1	no change to 3d model
+	Integrate generic instruments and reorganize instrument directories.
+	Make all nasal variables local to this model.
+	Add CRLF to make unix files more readable in DOS.
+	Re-arrange help popup to fit on screen.
+
+2007.Aug.21
+1	14284	12720	
+	First release. See readme file for details.
+
+2007.May.09
+	Start of bluebird modeling.
+
+
+future plans:
+	Add communications instrumentation.
+	Add weather radar to viewscreen in cockpit. 
+

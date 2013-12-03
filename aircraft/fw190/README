@@ -1,0 +1,19 @@
+This model is released under the terms of the GPLv2
+
+Keys:
+
+ctrl-l	lock tailwheel
+
+
+The "AFN2" Instrument can be adjusted via the "Radio" menu. 
+It works as ADF reciever. The horizontal needle shows if 
+the NDB is recieved, the vertical needle shows the course. 
+Center it and you are on course. If the needle is left, 
+turn left to center it again. If it's to the right turn 
+right. 
+ 
+Photo textures of Instruments were used with kind permission
+from http://www.cockpitinstrumente.de.
+
+Textures "Black8" and "Black 13" were kindly donated 
+by B. van Speybroek.

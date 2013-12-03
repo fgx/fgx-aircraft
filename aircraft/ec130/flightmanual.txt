@@ -1,0 +1,165 @@
+##FlightManual EC 130 B4##
+02/19/2012
+
+1. Information:
+This Model of an Eurocopter EC130 B4 is made for FlightGear and stands under the terms of GPLv2.
+
+This model is standing under heavily work progress so please accept that there are a lot of thing which might not working as you want. 
+For updates use the GIT-version and read the GIT-logs and some threads in the officiasl FlightGear Forum!
+
+Im still looking for datas about the airfoils, and perfomance datas! Help by a real pilot appreciated!
+The current fdm is just a guess and might be not that realistic.
+
+Note:  EUROCOPTER and its logo are trade marks of the Eurocopter group.
+======================================================================================================================
+Credits:
+Main Author, author 3D-Model:
+
+Heiko Schulz
+Heiko.H.Schulz@gmx.net
+
+Author dynamic flight model:
+Heiko Schulz 
+
+Author Nasal:
+Heiko Schulz
+
+Melchior Franz
+mfranz@aon.at
+
+2. Features (some still in work):
+- accurate 3d-model
+- 3d-cockpit
+- accurate simulation of the systems including FADEC and FLI according to real Flight Manual, including Flight Report page.
+- accurate Flight Dynamic
+- no Autostart
+- fuel state saved on exit
+- Force Trim Release
+-emergency floats
+
+3. To-do:
+- fixing the FLI to a more realistic behaviour
+- adding the rotorspeed management to FADEC
+- VEMD: switching the pages, fixing of some bugs
+- some minor optimization of the 3d-model
+- better views
+- flight manual as pdf
+- failures
+
+-------------
+FlightManual
+-------------
+
+2.2 Generell
+This helicopter is approved to operate:
+- by day and night in VFR
+2.3 Forbidden
+-acrobatic maneuvers
+-in flight engine power reduction with the twist grip
+
+
+3.Preflight Check:
+-check fuel state
+
+4.Normal procedures:
+Engine Prestart Check:
+
+1.) Rotorbrake: Fully Forward The lever with the yellow stripes is the rotor brake lever.
+2.) Cutoff lever: Fully Forward The lever with the red stripes is the Cutoff lever- it controlls the cutoff valve- so if this valve is not closed engine can get fuel.
+
+The fuel tank sits below the engine- due to gravitity the fuellines are empty.
+So you need first electrical power:
+3.)BAT EPU on and GEN on 
+4.) VEMD after a testing phase you should see the Enginestartpage- 3 halfcircles with Torque, Ng (aka N2) and T4.
+5.= W/LT test depress and release
+
+
+Engine Starting
+
+1.)Fuel P on Now the pump can fill up the lines to the engine with fuel. It needs about 30 sec. On the real thing you don't see any effect. On this model the FUEL-P sign on the warning panel may dissapear.
+2. A/Col-Light: On
+3.)Start Selector: On 
+The starter is released and will bring up NG to about 17-18%. Fuel is injected then automatically, NG increases, T4 increases, rotor is turning, engine oil pressure increases.
+Also some warnings on the warning panel will dissapear.
+At NG = 60% the Enginestartpage dissapears and the FLI-pages comes up.
+
+When Ng> 67% engine is now in Idle. 
+
+
+3.)set Fuel P offNot needed anymore- the engines sucks now the fuel.
+
+Run Up
+
+Twist grip set to Flight (100%) Drag the mouse up with MMB pressed. (not in Controll-mode or View-mode!) That's like Melchiors Bo105.
+
+
+Before Takeoff:
+
+Landing Light: as required ("l"-key ( like "L"etter))
+NavLights: as required
+All warnings and cautions should be off now, Rotor-RPM increases to >370.
+If Rotor-RPM >370 you can lift off. 
+Please note it is a french system!
+
+Takeoff Check and Procedure:
+-increase collective pitch until you  hover at 5 ft- check all engine values and warning lights off
+-increase airspeed until 40 ktn at 10 ft, then increasing to 50ktn at 20ft, then increase to 70ktn and climb to cruise level. 
+
+Cruise
+-airspeed about 100-137 with TRQ as required (best at 82%)
+
+Shutdown
+Twistgrip to Idle detent: drag the mouse down with MMB pressed
+Start selector off
+Gen off
+when Rotor- RPM <170 apply rotor brake
+Switch off all other systems not needed.
+
+If Rotor-RPM <70 Flightreportpage appears and shows flight duration time and the current numbers of flights done. 
+
+When FlightGear is exit as usual flightnumber and fuel level state is saved and will be load up again next time.
+
+No warranties!
+
+
+
+
+5. Force Trim Release
+
+Due to hydraulic boost of the controls the pilot woulden't feel any force feedback on the controls. That's why there is a spring which produce artificial force feel. This force can be set to zero by pressing the FTR-button at each stick position by some clutches and electric motors. The clutches holds the cyclic-controls, and the spring is moved to a force free position.
+As FlightGear dosen't support Force Feedback, and anyway there is no good hardware for that, we cannot simulate this approach. We could use the already implemented AutoTrim but this isn't really suitable to helicopters and seems even wrong to me. See also data/nasal/aircraft.nas ->autotrim
+We use another approach: While pressing the FTR-button ("t-key"), the inputs from Joystick/Mouse are interrupted and keep the Cyclic position in the sim to its current state. Now the Joystick/Mouse can be moved into a new position (like centered or any other position liked). When the button is released, inputs flow again.
+Some helis, the Ec130 as an option on demand, has a 4-way trim switch. This will move the controlls in small steps in the wished direction, so the heli is correctly trimmed it can be flown just with this little inputs. 
+
+The EC130 here will only make use by FTR. Sorry, no money left for extra gadgets! ;-)#
+that is how to use it:
+	(1) move the stick such that the heli is in an orientation that
+	    you want to trim for (forward flight, hover, ...)
+	(2) press FTR button (f-key)and keep it pressed
+	(3) move stick/yoke to neutral position (center)
+	(4) release FTR button (f-key)
+
+6.Emergency Floats:
+
+If selected the floats has to be armed with the button on the SCU.
+In the case of ermergency press "e"-key. The Floates will be inflated immediately.
+
+The emergency floats can only repacked on ground!
+
+7.Landing Lights:
+
+Press "l"-key (l like "L"etter)
+
+8. Additional informations:
+Like many french helicopters the hydraulics are to weak for acrobatic and heavy maneuvers.
+Maneuvers with high g-loads (high rotor loads) will lead to jackstall or also known as hydraulic transparency.
+Forces from the rotor are feed back to the cyclic controls, and can lock them. So in some certain flightstates there will be no control, 
+which is very dangerous. 
+The Gazelle and the Squirrel are "famous" for this behaviour and have been involved in some fatal accidents.
+
+This is simulated simplified due to limitations of FlightGear: at certain flightstates the inputs of the cyclic controls are reduced to zero depending on a simplified rotorload vs hydraulic force. When this happens reduce rotorload by taking down the collective.
+Better: keep away from acrobatic maneuvers!
+
+
+
+

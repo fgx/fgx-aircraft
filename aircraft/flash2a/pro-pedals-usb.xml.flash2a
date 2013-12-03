@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<!--
+************************************************************************
+* Setup for CH Pro Pedals USB.
+*
+* These are USB rudder pedals with toe brakes.  Bindings are as
+* follow:
+*
+* Axis 0 (left pedal): brake
+* Axis 1 (right pedal): throttle
+* Axis 2 (sliding both pedals): nosewheel
+************************************************************************
+$Id$
+-->
+
+<PropertyList>
+
+ <name>CH PRODUCTS CH PRO PEDALS USB </name>
+ <name>CH Products  CH Pro Pedals USB Rudder Pedals </name>
+ <name>CH PRO PEDALS USB </name>
+
+ <axis n="0">
+  <desc>Brake left</desc>
+  <binding>
+   <command>property-scale</command>
+   <property>/controls/gear/brake-left</property>
+   <offset>1.0</offset>
+   <factor>0.5</factor>
+  </binding>
+  <binding>
+   <command>property-scale</command>
+   <property>/controls/gear/brake-right</property>
+   <offset>1.0</offset>
+   <factor>0.5</factor>
+  </binding>
+ </axis>
+
+ <axis n="1">
+  <desc>Throttle</desc>
+ <binding>
+   <command>property-scale</command>
+   <property>/controls/engines/engine/footthrottle</property>
+  </binding>
+ </axis>
+
+ <axis n="2">
+  <desc>Rudder</desc>
+  <binding>
+   <command>property-scale</command>
+   <property>/controls/flight/rudder</property>
+   <factor>-1.0</factor>
+  </binding>
+ </axis>
+
+</PropertyList>

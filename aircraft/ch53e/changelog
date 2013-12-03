@@ -1,0 +1,17 @@
+
+=====================
+2007-Dec-29
+
+Cleaned up stick position indicator code, fixed minor bug with test button.
+
+=====================
+2008-Jan-08
+
+Baked AO map into center console panel UV image.
+
+Completed overhead panel mesh.
+
+UV mapped overhead panel.
+
+Baked AO into overhead panel UV image.
+

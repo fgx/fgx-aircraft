@@ -1,0 +1,28 @@
+This model is released under the terms of the GPLv2
+
+Keys:
+
+C	toggle cockpit door
+
+F	toggle forward fuselage door
+
+D	toggle rear fuselage door
+
+Ctrl-b	toggle supercharger
+
+Ctrl-l	lock tailwheel
+
+m/M	Master Arm on/off
+
+J	release Torpedo
+
+H	fire Rockets
+
+Ctrl-G	toggle gunsight stow 
+
+Weapon Loadout is selectable via the Equipment-Fuel and Payload Dialog.
+
+The Beaufighter Pilot's Notes can be found online at 
+http://www.burrowes.org/FamilyTree/E.F.G.Burrowes_LogBook/extras/Beaufighter-Manual/index.html
+
+Photo-realistic Cockpit Instruments by AJ MacLeod, permission to use photos generously given by http://www.spitfirespares.co.uk

@@ -1,0 +1,20 @@
+ver 0.9  29-06-2004
+ (Ilia Pavlenko) started work on 3d-cockpit. added IAS, Altimeter (uncalibrated yet), main artificial 
+ horizon for commander and 2p, added animated throttle levers for pilots.   
+
+ver 0.8  27-06-2004
+ replaced 3d model with better one from Ilja Moderau. Corrected point of view, horizontal 
+ position of his model and aileron animations. 
+
+ver 0.7. 04-04-2004 (nice date)
+ corrections to visual 3d model. 
+
+ver 0.6. 19-03-2004
+ 1. textures redrawn to "clean GPL" (from scratch by Ilia Pavlenko) - designation - non existant RA-85131 
+ (CCCP-85131 was retired some time ago, afaik there never was RA-85131)
+ 2. Artificial horizon gauge fixed with help from Lee Elliott (an225 "Mria" for FGFS)
+
+ver 0.5, 15-03-2004. 
+ 1. parking-brake VS brake-parking problem. 
+ 2. changed "panel-bg.rgb" to drawn from scratch (instead of MSFS model's one)
+ 3. renamed "sound" to "Sounds" dir to comply with naming convention, also verified generic sounds from FGFS.

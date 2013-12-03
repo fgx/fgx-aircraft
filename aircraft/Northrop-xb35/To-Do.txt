@@ -1,0 +1,5 @@
+January, 16, 2010
+
+After the fantastic work of Adrian NOVOTNY I must now remake the landing gear.
+
+find out why the autopilot is activated by default, which is inconvenient.

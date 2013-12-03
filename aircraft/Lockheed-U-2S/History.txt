@@ -1,0 +1,4 @@
+Cem AYDIN started the first "U-2 Project for Flightgear FlightSimulator" the April 11, 2011. 
+
+In the middle of February 2013, BARANGER Emmanuel, and MELIS Patrizio took the job in the hands again,
+creating a new mesh, and then a new model with new FDM, Nasal, Textures, and a new Pilot.

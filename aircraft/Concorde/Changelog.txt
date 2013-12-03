@@ -1,0 +1,64 @@
+     Version       CVS date                   Milestone
+===================================================================================================
+     2.11          October 2013               Refined pilot seats (by C. Schmitt).
+                                              Conversion of pedestal to 3D (VHF).
+     2.10          October 2011               Tyre smoke effect (by C. Schmitt).
+                                              3D wheel chocks.
+                                              Conversion of pedestal to 3D (INS).
+     2.9           November 2010              Alternate liveries.
+     2.8           September 2010             Contrails (by V. Meazza).
+                                              Exhausts (by C. Schmitt).
+                                              Fuel temperature.
+     2.7           March 2010                 Smoke effect.
+                                              2D/3D cockpit textures with relief (by T. Renk).
+                                              2nd observer view.
+                                              Steering, pushback.
+                                              Looking ahead smooths autopilot heading modes.
+                                              Autoignition, wheel chocks, ADC failure,
+                                              reverse in flight, compass.
+     2.6           January 2009               Transformers (26 volts), fuel pumps (XML).
+                                              Flight control system failure.
+                                              Virtual crew completes the normal checklists.
+     2.5           May 2008                   3D wipers, yokes and throttle cylinder.
+                                              Ground idle (only 4 engines at once).
+                                              Each autopilot has its own instruments.
+                                              INS alignment and failure, discharge valves.
+                                              Virtual crew spaces out his tasks.
+     2.4           September 2007             First version using maintenance manual.
+                                              3D seats and crew.
+                                              Warning lights have 2 light levels.
+                                              Intake failure (only 4 engines at once).
+                                              Tank and engine valves (crossfeed).
+                                              2nd pressurization system, anti-icing.
+                                              Engine rating, hydraulics (XML), brake temperature.
+     2.3           January 2007               3D flood lights.
+                                              Warning lights are emissive by night.
+                                              Observer view.
+                                              Each autopilot has its own NAV frequency.
+                                              VRP at nose, longer front gear.
+                                              Air conditioning, depressurization.
+                                              Virtual crew performs the essential tasks.
+                                              Voice callouts.
+                                              Menu.
+     2.2           April 2006                 Lighting (internal and external).
+                                              Cockpit textures.
+                                              Full cockpit (3D vibrations at subsonic speed
+                                              restricted to only 2D instruments,
+                                              magnified per view, in a backward far plan).
+                                              Autoland has a gradual pitch below 500 ft.
+                                              Air bleed, electrical system (XML).
+     2.1           November 2005              Copilot and steward views.
+                                              Text in alarm textures, 1st instrument textures.
+                                              Electrical system (JSBSim), hydraulics, fuel pumps.
+                                              Virtual copilot during 4 engines flame out.
+     2.0           January 2005               First version using flight manual.
+                                              Engineer and overhead views.
+                                              Optimization of instruments.
+                                              Instruments dynamic with the view angle.
+     1.2           October 2004               3D cockpit.
+     1.1           September 2004             Cabin altitude.
+     1.0           July 2004                  FDM, 2D panel.
+                                              Fuel transfer (center of gravity, tank interconnect).
+                                              Autoland.
+                   October 2003               3D aircraft.
+===================================================================================================

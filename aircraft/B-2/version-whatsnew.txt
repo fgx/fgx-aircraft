@@ -1,0 +1,47 @@
+XXXXXX B-2 Spirit (YASim) readme XXXXXX
+XXXXXX      Spirit Of Flight     XXXXXX
+XXXXXX       AD INEXPLORATA      XXXXXX
+
+
+XXXXXX  Version Nr: 0011 20022007 XXXXXX
+
+- new version: from 00 to 01/subversion 1
+- introducing flymodes :-)
+- new textures
+- new instruments
+- some clickable panels
+- updated model
+- minor changes to most files
+
+XXXXXX  Version Nr: 0005 07022007 XXXXXX
+
+- range/fuel load now match approx
+- added flying-HOWTO
+- JN added
+
+XXXXXX  Version Nr: 0004 05022007 XXXXXX
+
+- bug-fix: added rudder-trim reset when other autopilot modes are selected (led to unmanagable controls)
+
+XXXXXX  Version Nr: 0003 04022007 XXXXXX
+
+- 2 autopilot modes: 
+	> startup with bug-yaw-control already engaged/ rudder input possible (nav1-hold misuse) (Ctrl-n) -suitable for approach / takeoff
+	> switch to heading-yaw-control in flight (Ctrl w)/ no rudder input possible (wing-leveler misuse)
+- brighter nav lights
+- new FOV 60
+
+
+XXXXXX  Version Nr: 0002 01022007 XXXXXX
+
+- fixed submodels: AGM-154 now usable - still experimental
+- autopilot wing-leveler now misused to correct sideslip/yaw since some people had difficulties
+	> just fire it up at takeoff! (it needs to be balanced though)
+- adjusted approach speed and elevator
+
+
+
+
+Have Fun! Good Luck!
+
+Markus Zojer,  28/01/2007

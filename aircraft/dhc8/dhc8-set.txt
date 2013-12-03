@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+de Havilland DHC8-300Q
+Oct 2008 Alex Park
+FDM based on Sid Adams Twin Otter DHC6 adapted for the Dash8 - 300Q
+************************************************************************
+-->
+
+<PropertyList include="dhc8-base.xml">
+    <sim>
+        <description>DHC8-300Q</description>
+        <status>developement</status>
+        <author>Alex Park</author>
+        <flight-model>yasim</flight-model>
+        <aero>dhc8</aero>
+        <fuel-fraction>0.5</fuel-fraction>
+        <startup>
+            <splash-texture>Aircraft/dhc8/splash.rgb</splash-texture>
+        </startup>
+
+    <model>
+        <path>Aircraft/dhc8/Models/dhc8-300Q.xml</path>
+
+
+        <remove-doors type="bool">0</remove-doors>
+    </model>
+
+    <hitches>
+        <aerotow>
+            <tow>
+                <length type="float">60</length>
+                <elastic-constant type="float">10000</elastic-constant>
+                <weight-per-m-kg-m type="float">1</weight-per-m-kg-m>
+                <dist type="float">1</dist>
+                <connected-to-property-node type="bool"></connected-to-property-node>
+                <brake-force type="float">100000</brake-force>
+                <connected-to-ai-or-mp-callsign type ="string">*</connected-to-ai-or-mp-callsign>
+                <end-force-x type ="float">0</end-force-x>
+                <end-force-y type ="float">0</end-force-y>
+                <end-force-z type ="float">0</end-force-z>
+            </tow>
+            <speed-in-tow-direction type="float">0</speed-in-tow-direction>
+            <open type="bool">true</open>
+            <local-pos-x type="float">0</local-pos-x>
+            <local-pos-y type="float">0</local-pos-y>
+            <local-pos-z type="float">0</local-pos-z>
+            <is-slave type="bool">false</is-slave>
+        </aerotow>
+    </hitches>
+
+    <menubar>
+        <default>
+            <menu n="10">
+                <label>DHC-8</label>
+                <enabled type="bool">true</enabled>
+                <item>
+                    <label>Autostart</label>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>sim/model/start-idling</property>
+                    </binding>
+                </item>
+                <item>
+                    <label>Remove Rear Doors</label>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>sim/model/remove-doors</property>
+                    </binding>
+                </item>
+                <item>
+                    <label>Wipers On/Off</label>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>controls/electric/wipers/switch</property>
+                    </binding>
+                </item>
+                <item>
+                    <label>Select Livery</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>aircraft.livery.dialog.toggle()</script>
+                    </binding>
+                </item>
+            </menu>
+        </default>
+    </menubar>
+
+</sim>
+
+<controls>
+        <gear>
+            <brake-parking>1</brake-parking>
+        </gear>
+</controls>
+
+<input>
+    <keyboard>
+        <key n="79">
+            <name>O</name>
+            <desc>Open aerotow hook</desc>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/hitches/aerotow/open</property>
+                <value type="bool">true</value>
+            </binding>
+        </key>
+        <key n="111">
+            <name>o</name>
+            <desc>Lock aerotow hook</desc>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/hitches/aerotow/open</property>
+                <value type="bool">false</value>
+            </binding>
+        </key>
+    </keyboard>
+</input>
+<input>
+ <keyboard>
+  <key n="119">
+   <name>w</name>
+    <desc>Walk forward toward view</desc>
+    <repeatable>true</repeatable>
+    <binding>
+     <command>nasal</command>
+     <script>walk.walk_about(0.1)</script>
+    </binding>
+  </key>
+  <key n="87">
+   <name>W</name>
+   <desc>Walk backward from view</desc>
+   <repeatable>true</repeatable>
+   <binding>
+    <command>nasal</command>
+    <script>walk.walk_about(-0.1)</script>
+   </binding>
+  </key>
+ </keyboard>
+</input>
+
+<engines>
+    <engine n="0">
+      <rpm>1000</rpm>
+      <reverser-position type="double">0.000000</reverser-position>
+    </engine>
+    <engine n="1">
+      <rpm>1000</rpm>
+      <reverser-position type="double">0.000000</reverser-position>
+    </engine>
+  </engines>
+
+  <input>
+    <keyboard>
+      <key n="127">
+        <name>Delete</name>
+        <desc>Toggle Reversers</desc>
+        <binding>
+          <command>nasal</command>
+          <script>reversethrust.togglereverser()</script>
+        </binding>
+      </key>
+    </keyboard>
+  </input>
+
+    <nasal>
+        <dhc8>
+            <file>Aircraft/dhc8/Nasal/Electrical.nas</file>
+            <file>Aircraft/dhc8/Nasal/systems.nas</file>
+		<file>Aircraft/dhc8/Nasal/walk.nas</file>
+            <file>Aircraft/dhc8/Nasal/vhf22.nas</file>
+            <file>Aircraft/dhc8/Nasal/vir32.nas</file>
+ 		<file>Aircraft/dhc8/Nasal/M877.nas</file>
+		<file>Aircraft/dhc8/Nasal/reverse-thrust.nas</file>
+            <file>Aircraft/Instruments-3d/clock/M877/M877.nas</file>
+        </dhc8>
+    </nasal>
+
+  
+
+
+  <hitch name="aerotow" x="-6.2" y="0" z="-0.12"  force-is-calculated-by-other="1">
+  <tow length="60" weight-per-meter="0.035" elastic-constant="9000" break-force="10000" mp-auto-connect-period="1.0"/>
+  <winch max-tow-length="1000" min-tow-length="60" initial-tow-length="60"/>
+</hitch>
+
+</PropertyList>

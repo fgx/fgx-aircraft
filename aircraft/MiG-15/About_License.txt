@@ -1,0 +1,20 @@
+About license.
+
+MiG-15 is distributable under terms of GPL license.
+
+Skins or liveries of MiG-15bis is distributable as part of product under terms of GPL license.
+
+Metal texture used is heavily modified texture by Mayang Murni Adnin from http://mayang.com/textures/ site.
+Original mayang.com license allows to redistribute it as part of nonpicture product without any issues.
+Original license allows to redistribute it as standalone picture with giving to end user information about original authors way similar to that document do.
+Original license forbids redistributing by way as original site do, so texture itself can not be uploaded to any textures redistribution site.
+For other questions about texture distributing solving read original license on http://mayang.com/textures/
+
+Sounds or liveries of MiG-15bis is distributable as part of product under terms of GPL license.
+
+Sounds of MiG-15bis is mostly free sounds from common sources what is redistributable without issues. Some sounds is from other FG GPL licensed models as Lightning and Su-37 and can be redistributed without issues too. Engine sounds copied from http://www.youtube.com/watch?v=ogxM8priM6Y by jaba149 personal permission. It You want to redistribute it as part of other plane it would be good to ask original video author. Since permission was given to including sounds to GPL product then it's no obligatory. Still it would be good to ask first to make respect for good man.
+
+If You want to overwrite textures or sounds by some else images or sounds from external sources please be sure that images and sounds is freely redistributable to avoid copyright problems.
+
+With best regards,
+	Slavutinsky Victor

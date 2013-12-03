@@ -1,0 +1,155 @@
+
+=====================
+2005-Jun-11
+
+Added switches for nav lights and landing lights with hotspots. Also included
+NASAL to drive the landing light behavior.
+
+Minor changes to some cockpit objects in the .ac file.
+
+Added NASAL to make the p-brake behave more realistically. You now have to depress the pedals
+before putting on the brake for it to stick, and touching the brakes also turns the brake off.
+
+
+
+=====================
+2005-Jun-13
+
+Finished landing gear light material animation.
+
+Animated cowl and intercooler flaps (that was a chore)
+
+Added rudimentary AI to simulate the engineer controlling the cowl and intercooler flaps.
+
+Fixed the tail insignia for "Lucky Lady", now a circle as in real life.
+
+More minor model and texturing changes.
+
+=====================
+2005-Jun-20
+
+Made new custom ASI.
+
+Made new turn and slip instrument.
+
+Made new alt instrument.
+
+Made new clock.
+
+Made new VSI.
+
+Made more changes to cabin interior.
+
+=====================
+2005-Jun-27
+
+Added the cockpit floor hatch and animated it. It's quite attractive.
+
+Made some adjustments to the struts on the canopy
+
+Added tail gunner's gunsight
+
+Made changes to the .ac postprocessor to easily add custom crease angles and overwrite materials.
+
+Fixed the landing gear light behavior by adding a master safe to land light and removing the tailskid light.
+
+Added some more struts to the MLG, tweaked the wheel well for more realism and so they'd fit.
+
+=====================
+2005-Jun-27
+
+
+=====================
+2005-Jun-27
+
+
+=====================
+2005-Jun-27
+
+
+=====================
+2005-Jun-29
+
+Installed a new gyro compass dial.
+
+Install a new mag compass dial.
+
+Added multiple pilot views. Access via 'j' (for jump) key.
+
+Added flaps position indicator.
+
+Added instantaneous controls for the flaps. You now have to hold down the flaps up/down key.
+
+
+=====================
+2005-Jul-01
+
+Cleaned up controls.flapsDown function overload.
+
+Animated flaps switch and added clickable zones.
+
+
+=====================
+2005-Jul-25
+
+Animated boost dial and added boost hostspots to panel.
+
+Added MP and RPM guages.
+
+Added the blind landing indicator.
+
+=====================
+2005-Jul-29
+
+Added attitude indicator, complete with cageing knob and flag animations.
+
+Added PDI instrument. It doesn't do anything yet, because there is no bombing
+AI.
+
+Animated crew entry ladder.
+
+Added Flux Gate Compass instrument.
+
+Added the Radio Compass. It is implemented as a simple ADF without a rotating
+dial.
+
+Remodeled Mag Compass to be more historically accurate.
+
+Remodeled Heading Indicator to be more historically accurate.
+
+Cut holes in pilot panels and did away with old temporary alpha channel panel.
+
+=====================
+2006-Feb-03
+
+Remodeled pilot's and bombadier's seats to be more accurate.
+
+Added a control box for the ADF, with animated dial.
+
+Started a basic b29-sound.xml file. Much more to come.
+
+Applied Vivian's engine changes (Thanks Vivian!) and made some adjustments to the FDM config.
+
+Added noshadow animations for a multitude of objects.
+
+Finally fixed the prop animations. They fade in/out, are layered over the engines and each other correctly and of course spin. No prop pitch though, that's just too much work for now.
+
+Added more detail to the brake pedal animation.
+
+Repaired main gear animation.
+
+
+=====================
+2006-Mar-20
+
+Enlarged Bomb Bay.
+
+Added two bomb loadaouts, both the models and the data for the weights.
+
+Started a set of nasal calls to drop bombs and handle the animation/submodel triggers, as well as to update the YASim weights.
+
+Started a submodel configuration for both loadouts.
+
+Nasalized the view offset and fov control so that you zoom in on the pilot's head, but zoom out to the ac's cg. There's even a special mode that centers on the bomb bay when the doors open!
+
+Chromed some fixtures in the cockpit.

@@ -1,0 +1,91 @@
+DC-3/C-47
+FDM by Gary Neely (Buckaroo)
+
+Flying Notes
+
+Speeds (KIAS):
+  Vs0    64 (some sources down to 58)
+  V1/V2  84
+  Va     120
+  Vno    158
+  Vne    190
+  Vf     135 (one-quarter flaps)
+  Vf     99 (half flaps)
+  Vf     97 (full flaps)
+  Vlo    126
+
+Landing Gear down at no more than VNE.
+
+G limits:
+  flaps up    +2.83/-0.83G
+  flaps down  +1.58/-0.44G
+
+Service ceiling: 24,800', 12,500' on one engine. Note that with the single-stage blower, these are rather optimistic altitudes. A ceiling of 15,000' is more reasonable.
+
+Max crosswind: 13 kts
+Max tailwind when landing: 9 kts
+
+Power Settings:
+			MP	RPM			HP	GPH (estimate)
+			--	---			--	---
+Max TO power		48"	2700 for 1 minute	1200	180
+Normal rated (METO)	41-42"	2550			1050	157.5
+Initial climb		36"	2350			800	120
+Normal climb		31"	2050			700	105
+Cruise			30-33"	2050 (to 10,000')	625	94
+
+Minimum idle RPM: ~550
+Max RPM in Auto Lean: 2050
+
+
+This is a fairly docile, easy to fly plane. With practice, it's easy to taxi. It should exhibit no odd or difficult behavior. Please view the flying notes below for hints on handling.
+
+
+Taxiing
+
+Ground handling of the DC-3 is not hard but does require a little practice. The tail wheel of the DC-3 is not steerable, nor is it coupled to the rudder. Using the rudder control will not steer your plane on the ground. The key to ground handling is the use of differential engine power. When making a turn on the ground, unlock the tail wheel (the lower-case L key on the keyboard) and add a little power to the engine on the outside of the turn. For example, if turning left, add power to the right engine. As soon as the plane begins to turn, back off power and prepare to add a little correctional power to the opposite engine to arrest the turn. You can use differential braking to assist a turn, but brakes should be applied sparingly and lightly. Brakes can be used to correct straight-ahead taxiing, but use them lightly. For taxiing in a straight line, you may wish to lock the tail wheel. Make very sure your tail wheel is locked before and during flight! Taxi using full-rich, full RPM settings.
+
+
+Take Off
+
+Set props to full-fine (max RPM). Flaps are normally not required for takeoff. For short fields, the first indicated flap setting may be used. Make sure the tail wheel is in the locked position. Mixture should be in the auto-rich position (full rich). Use maximum takeoff power (48" and 2700 RPM) for up to 1 minute. If maximum power is not required, use the alternate and generally recommended takeoff power settings of 42" and 2700 RPM. Release the brakes and let the plane come up to speed, holding the elevator back slightly and allow the plane to lift itself off. Normal lift-off speed is around 80 kts. Raise the gear as soon as possible.
+
+
+Climb
+
+After takeoff, reduce power to 36" then reduce RPM to 2350. Always reduce power before reducing RPM. For a more economical climb, use 31" and 2050 RPM. Maintain a climb speed of at least 95 kts. Fuel boost pumps may be turned off.
+
+
+Cruise
+
+Upon reaching the desired cruising altitude, reduce MP as necessary, typically 30-31", and set RPM to 2050. Set mixture to auto-lean. If engine temps are less than 200C, retract cowl flaps. Depending on conditions, max cruise is about 165 kts indicated.
+
+
+Landing
+
+Make sure the tail wheel is locked. Turn fuel boost pumps on. Set mixture to auto-rich. Lower gear at 120 kts or less. Enter the pattern at 110 knots or so, and maintain that speed. Set flaps as desired, typically the first indicated position (1/4 max) when entering the pattern. See V-speeds above for flap settings. On approach, reduce power then reduce RPM to 1800 to 2000. As throttles are closed for landing, increase propeller settings to full RPM, in case a go-around proves necessary. Land at about 70 kts. The DC-3 should be landed on the main wheels, tail-low if desired, but should not be three-pointed. When setting up for final approach, it may help to set some landing trim.
+
+After touch-down, avoid using the brakes until airspeed has fallen off considerably. Hold the elevator well back and apply brakes lightly. If using a keyboard, it may help to alternatively touch the right and left brake, or 'pump' the brakes to avoid using 100% braking force which may cause the plane to nose-over.
+
+
+Stalls
+
+Stalls with full flaps are around 58 knots. Generally beware of stalls at flight speeds under 64 knots. Pilot reports suggest stalls are a somewhat hard to get into without a lot nose up trim, but could be memorable once they occur. The nose pitches down and there is a significant to severe wing drop. Clean stalls aren't so bad, but full-flap, power-on stalls are nasty if one muscled into them. In general, a stall should exhibit a wing drop, so be prepared and if practicing stall, make sure you have sufficient altitude to recover.
+
+
+Other Notes
+
+The above values and recommendations vary quite a bit depending on the source and the DC-3/C-47 configuration and engines. These are guidelines meant to accompany my FDM to ensure a reasonable flight profile. Note that the FDM currently does not yet include provisions for cargo, so this is a fairly lightly loaded aircraft.
+
+If you don't follow the above recommendations, particularly with regard to power settings, the DC-3 may seem over-powered. It's important to judge the FDM against normal flight profiles and power settings, since a simulation can be flown at maximum power and RPM all day without any negative effects. Also, the Pratt & Whitney R-1830 Twin Wasps have are geared and supercharged and have a lot of power at very low altitudes. They should be handled with respect. Also bear in mind that no cargo provisions are currently specified. Cargo doesn't change the handling of the DC-3 by a lot, but obviously it will have some effect.
+
+Note that YASim does a lousy job with low-power manifold pressure ranges where vacuum can be reported as absurdly low values. Bear that in mind when using low-power settings.
+
+For additional notes on my DC-3 flight simulation, see the actual FDM file.
+
+Gary Neely "Buckaroo"
+
+April 2012
+
+
+

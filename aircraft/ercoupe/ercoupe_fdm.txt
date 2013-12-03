@@ -1,0 +1,14 @@
+Elevators limited to +/- 13 degrees
+Remove rudder input and couple to aileron input
+Remove rudder steering and couple to aileron input
+Remove flaps 
+Remove lift from speedbrakes.  Ercoupe windows will open in flight, the speedbrake will simulate this.
+
+Adjust weights based on www.ercoupe.net/ads/Log-94106.pdf
+Adjusted locations of all fdm items based on the type certificate and model measurements
+
+Added third fuel tank
+
+Stiffened nose gear by 50% based on model observations
+
+Adjusted drag due to speed brake deflection to yield a 10 mph drop in speed during stable flight at 100 mph.

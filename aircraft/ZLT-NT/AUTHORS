@@ -1,0 +1,32 @@
+Anders Gidenstam  (anders(at)gidenstam.org)
+  - ZLT-NT FlightGear configuration
+  - ZLT-NT Flight Dynamics Model configuration
+  - ZLT-NT 3d model
+
+Alexis Bory
+  - The Scania mast truck 3d model.
+
+The model borrows content from the following authors' contributions
+to FlightGear:
+
+Syd Adams
+  - RMI instrument.
+  - VHF-22 comm radio.
+  - VIR-32 nav radio.
+  - ADF-462 ADF radio.
+  - TDR-94 transponder.
+  - Primus-1000 PFD and associated scripts.
+  - KDI-572 DME indicator
+
+Jon S. Berndt et. al.
+  - FDM engine and original propeller definition. (From JSBSim-CVS)
+
+David Megginson
+  - Propeller 3d models. (From c172p)
+
+Gijs de Rooy
+  - Models/Lights/ navigation, beacon and strobe lights. (From 747-400)
+
+Dependencies:
+
+Aircraft/CitationX       (Nasal/flightdirector.nas,Models/Instruments/fmc.xml)

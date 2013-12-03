@@ -1,0 +1,85 @@
+HAWKER HUNTER GA11 - PILOT'S NOTES 
+
+BACKGROUND 
+
+The Hunter GA11 was an operational training aircraft operated by the 
+Royal Navy from the early 1960's to the mid 1990s. More information can 
+be found here: http://www.fradu-hunters.co.uk/index.html or here: 
+http://www.thunder-and-lightnings.co.uk/hunter/survivors.html . 
+The Royal Navy's GA11s were converted from surplus Royal Air Force F4s, 
+and were given the distinctive saw-tooth wing leading edge of the F6 
+while retaining the lower-powered Rolls Royce Avon RA 7 giving about 
+7500lbs of thrust. The gun pack was removed, and an arrestor hook added 
+(for airfield use only - the GA11 was not capable of carrier 
+operations). This is the aircraft modelled. 
+
+FDM 
+
+Currently YASIM only. 
+
+CONTROLS 
+
+The following additional keyboard controls have been implemented: 
+· [/]: extend/retract flaps in 10 degree steps. 
+· F/f: canopy open/close 
+· O/o: hook extend/retract - operational - but there is no catapult lauch mechanism -
+if you land on a carrier, you can't take off again.
+· CTRL F: emergency flap lowering. Operation of this control gives 
+a once-only lowering of the flaps to maximum. It disables the 
+normal flap extension, and cannot be reversed. 
+· CTRL B: toggle speed brake is implemented, and is interlocked 
+with the undercarriage so that it cannot be extended while the 
+latter is down. The reverse is not true (yet). There are 2 
+warning lights on the port instrument panel indicating the 
+interaction of these 2 items. 
+
+OPERATION 
+
+Start-up. 
+
+The model starts with engine running at ground idle, and with brakes 
+ON. 
+
+Take-off. 
+
+Select 10 deg flap. Maximum take off power is 7950 rpm. (NOTE: the RPM 
+instrument is of the clock type showing true RPM NOT %n1.) The model 
+will swing to port as it accelerates. Use differential braking (,/.) to 
+keep straight until about 100kts IAS when there is sufficient rudder 
+authority. Rotate gently at about 150kts IAS. 
+
+	WARNING: there is a lot of aircraft behind the main wheels, and 
+	it is	easy to impact the runway with the tail bumper. 
+
+Flight. 
+
+Pitch trim is heavily affected by power settings. You will need to 
+adjust pitch trim constantly. The model is unstable in roll, and cannot 
+be trimmed hands-off. Use the wing leveller. 
+
+Landing. 
+
+	Approach: 
+		Glide slope 3 degs 
+		Speed: 140 kts IAS 
+		AOA: +3 degs 
+		Flap: full 
+
+	Touchdown: 
+	
+		Speed: 130 kts IAS 
+		AoA +15 degs 
+		Vertical Speed -0.5 - -1.0 fps 
+
+ACKNOWLEDGEMENTS 
+
+Thanks are due to: 
+	David Cooper who helped build the aircraft (the original, not the 
+	model), 
+	Colin Newnes who flew the aircraft, and whose memory has been stretched 
+	to recall some obscure details, 
+	Lee Elliott some of whose Seahawk model has found its way into this 
+	one, and 
+	Jim Wilson, whose P51d instruments formed the basis of some of the 
+	Hunter instruments. 
+

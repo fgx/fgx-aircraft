@@ -1,0 +1,68 @@
+STARTING N7764P
+===============
+
+The pa24-250 Comanche model is loaded with the fuel selector "Off" and all the electrical switches "Off"; just the way we leave the real N7764P in the hangar. There is a useful "help" file that loads if you select "Help > Aircraft Help" from the menu bar.  Starting instructions and how to highlight "hot spots" as well as a table of keyboard bindings are then displayed.  
+
+N7764P Flap Controls
+====================
+This Comanche has electric flaps that move as long as the switch is depressed.  If you use either the flap switch "hot spot", the keys "[" or "]", or a flap control associated with a joystick, the flaps operate as in the real AC.
+
+BACKGROUND INFORMATION
+======================
+The Piper Comanche 250 is a four-seat, retractable-gear "high-performance" aircraft often called the "poor-man's Bonanza". Until the flood of the Lockhaven, PA plant, this was the high end of the Piper single engine line. Piper first introduced a 180 hp four cylinder version produced from 1957 to 1964 with a gross weight of 2550 lbs that was some what under powered.  The next year, Piper upped the power with a Lycoming O-540-A (250 hp, normally aspirated) which was produced from 1958 to 1960 with a gross weight of 2800 lbs.  In 1962, the 250 gross weight was upped to 2900 lbs with the addition of two outboard tanks increasing the usable fuel to 86 gallons. This is the version modeled.  Both fuel-injected and normally aspirated Comanche 250s were manufactured from 1962 to 1964.  Piper repeated this pattern with the Comanche 260s introduced in 1965 with gross weight the same as the 250 Comanche followed by the 260B in 1966 at a gross weight of 3100 lbs and a 260C in 1969 with a gross weight of 3200 lbs.  Piper added a 260T (turbo charged) in 1970.  In addition, Piper made a few 8 cylinder Comanche 400's in 1964-65. 
+
+Like other Piper low-wings, the Comanche is a gentle but very solid feeling instrument platform with strong pitch stability to the point that the auto pilot does not really need the pitch axis. It has a great glide clean (gear up and no flaps and prop at high pitch - pulled all the way back).  One must plan ahead and get the AC slowed up well before the outer marker as the max gear extension speed is 150 mph and once the descent on glide slope starts, it is very hard to lose extra speed so you can lower the gear.  I like to drop the manifold pressure to 16 in. for the procedure turn and drop the gear 2 minutes from the outer marker, and then add 15 degrees of flaps 1 minute from the outer marker.  You can usually leave the manifold pressure at 16 and fly down the glide slope with the yoke in the real AC.
+
+PERSONAL NOTE
+=============
+I was a flight instructor and and charter pilot for Des Moines Flying Service in the summers of 1966-68 and flew many charters in all these models.  When I decided to buy into a partnership on a high-performance single engine two years ago, I looked for one of these venerable Comanche's.  This fgfs pa24-250 is modeled after that AC which is hangared 1/2 mile from my Seagate Technology office in Longmont, CO.  My two partners both work for Seagate and we sometimes fly to the Greeley, CO. airport (GXY) for lunch.  We are all instrument rated and fly safety pilot for each other to stay current.
+
+
+
+PIPER COMANCHE 250 (1962 MODEL) PERFORMANCE DATA
+================================================
+
+Here are the numbers from the Piper POH:
+
+Speeds
+------			 mph IAS	KIAS
+  Vne (never exceed):    227 		197		
+  Vno (max. cruise):     180		156
+  Vfe (max. flaps):      125		108
+  Vlo (ldg. gear op.):   150		130
+  Va (maneuvering):      144    	125
+  Vs (clean stall):       71		 62
+  Vso (landing stall):    63 		 55
+  Vglide (best glide):   100		 87
+  Vx (best climb angle):  85		 74
+  Vy (best climb rate):  105		 91
+  Vr (rotation)		  74		 85
+  Enroute climb:         120		104
+  Approach (no flaps):    95		 83
+  Approach (full flaps):  82		 71
+
+  Cruise (75%, 7000 ft): max MP, 2400 RPM (181 mph TAS, 157 KTAS)
+  Cruise (55%, 14,000 ft): max MP, 2400 RPM (163 mph TAS, 141 KTAS)
+
+Power
+-----
+  Take off:                  full
+  Climb:                     full
+  75% power at 8,000 ft:     2665 rpm
+  75% power at 4,000 ft:     2570 rpm
+  75% power at sea level:    2480 rpm
+  55% power at 12,000 ft:    2470 rpm
+  55% power at 8,000 ft:     2375 rpm
+  55% power at 4,000 ft:     2285 rpm
+  55% power at sea level:    2195 rpm
+
+Fuel
+----
+  Total fuel:                90 gal US
+  Usable fuel:               86 gal US
+  Grade:                     100LL/100 (Avgas)
+  GPH 75%        14.0 gph available up to 7,000 Density Altitude
+  GPH 65%        12.0 gph available up to 10,000 Density Altitude
+  GPH 55%	 10.0 gph available up to 14,000 Density Altitude
+  Maximum Approved Flight Level 220 (22,000 MSL)
+

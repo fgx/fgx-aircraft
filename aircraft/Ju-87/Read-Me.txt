@@ -1,0 +1,85 @@
+English/Français
+
+[English]
+----------
+
+A little history
+================
+
+Junker Ju 87 "Stuka"
+====================
+
+Manufacturer                  : Junker
+Type                          : 
+Year                          : 
+Powerplant                    : 
+Wingspan                      : 
+Length                        : 
+Height                        : 
+Loaded weight                 : 
+Cruise speed                  : 
+Range                         : 
+Crew                          : 
+
+Some useful keys:
+=================
+
+d      : Open/Close canopy
+Space  : Fire guns
+Ctrl e : Drop bomb
+
+Thanks
+======
+
+Rex LACTAOEN for system guns and bomb
+
+===============
+BARANGER Emmanuel
+May, 15, 2009
+Febrary, 22, 2010
+
+http://helijah.free.fr/flightgear/hangar.htm
+embaranger@free.fr
+
+
+[Français]
+----------
+
+Un peu d'histoire
+=================
+
+Junker Ju 87 "Stuka"
+====================
+
+Constructeur                  : Junker
+Type                          : 
+Année                         : 
+Moteur                        : 
+Envergure                     : 
+Longueur                      : 
+Hauteur                       : 
+Poids estimé au décollage     : 
+Vitesse estimée de croisière  : 
+Autonomie estimée             : 
+Equipage                      : 
+
+
+Quelques touches utiles :
+=========================
+
+d      : Ouverture/Fermeture de verrière
+Espace : Tir des mitrailleuses
+Ctrl e : Lacher la bombe
+
+Remerciements
+=============
+
+Rex LACTAOEN pour le système d'arme et de bombe.
+
+===============
+BARANGER Emmanuel
+15 Mai 2009.
+22 Fevrier 2010.
+
+http://helijah.free.fr/flightgear/hangar.htm
+embaranger@free.fr

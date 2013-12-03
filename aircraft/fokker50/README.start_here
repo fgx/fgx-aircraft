@@ -1,0 +1,12 @@
+Notes on the FGFS Fokker 50 Project
+
+This project is based on Erik Hofman's original F50 model for the Fokker 50.
+Erik's work included a good external model, a Denim paint scheme, and a useable FDM.
+
+I am working on an accurate F50 cockpit, and will turn my attention next to a new FDM, making the ERP (engine rating panel- for engine and prop management) and finally other cosmetic details.  Currently, the aircraft is quite flyable- see the in-game aircraft help for a few tips- but there is plenty still to do.  Please note that if you would like to test out the Fokker, please use the VLM version, as this is the one that I am concentrating on.
+
+If you have something to contribute, your input will be most welcome- join in at the FlightGear forums!  See the contributors file for acknowledgements.  I would particularly welcome help debugging the aircraft in version 1.0, as I am concentrating on developing for cvs/osg.
+
+Regards
+Charlie Andrews
+charlie.andrews1@tiscali.co.uk

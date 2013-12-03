@@ -1,0 +1,103 @@
+<pre>
+======================================================
+= Beech 99                                           =
+= for FlightGear with LaRCsim and the UIUC Aeromodel =
+=                                                    =
+= Flight model by:                                   =
+= Michael Selig, et al. (m-selig@uiuc.edu)           =
+= <a href="http://www.aae.uiuc.edu/m-selig/apasim.html">http://www.aae.uiuc.edu/m-selig/apasim.html</a>        =
+======================================================
+
+To run, try:
+
+fgfs --aircraft=beech99-v1-uiuc
+
+Files and directory structure required in $FG_ROOT/Aircraft/ to fly the
+model:
+
+beech99-v1-uiuc-set.xml
+beech99/Sounds/uiuc/beech99-sound.xml
+UIUC/beech99-v1/aircraft.dat
+
+These files above come with the FlightGear base package.
+
+Files and directory structure required in $FG_ROOT/Aircraft/ to see the
+external 3D model:
+
+beech99/Models/uiuc/beech99/beech99.ac
+beech99/Models/uiuc/beech99/beech99.air
+beech99/Models/uiuc/beech99/beech99.loc
+beech99/Models/uiuc/beech99/beech99.ppeloc
+beech99/Models/uiuc/beech99/beech_990.rgb
+beech99/Models/uiuc/beech99/beech_991.rgb
+beech99/Models/uiuc/beech99/beech_992.rgb
+beech99/Models/uiuc/beech99/beech_993.rgb
+beech99/Models/uiuc/beech99/beech_994.rgb
+beech99/Models/uiuc/beech99/beech_995.rgb
+beech99/Models/uiuc/beech99/beech_996.rgb
+beech99/Models/uiuc/beech99/beech_997.rgb
+beech99/Models/uiuc/beech99/beech_998.rgb
+beech99/Models/uiuc/beech99/beech_999.rgb
+beech99/Models/uiuc/beech99/beech99-model.xml
+
+These files can be obtained from Wolfram Kuss' website here:
+
+<a href="http://home.t-online.de/home/Wolfram.Kuss/">http://home.t-online.de/home/Wolfram.Kuss/</a>
+
+The 3D model is here:
+
+<a href="http://home.t-online.de/home/Wolfram.Kuss/FGFS1/FGFS1.htm">http://home.t-online.de/home/Wolfram.Kuss/FGFS1/FGFS1.htm</a>
+
+Download the zip file and model files in the directory indicated
+above.  Under linux, the files from zip archive might need to be
+renamed to lower case (if they are not already that way).  Renaming to
+lower case will be necessary if FlightGear crashes when trying to read
+the texture files.
+
+To use the new aircraft model and not the default Opus glider, edit the
+beech99-v1-uiuc-set.xml file and change the string:
+
+"Aircraft/UIUC/Models/opus/opus-model.xml"
+
+to 
+
+"Aircraft/beech99/Models/uiuc/beech99/beech99-model.xml"
+
+after the model files have been installed.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Model description and updates:
+
+5/25/02 - First release: v1
+
+* "Linear model" meaning that constants are use for stability
+  derivatives.  The chief drawback of this type of model is that stall
+  is not properly modeled, and as a consequence an unrealistically
+  high lift coefficient is produced when the aircraft is at a high
+  angle of attack.  As a result the aircraft can fly much more slowly
+  than in real life.
+
+* Model largely built from: "Small twin turboprop commuter airplan"
+  data from: Roskam, J., Airplane Flight Dynamics and Automatic Flight
+  Controls, Part I, DARcorporation, Lawrence, KS, 1995, pg 508-510.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+**************************************************
+ Prof. Michael S. Selig
+ Dept. of Aerospace Engineering
+ University of Illinois at Urbana-Champaign
+ 306 Talbot Laboratory
+ 104 South Wright Street
+ Urbana, IL 61801-2935
+ (217) 244-5757 (o), (509) 691-1373 (fax)
+ m-selig@uiuc.edu
+ <a href="http://www.uiuc.edu/~m-selig">http://www.uiuc.edu/~m-selig</a>
+**************************************************
+
+</pre>
+

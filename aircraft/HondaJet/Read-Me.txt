@@ -1,0 +1,79 @@
+English/Français
+
+[English]
+----------
+
+A little history
+================
+
+Honda Jet
+=========
+
+Manufacturer                  : Honda
+Type                          : Jet
+Year                          : 
+Powerplant                    : HF120 by GE-Honda (1,880 lb each, 
+Wingspan                      : 39.87 ft
+Length                        : 41.70 ft
+Height                        : 13.21 ft
+weight                        : 
+Service ceiling               : 43,000 ft
+Cruise speed                  : 420kt(TAS) @ 30,000 ft (maximum)
+Rate of climb                 : 3,990 ft/min
+Take-off distance             : 3,120 ft
+Landing distance              : 2,500 ft
+Range                         : 1,400nm (VFR), 1,180nm(IFR)
+Crew                          : 2
+
+Some useful keys:
+=================
+
+Thanks
+======
+
+===============
+BARANGER Emmanuel
+January, 29, 2008. 
+
+http://helijah.free.fr/flightgear/hangar.htm
+embaranger@free.fr
+
+
+[Français]
+----------
+
+Un peu d'histoire
+=================
+
+Honda Jet
+=========
+
+Constructeur                  : Honda
+Type                          : Jet
+Année                         :
+Moteur                        : HF120 par GE-Honda (850 kg chaque) 
+Envergure                     : 12.15 m
+Longueur                      : 12.71 m
+Hauteur                       :  4.03 m
+Poids                         :
+Altitude de croisière         : 14 0000 m
+Vitesse de croisière          : 420kt(TAS) @ 30,000 ft (maximum)
+Rate of climb                 : 1210 m/min
+Atterrissage                  : 950 m
+Décollagec                    : 760 m
+Autonomie                     : 1,400nm (VFR), 1,180nm(IFR)
+Equipage                      : 2
+
+
+Quelques touches utiles :
+=========================
+
+Remerciements
+=============
+
+===============
+BARANGER Emmanuel
+29 Janvier 2008.
+
+http://helijah.free.fr/flightgear/hangar.htm
+embaranger@free.fr

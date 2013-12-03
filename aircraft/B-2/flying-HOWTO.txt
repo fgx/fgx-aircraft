@@ -1,0 +1,113 @@
+XXXXXX B-2 Spirit (YASim) readme XXXXXX
+XXXXXX      Spirit Of Flight     XXXXXX
+XXXXXX       AD INEXPLORATA      XXXXXX
+
+
+XXXX FLYING HOWTO XXXX
+
+This guide should aid you to control the aircraft:
+The conditions change slightly with different fuel loads, speeds and altitude conditions.
+
+XXXX NEW FLYMODE FLYING HOWTO XXXX
+----------------------------------
+
+We have 5 flymodes now to control this plane. They aid you in most situations, so just click on the flymode desired  (clickable buttons at top left) and it should be highlighted indicating that it is active. Basically we have 2 flymodes in air: FL(manual flight) and AP(autopilot)(AS similar to AP), and 2 special modes for ground interaction: TO and LA.
+
+-TAKEOFF(TO)-
+
+This flymode set gears, brakes and speed automatically as required by the situation. All you have to do is hold direction and altitude. Align with the runway and push the button: This should accelerate you, rotation done manually at 160kias, at 210kias gears are retracted automatically and TAKEOFF mode disables itself. TO is the only flymode that can be activated while on ground.
+
+-LANDING(LA)-
+
+Once enabled this flymode set gears, airbrakes and speed automatically until you touch down. Just fly a shallow approach (controlling direction and altitude), the rest is done for you. If you miss your approach (too high or fast), stay above 300ft agl and do a go around (=speed will be at least 160kias). In case you are just above the runway, do a touchdown and hit TAKEOFF which brings you to speed again and take off for another approach.
+
+-FLIGHT(FL)-
+
+This mode represents manual flight mode in which most settings can be adjusted manually. Only the stabilizer is activated automatically when switching to that mode. At takeoff the autopilot switches to this mode by default, on ground it is disabled automatically. It is combined with TO or LA in air. Switching to AP mode disables FL mode.
+
+-AUTOPILOT(AP)-
+
+Autopilot controlled flight: stabilizers, heading and altitude enabled by default, speed can be added manually. Can be combined with LA mode. Switching to FL automatically disables AP mode. 
+
+-AUTOPILOT/STEALTH(AS)-
+
+Experimental at the moment, it represents a more stringent autopilot, that controls itself (speed cant be changed) and only little input is possible. This is required to maintain stealth attitude. Switched off by switching to AP only!
+
+Comment: All you have to do is to switch between FL, AP and AS(not finished yet, but works) in flight. On ground you can use the TO mode (you can also take off manually) to take off. To land activate the LA mode (you will have to try several times until you get used to it) or land manually (recommended for short strips, steep/fast approaches).
+Clickable buttons are misloaded sometimes, so you have to click above the buttons. At the moment 5 flymode buttons, left and lower middle instrument buttons are clickable.
+
+
+XXXX OLD MANUAL FLYING HOWTO XXXX
+---------------------------------
+TAKEOFF:	x Release parking brake
+		x Apply full throttle (assuming that you are at the start of the runway)
+		x Rotate at 160kts (with full fuel load, else 140/150)
+		x Correct yaw/sideslip with rudder control (drag)
+		x Autopilot aids you in sideslip/yaw has to corrected by yourself
+		x Takeoff length with full fuel load approx. 6500ft
+		x Retract gear at end of runway or at 200kts
+		x Ctrl w toggles the autopilot which corrects sideslip/yaw = easier to fly
+			enabled by default; 
+		x Climb at 3-4 degrees or approx.2000ft/min (for 0-6000ft 3000ft/min)
+		x Over 20000ft climb with 2000ft/m(above 30000ft 1000ft/m)
+
+Comment:
+The takeoff process may be a bit more difficult than in "regular" aircraft since shortly after takeoff the direction of your plane has to be aligned with the "real" direction you are heading. This is best archived with rudder and a bit of aileron. The plane tends to yaw, depending on the manouver you flying, so stay alert to correct with rudder control and if necessary aileron.
+
+X-------------------------------------------------------X
+
+FLIGHT:		x Apply 0.4 to 0.7 throttle
+		x For longer distances relax and use the autopilot ;)
+		x For terrain following flights close to the ground use 1/3 fuel
+		x Use 1 step spoilers when necessary
+
+Comment:
+At the moment 2 main distinguishable flight modes are available: Fully autopilot controlled flight, which should help you to fly efficiently over looong distances, controlled via true or bug heading.
+The second AP flymode is stability control via spoilers. The default (and in my opinion much more suitable) mode is toggled by Ctrl w(wing-leveler) and supports you in manual flight. It can be used for takeoff, approach ground dodging flight, but take into consideration that you have to have to control the yaw angle, since it can be affected by your manouvers. 
+
+A word to manouvers: Fly in Ctrl w mode and stay alert for yaw. The plane tends to a straight climb in sharp turns, this can be best controlled by elevator(push down) combined with rudder/spoiler. With a bit of practice there is no difficulty in controlling this plane, just get a feeling on how it reacts and be gentle with your actions:-).
+
+X-------------------------------------------------------X
+
+APPROACH:	x Use spoilers to decelerate/ cut throttle
+		x Below 230kts extract gears
+		x Use a glideslope around -2 degrees pitch (shallow approach)
+		x Over runway use full spoilers to decelerate
+		x Touchdown at 160 to 140kts (with little fuel 130kts)
+
+Note: The aircraft tends to stay airborne so you have to force it down a bit, like in the fighter planes: use a shallow approach!
+
+Important note: If you fly manually and loose control over the yaw/sideslip momentum, just keep the pitch up around 2-3 degrees and keep the plane level to the ground and you won't crash(hopefully)! Now try to compensate yaw to get in control again!
+
+X-------------------------------------------------------X
+
+REFUELING:	x Open fuel hatch (o)
+		x Apply 1 step spoilers (k)
+		x Align with the tanker
+		x refuel indicator should pop up in upperleft display, indicating refueling envelope
+		x ...try to stay calm ;-)
+
+Comment:
+When being aligned with the tankes don't change your throttle setting too much, switch between spoiler steps 1-3 using j/k instead as they tend to react faster.
+
+XXXX FEATURES XXXX
+
+
+j/k 	decrease/increase spoilers
+o 	open/close fuel hatch
+O	open/close cockpit access hatch
+Ctrl d 	open/close bomb bay doors
+Ctrl j	launches 2 AGM-154 missiles (10 sec delay) - experimental
+Ctrl w 	enables autopilot which corrects sideslip/rudder input possible
+rudder control  drag spoilers
+flap control	GLAS used to pitch down 0/5/10/15/20/25
+spoilers	0/0.25/0.5/0.75/1
+fuel flow is shown in gallons/h
+fuel capacity is shown in lb/h
+refueling light F00L upper left, when in refueling radius
+refueling code not added because fuel flow is frozen
+
+
+Have Fun! Good Luck!
+
+Markus Zojer,  06/02/2007

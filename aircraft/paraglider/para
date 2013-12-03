@@ -1,0 +1,23 @@
+#!/bin/bash
+
+cmdline="
+--fg-root=/home/dave/FlightGear/data
+--aircraft=paraglider-jsbsim
+--airport-id=KSFO
+--in-air
+--notrim
+--altitude=1000
+--heading=280
+--uBody=10
+--wBody=8
+--geometry=1024x768
+--visibility-miles=10.0
+--enable-sound
+--disable-clouds
+--disable-hud
+--start-date-gmt=2003:01:20:16:00:00
+"
+
+/home/dave/bin/fgfs $cmdline
+exit 0
+

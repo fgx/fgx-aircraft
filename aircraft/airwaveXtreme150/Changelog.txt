@@ -1,0 +1,63 @@
+Changes July 2013 by D-NXKT:
+
+- improved ground handling: walking mode 
+- recover after crash
+- Change "on ground"-variable in multiplayer 
+  (modification is NOT downward compatible)
+- transmit properties kingpost, single surface and wheels over multiplayer
+
+
+Changes August 2012 by D-NXKT:
+
+- make JSBSim-Version the default (airwaveXtreme150-set.xml)
+
+
+Changes July 2012 by D-NXKT:
+
+- Enable multiplayer (animations and variants but NOT for individual settings)
+- Possibility to autosave individual settings
+- Make generic panel visible on demand in all views and view directions
+- Model: Tried to get rid of sail intersections at wing tip (seen with ATI cards)
+- Minor corrections in "Performance Settings" (Metric units set immediately)
+- Minor corrections for harness (reduced texture fighting / modified prone animation)
+- New thumbnail.jpg and splash.png
+   
+   
+Changes June 2012 by D-NXKT:
+
+- conversion from UIUC to JSBSim
+- more realistic appearance (e.g. twisted wing)
+- added kingpost, single surface, wheels, parachute
+- added legs and shoes
+- running animation
+- added harness-view and wing-tip-view
+- view animation
+- highly configurable (different versions)
+- added performance settings (glide-ratio, weight, sail-area)
+- added whack sound
+
+
+Changes February 2012 by D-NXKT:
+
+- convert model hgdlr_cs.mdl to hgdlr_cs.ac
+- convert textures hgdlr_cs.0af to hgdlr_cs0.rgb
+- convert textures hgdlr_cs.1af to hgdlr_cs1.rgb
+- add missing pilot-neck and back-wires
+- retexturing
+- repainting
+- shifting cg of model to origin (0,0,0)
+- rotate model to fit (visible) incidence
+- adapt contact points
+- pilot animation
+- additional view (keel view)
+- fdm unchanged!
+- add aircraft help
+- add aircraft status
+- add splash.png
+- update thumbnail.jpg
+
+
+
+
+
+

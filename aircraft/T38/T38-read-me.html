@@ -1,0 +1,181 @@
+<HTML>
+<HEAD></HEAD>
+<BODY>
+<H3>Northrop T-38 Talon (JSBSim Model)</H3>
+Version 1.2, released 16 October 2003
+<BR><BR>
+
+Configuration files for the FlightGear flight simulator 
+<A HREF="http://www.flightgear.org/">www.flightgear.org</A>.<BR>
+By David Culp, April 2003,  <A HREF="mailto:davidculp2@attbi.com">
+davidculp2@attbi.com</A><BR>
+License:  GPL  (see <A HREF="http://www.gnu.org/licenses/gpl.html">
+http://www.gnu.org/licenses/gpl.html<A/>)<BR>
+<BR>
+<HR>
+<H3>Overview</H3>
+This is a first attempt at using a single archive to distribute all the
+files needed to model an aircraft in FlightGear. This archive should be
+extracted into directory $FGROOT/Aircraft/T38.  The engine file will then need to be moved
+to the $FGROOT/Engine directory.  Eventually FlightGear will be able to keep all the files for an
+airplane in one directory.
+<BR><BR>
+<HR>
+<H3>Contents</H3>
+<TABLE BORDER WIDTH=100%>
+<TR>
+ <TH WIDTH=25%>filename</TH>
+ <TH WIDTH=45%>description</TH>
+ <TH WIDTH=30%>placement</TH>
+</TR>
+<TR>
+ <TD>T38-read-me.html</TD>
+ <TD>This Readme file</TD>
+ <TD>$FGROOT/Aircraft/T38</TD>
+</TR>
+<TR>
+ <TD>T38.xml</TD>
+ <TD>The flight model</TD>
+ <TD>$FGROOT/Aircraft/T38</TD>
+</TR>
+<TR>
+ <TD>T38-set.xml</TD>
+ <TD>An alias for the main configuration file</TD>
+ <TD>$FGROOT/Aircraft/T38</TD>
+</TR>
+<TR>
+ <TD>T38-jsbsim-set.xml</TD>
+ <TD>The main configuration file</TD>
+ <TD>$FGROOT/Aircraft/T38</TD>
+</TR>
+<TR>
+ <TD>T38-sound.xml</TD>
+ <TD>The sound configuration file</TD>
+ <TD>$FGROOT/Aircraft/T38</TD>
+</TR>
+<TR>
+ <TD>T38-electrical.xml</TD>
+ <TD>The electrical system (unused)</TD>
+ <TD>$FGROOT/Aircraft/T38</TD>
+</TR>
+<TR>
+ <TD>J85-GE-5_sim.xml</TD>
+ <TD>The engine configuration file</TD>
+ <TD>$FGROOT/Engine</TD>
+</TR>
+<TR>
+ <TD>t38</TD>
+ <TD>A Unix/Linux shell script for fgfs</TD>
+ <TD>~</TD>
+</TR>
+</TABLE>
+<BR>
+
+
+<TABLE BORDER WIDTH=100%>
+<TR>
+ <TH WIDTH=25%>directory name</TH>
+ <TH WIDTH=45%>description</TH>
+ <TH WIDTH=30%>placement</TH>
+</TR>
+<TR>
+ <TD>Sounds</TD>
+ <TD>Contains .wav files and sound configuration for the T-38</TD>
+ <TD>$FGROOT/Aircraft/T38</TD>
+</TR>
+<TR>
+ <TD>Panels</TD>
+ <TD>Contains the T-38 instrument panel configuration</TD>
+ <TD>$FGROOT/Aircraft/T38</TD>
+</TR>
+<TR>
+ <TD>Models</TD>
+ <TD>Contains the T-38 3D model</TD>
+ <TD>$FGROOT/Aircraft/T38</TD>
+</TR>
+<TR>
+ <TD>Instruments</TD>
+ <TD>Contains T-38-specific instruments</TD>
+ <TD>$FGROOT/Aircraft/T38</TD>
+</TR>
+</TABLE>
+<BR>
+
+<HR>
+<H3>Bugs</H3>
+I'm still fairly new to FlightGear, so some of these "bugs" may actually
+be features :)
+<BR><BR>
+<TABLE BORDER=1 WIDTH=100%>
+<TR>
+ <TH WIDTH=40%>bug</TH>
+ <TH WIDTH=60%>status</TH>
+</TR>
+<TR>
+ <TD>3D model has some bugs</TD>
+ <TD>The model is a reskinned version of the Captain Slug AT-38, with modifications by Innis Cunningham,
+  who converted the model from MDL to AC3D format and added animations and a cockpit.
+  There are missing gear doors. It could use gear sequencing.  Some texture missing from aft
+  fuselage. 
+</TD>
+</TR>
+<TR>
+ <TD>The ADI falls apart above about +/-20 degrees of pitch</TD> 
+ <TD>Texture cropping is not available yet for 2D cockpits</TD>
+</TR>
+<TR>
+ <TD>The instrument panel is too small</TD>
+ <TD>This is actually a feature :)  It is meant to increase 
+     visibility over the nose.</TD>
+</TR>
+<TR>
+ <TD>T-38's don't have that instrument at the right side of the panel</TD>
+ <TD>That's for flight test only.  If you don't want it there just comment
+     out the "Aero data" instrument in T38-panel.xml.</TD>
+</TR>
+<TR>
+ <TD>Where's the cheezy AOA Christmas tree?</TD>
+ <TD>Ignored for now.</TD>
+</TR>
+<TR>
+ <TD>The VOR doesn't work</TD>
+ <TD>Working on it.</TD>
+</TR>
+<TR>
+ <TD>The altimeter digital readout is out of sync</TD>
+ <TD>Rounding error.  A 'truncate' unary operator is needed.</TD>
+</TR>
+</TABLE>
+<BR><HR>
+
+<H3>Flying the T-38</H3>
+Apply full throttle, afterburner is optional but recommended until 300 knots.  Rotate at 140 knots
+.  When airborne raise gear and flaps immediately.  Be carefull not to sink after initial flap
+ retraction. Climb at a shallow angle, less than 1000 fpm, until reaching 300 knots, then
+climb at 300 knots to 0.8 Mach.  To land fly downwind at 300 knots clean, on base slow to
+200 knots, extending gear and half flaps passing through 220 knots. On final
+extend full flaps and slow to 160 knots.<BR><BR>
+I recommend using the "hat switch" on your joystick to control stabilizer
+trim.  I know most people like to use it for view changes, but you can't
+fly a jet without lots of stab trimming.
+<BR><BR>
+Let me know if you'd like more features, and if you have recent time in the T-38
+let me know if this model flies reasonably close to the real airplane.
+<BR><BR>
+
+<H3>Notes</H3>
+The engine model uses the FGSimTurbine module of JSBSim.  The afterburner
+can be activated in one of two ways, as defined by the AUGMETHOD value in
+the engine configuration file.<BR><BR>
+The "AOA buffet" sound activates at an AOA of 5.7 degrees.  The sound
+should be a lower frequency buffet, and maybe I'll find the right sound 
+someday.  As far as the activation AOA, it's only a guess.<BR><BR>
+The light in the gear handle activates whenever throttle[0] is at idle
+and the gear handle is up.  Not exactly how it works in the real airplane,
+but close.<BR><BR>
+ 
+
+<BR><BR><HR>
+16 Oct 2003
+</BODY>
+</HTML>

@@ -1,0 +1,10 @@
+dc8-73.xml
+Primary JSBSim FDM description.
+
+dc8-73-set.xml
+FlightGear aircraft config.
+
+Models/dc8-73.xml
+Aircraft model config.
+
+

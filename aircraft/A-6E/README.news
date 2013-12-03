@@ -1,0 +1,74 @@
+
+2007/11/05
+----------
+- PHD (Pilot Horizontal Display) more optimizations, dotd are not displayed
+    outside the screen anymore.
+- Navigator view, begining of the navigator panel, one external air temperature
+    gauge, and the Doppler Panel wich shows the wind induced drift and the
+    ground speed.
+- The autopilot wich has only few capabilities, maintain altitude and/or bank
+    angle.
+- Added the machmeter feature to the Air Speed indicator.
+
+2007/05/29
+----------
+- VDI (Vertical display indicator).
+- PHD (Pilot Horizontal Display)
+    Displays only Terrain Clearance Mode, crashes FG OSG with a range > 1.5
+    miles. Can be turned off via the controls on the right side of the main
+    panel:
+        HORIZONTAL: - off or standby (disables the nasal loop).
+                    - Display scale miles (with OSG a range greater than
+                      1.5 makes FG crash.
+	
+	
+ 
+- loads of knew things.
+
+2007/04/07
+----------
+- External livery: black are lighter, 'AJ' letters are green as they should
+  be.
+- Under-carriage animations fixed for FG-PLIB branch.
+- Cokpit: Canopy frames improved, added a clock, tunned the Air-speed indicator.
+  Added the begining of the VDI (Vertical Display indicator) I will explain all
+  it's functions in the wiki later. Note this is the early version of the VDI.
+  (A6-Es with TRAM revision have another VDI, model IP-722/AVA-1 wich looks more
+  'professional' and as lot more symbols.)
+- Added the overall geometry of the optical sight.
+- Better pilots with nice gloves and semi articulated members.
+
+
+2007/03/29
+----------
+- Fuselage and wings design nearly finished. I have to model the antennas
+  and the lights. Wheels don't spin yet.
+- External textures almost finished too.
+- Cockpit: only the fives ones: Alti, Airspeed, Vario, Attitude, Gyro, and
+  a sixth, a Radar Altimeter. Useful as you can't set your Barometric
+  Altimeter yet.
+- FDM: begins to be sweet now, thanks to inflight 'auto-moving-cheating' C.G.
+- External fuel tanks (TY Andy).  
+
+
+2007/03/17
+----------
+- First commit in Flightgear CVS
+- External view:
+  - animations: rudder, elevator, flaps, tail hook.
+- FDM:
+  - launch bar, tail hook.
+- AoA indexer
+
+
+
+2007/03/07
+----------
+
+- first try to display the model within FGFS. Work on the landing gears.
+
+
+january 2007
+------------
+
+- Begining of the re-modeling of the aircraft on the base of Vivian's KA6-D.

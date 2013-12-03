@@ -1,0 +1,110 @@
+Rockwell B-1B Lancer "The Bone"
+
+XXXXXX  Version Nr: 0019 20032010 XXXXXX
+
+News/updates: Major update
+
+- terrain following script rewritten
+- guided ordonance system rewritten
+- exterior model texture improvenments
+- new instruments(IKB + MFD) for WSO position
+- cdu-900 prototype for nav/com input/display
+- radar now sorts for distance, displays closest
+
+XXXXXX  Version Nr: 0018 20102010 XXXXXX
+
+News/updates: Major update
+
+- FDM adjusted
+- now only guided ordonance available
+- cockpit updated
+- lots of small bugs removed
+
+XXXXXX  Version Nr: 0017 06122008 XXXXXX
+
+News/updates: Experimental update
+
+- weapon dialogs introduced
+- launch system updated
+- textures added
+- target display added
+
+XXXXXX  Version Nr: 0016 08102008 XXXXXX
+
+News/updates: Experimental update
+
+- guided weapons system introduced
+- automated launch system
+- sniper pod added
+
+XXXXXX  Version Nr: 0015 20082008 XXXXXX
+
+News/updates: Major update
+
+- Aft bay added
+- OSO panel and display
+- Functional weapon system (only unguided GBU31 at the moment)
+- Impact model relies on the vulcan-b2 installed
+- Tank locations updated
+- NUC panel in cockpit now shows time/nm to waypoint
+
+XXXXXX  Version Nr: 0014 06072008 XXXXXX
+
+News/updates: Major update
+
+- Cockpit/WSO cabin improvements (pilots and seats captured from f-14;))
+- Cockpit access ladder
+- Fire warning/extinguish system
+- Rear landing gear doors / gear with animation
+- Forward and Intermediate Weapon Bay
+- Refuel system serviceable
+- Engine start sequence available
+- Countless fixes I cant remember
+
+XXXXXX  Version Nr: 0013 16042008 XXXXXX
+
+News/updates: Minor update
+
+- New engine outlets
+- Converted .osg to .xml files
+- Cockpit improved
+- Countless little adjustments
+
+XXXXXX  Version Nr: 0012 03032008 XXXXXX
+
+News/updates: Major update
+
+- New 3D model by pauljs75
+- Cockpit remodelled
+- Experimental FCGMS control uses real fuel now to establish CG
+- Windscreen rain amimation (preview) and sound
+- Terrain following system rewritten, now a bit unprecise in clearing crests
+- Radar now shows MP aircraft +/- 1000ft as orange, above blue, below green
+- Throttle handle added, flaps and sweep handle positioned at correct position
+- tacan instrument ARN-118 added, converted to OSG from XIIIs plib version
+- gears and some aircraft body parts textured
+
+
+XXXXXX  Version Nr: 0011 24112007 XXXXXX
+
+News/updates: Major update
+
+- Improoved and adjusted FDM
+- Instrument lights switchable
+- Added strobe and position lights (switchable)
+- Remapping/Misuse of properties in order to get them displayed correctly in multiplayer
+- Wing sweep weight distribution modelled (wings and fuel tanks)
+- Center of Gravity display and experimental FCGMS control
+- terrain following system now works also on water
+- tons of little bugfixes and adjustments
+
+Todo: (incomlete/most urgent)
+- Fuel management system needs to be written (nasal), that provides fuel pumps to and from tanks
+- Finer 3D Model needs to be added
+- Electric systems need modelling
+
+-----------------------------------------
+
+Have Fun! Good Luck!
+
+Markus Zojer,  03/03/2008

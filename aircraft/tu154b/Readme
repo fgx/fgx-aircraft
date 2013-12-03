@@ -1,0 +1,56 @@
+
+********************** Tu-154b v.3.0 *******************************************
+
+Welcome to world of Russian Aviation!
+
+Before use of model, you MUST read documentation: Docs/tu154eng.pdf - in English, Docs/tu154rus.pdf - in Russian. 
+There are Project Tupolev docs in Docs/PT_Docs for SVN version of model. If you want to get more information about plane and PT model for MSFS sim,
+you should read it.
+
+This is a very complex model, and it's not intended for beginners.
+
+******************************** Installation ***********************************
+
+This model intend for FlightGear version 2.12 and devel. It does not support old FlightGear version (1.9.1, 2.0 or late), and 
+you would not replace FDM file. If you want use older FG version, you may download appropriate version from 
+http://yurik.flightgear.ru/tu154b-release/.
+
+For our foreign friends, Don Lavelle has create set of textures. It translate most of signes in cabin to English, take care about right terminology. 
+Unpack english_pack.tar.gz and copy and replase all files to model directory.
+
+********************************** LICENSE ***************************************
+
+Roman Skoryh, author of original visual model of Tu-154B for Project Tupolev, gave permission for distribution of this model under GPL license.
+Since version 3.0, released at jule 2013, Tu-154b for FlightGear is distributed under GPL.
+
+********************************** Authors ***************************************
+
+Yurik V. Nikiforoff aka Yurik_nsk - FDM, 2d & 3d instruments, animations, systems and over.
+
+Alfated - textures, animations, testing.
+
+Vitaliy.May and Co - new splash-screen, GPL liveries.
+
+Soitanen.Michael - testing and help.
+
+Ruslan Gnatovsky aka Gnat - nasal electrical system.
+
+Russian FlightGear community: BOG, Magic, VaLeo, AlexTochka, RealMike, AirAlex, Schneider, vlad32768,
+CAXAP, DimkaS - beta-testing.
+
+Stalker198033 - picture for old splash-screen.
+
+English pack - Don Lavelle aka Karla (www.flightgear.org)
+
+Project Tupolev staff:
+
+Roman Skoryh - visual model, permission for GPL.
+Stepan Gritsevsky - NVU and instruments guru.
+Big thanks to Dmitry Kolesnik aka TenderCat - for consulting and support.
+
+Welcome to http://flightgear.ru/forum !
+
+Yurik_NSK, your humble author.
+yurik.nsk@gmail.com
+
+Jule 2013

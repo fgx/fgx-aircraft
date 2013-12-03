@@ -1,0 +1,149 @@
+<pre>
+======================================================
+= C-GPTR Ornithopter                                 =
+= for FlightGear with LaRCsim and the UIUC Aeromodel =
+=                                                    =
+= Flight model by:                                   =
+= Michael Selig, et al. (m-selig@uiuc.edu)           =
+= <a href="http://www.aae.uiuc.edu/m-selig/apasim.html">http://www.aae.uiuc.edu/m-selig/apasim.html</a>     =
+=                                                    =
+= External model by:                                 =
+= Lee Elliott                                        =
+======================================================
+
+To run, try:
+
+fgfs --aircraft=ornithopter-uiuc
+
+Files and directory structure required in $FG_ROOT/Aircraft/ to fly the
+model:
+
+ornithopter-uiuc-set.xml
+ornithopter/Models/C-GPTR-8-4.ac
+ornithopter/Models/ornithopter-8-4-model.xml
+ornithopter/Models/C-GPTR-003.rgb
+ornithopter/Sounds/ornithopter-sound.xml
+UIUC/ornithopter/aircraft.dat
+UIUC/ornithopter/flap.dat
+UIUC/ornithopter/README.orni.html
+
+These files above come with the FlightGear base package.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Model description and updates:
+
+6/3/03: First FGFS release, as outlined in an email to the FlightGear
+mailing list:
+
+Earlier today I added an ornithopter model to FlightGear.  The model
+simulates the full scale piloted C-GPTR ornithopter designed by Prof
+DeLaurier and his group at the University of Toronto Institute for
+Aerospace Studies (UTIAS).
+
+A web link detailing the design is here: http://www.ornithopter.net
+
+Credits for the simulation model go to:
+
+- Prof DeLaurier and his group for input on several topics ranging
+  from aerodynamics to mass data to gear parameters and more
+
+- Rambod Larijani (UTIAS) for the predicted force and moment data
+  produced by the flapping wing (lift, thrust, moment and inertia).
+  This data is encapsulated in a 9 MB file (124,000 lines give or take
+  a few).  He did this work for his PhD.
+
+- Theresa Robinson (UTIAS) for writing the 4D interpolation code that
+  finds the force/moment data as a function of airspeed, flapping
+  frequency, wing phase, and angle of attack.  This effort was part of
+  her MS work.
+
+- Rob Deters (UIUC) for taking Theresa's code and integrating it w/
+  FlightGear (LaRCsim/UIUC-Aeromodel)
+
+- Lee Elliott for making the wonderful 3D model w/ all the trimmings,
+  including sponsor logos, stabilator mass balancers, nicely detailed
+  front nose gear strut, pilot, twisted wings, and much more.
+
+- My work involved pulling all of this data together and making sense
+  of it.  I also added in aero characteristics and other data to fill
+  in the gaps.  An interesting part was working out the model
+  animations using Matlab to find the positions for all the flapping
+  wing bits, which were then put into the -model.xml file.  The
+  illusion of wing twist is created by flapping 5 different wings
+  together, but only one is displayed at any given time depending on
+  the phase in the flapping cycle.
+
+- Of course, thanks go the FlightGear group for the wonderful
+  infrastructure that made it all work!
+
+Things to note:
+
+- The flapping wing data is limited to certain parameter ranges which
+  are:
+
+  Angle of Attack: -15 to 15 deg
+  Velocity: 5 to 100 ft/s
+  Flapping Frequency: 0.8 to 1.25 Hz
+  Phase: 0 to 360 deg
+
+  It is easy to pitch up into a high angle of attack regime, in which
+  case, the simulation is going to be off.  If the angle of attack or
+  velocity goes outside this range, then the last interpolated values
+  are held.  The throttle controls the flapping frequency from 0.8 to
+  1.25 Hz, so it is not possible to stop the wings.
+
+- In high speed taxi trails of the real aircraft, one of the
+  challenges has been setting up the optimum undercarriage
+  configuration and characteristics (spring and damping
+  characteristics).  For certain setups, the aircraft will bounce on
+  the nose wheel or "hop" on all three wheels.  These pesky
+  tendencies, which have led to airframe damage, which can be
+  demonstrated by changing the front gear strut length in the
+  aircraft.dat file.
+
+- As the wings flap up and down, the ornithopter center of gravity
+  moves in sync like a bird.  This behavior can be sensed from the
+  cockpit, and in the HUD the g-load can be seen to vary from ~0.7 to
+  ~1.3g.  When viewing the aircraft in chase mode, it's not so easy to
+  sense and see this effect because the target spot is centered on the
+  screen and held fixed to the center of gravity.  In this view it is
+  actually the ground that appears to be moving.
+
+- The goal of the real bird is to be the first full-scale piloted
+  ornithopter.  If it happens this year (and flight attempts are
+  planned) ... well then, it only took 100 yrs since the last group was
+  trying it.  Clearly separating lift from thrust is the easier route.
+  We have the Wright Brothers to thank for that.
+  
+- One other thought, it's worth mentioning that this type of airplane is
+  not envisioned as an "ultra-light" for the masses.  The handling
+  qualities leave a couple of things to be desired.  In pitch, it has
+  massive authority by design.  A full-flying stabilator design can be
+  set to trim for any position, which ultimately might not match the
+  engineering predictions for this first of type.  So in the design
+  there's inherently room for error, and hence the pitch/trim authority
+  is conservative.  As for lateral/directional control, it does not have
+  much.  But come to think of it neither did the 1903 Wright Flyer.  The
+  goal of the C-GPTR ornithopter is to fly once in a straight flight
+  down the runway.  The mission is simple: takeoff, fly straight, land.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+**************************************************
+ Prof. Michael S. Selig
+ Dept. of Aerospace Engineering
+ University of Illinois at Urbana-Champaign
+ 306 Talbot Laboratory
+ 104 South Wright Street
+ Urbana, IL 61801-2935
+ (217) 244-5757 (o), (509) 691-1373 (fax)
+ m-selig@uiuc.edu
+ <a href="http://www.aae.uiuc.edu/m-selig">http://www.aae.uiuc.edu/m-selig</a>
+**************************************************
+
+</pre>
+

@@ -1,0 +1,21 @@
+This model is released under the terms of the GPLv2
+Copyright by Detlef Faber
+
+OSG Users can klick on the Door Handles to open/close the Doors.
+
+to do list
+	
+- cablage des interrupteurs : 
+	-couper le trim par les touches (suivant <property>/instrumentation/trim/serviceable</property> )
+	-alimentation du gps
+							
+- finir le gps kln90a ou faire une autre gps ...
+	
+a voir
+
+- qu'est ce qui se passe si on branche l'alternateur lorsque le starter est en route ?
+- finir l'annunciator (la lampe verte a droite de fuel pump) deice ?
+
+
+
+	

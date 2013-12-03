@@ -1,0 +1,15 @@
+     Version           CVS date                   Milestone
+================================================================================================
+     2.1               October 2013               VHF.
+     2.0               October 2011               First version using flight manual.
+                                                  Tyre smoke effect.
+                                                  Conversion of pedestal to 3D.
+                                                  Looking ahead smooths autopilot heading modes.
+                                                  INS.
+     1.2               March 2010                 FDM 2.0 (747 coefficients),
+                                                  body gear and nose wheel steering, pushback.
+     1.1               February 2008              3D cockpit, with seats, yokes, levers,
+                                                  and a few warning lights.
+     1.0               December 2006              Aircraft, FDM, 2D panel.
+================================================================================================
+

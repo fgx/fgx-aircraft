@@ -1,0 +1,135 @@
+Special aircraft keys
+Shift-S Autmatic start sequence including all systems (the aircraft needs to be stationary and fuel cut off.)
+Shift_L Attache or remove droptanks on ground. (Stationary and fuel cut off.)
+Ctrl-J Jettison droptanks in air.
+Ctrl-D Unlocks and opens/closes and locks canopy. Closed and locked canopy - first press unlocks second opens canopy. Closed and unlocked canopy at simulation start - first press locks. Open canopy - first press closes canopy second locks 
+Shift-Q Fuel cut off, not normally needed
+
+Special indicators
+GLÖM EJ LAND-STÄLL: ("Do not forget landing gear") flashes if altitude < 1450 m, airspeed < 450 km/h and throttle < 85%
+
+HUVUDVARN.: Main caution light. Indicates important system warnings. See below.
+
+HÖJDV: Flashes when target altitude is not 0 and aircraft not at target altitude. Lit when stable at target altitude.
+
+Gauges and instruments
+Fuel gauge: Shows percent of droptanks left until they are empty if attached. Otherwise percent of internal fuel remaining.
+
+G-gauge: Max G-force is displayed by a striped needle. Reset by clicking the small reset pin on the right side of the instrument.
+
+Altitude gauge: Pressure setting is done by clicking left or right side of the setting knob (lower left of he instrument).
+
+AHK
+The real AHK (swe.Avstånd Höjd Kommando, eng. distance altitude command), on the right side of the radar, was an instrument connected to the Swedish air combat control centers (The system is part of "STRIL60"). It gave tactical information to the pilot by 20 different commands, displayed as words at the top of the instrument, and also the distance scale and the arrow needle on the height scale. Some of the commands are reused  as instrument modes.
+In all modes the "HÖJD" (altitude) scale shows pressure-altitude. Dot-needle from 0-2000 m and tape-needle from 0-20000 m.
+Modes: 0 (zero), HÖJDÄNDRING (altitude change), LANDA (land)
+Click the command text to change mode.
+0: Only altitude shown
+HÖJDÄNDRING: Arrow shows height reached in one minute at current vertical speed. Scale 0-20000 m. "AVST" tape shows distance over ground to change altitude 1000 m at current vertical speed. Speed over ground calculated from IAS using standard atmosphere.
+LANDA: Arrow shows height reached in one minute at current vertical speed. Scale 0-2000 m.
+"AVST" tape shows distance over ground until tuchdown at sealevel and current vertical speed. Speed over ground calculated from IAS using standard atmosphere.
+AVST. 400: Arrow shows height reached in one minute at current vertical speed. AVST tape shows distance to beacon 0-400 km.
+AVSTÅND 40: Arrow shows height reached in one minute at current vertical speed. AVST tape shows distance to beacon 0-40 km.
+BARBRO: Arrow shows height reached in one minute at current vertical speed, scale 0-2000 m. AVST tape shows distance to beacon 0-40 km.
+NYTT MÅL: Arrow shows Route Manager cruise altitude 0- 20000 m. AVST shows distance 0-400 km to next Route Manager waypoint.
+
+Altitude selector
+Right side below secondary AI. Sets target altitude for autopilot.
+
+Course selector
+Below Heading indicator. Sets course needle on the heading indicator (compass).
+
+Caution panel
+Lower right. Shows system cautions and warnings.
+Those with * in front triggers main caution light:
+*BRAND MOTOR: (fire engine) not implemented
+*BRAND EBK P: (fire afterburner pump) not implemented
+STYR AUT: (autopilot) autopilot off
+MOTOR IS: (engine ice) engine deicing on not implemented yet
+*TANK LUFT: (tank air) airpressure fault in fuel system. Not implemented
+*OLJE TRYCK: (oil pressure) low oil pressure.
+EBK: (afterburner) Indicates that the exhaust nozzle is working as AB is turned off or on
+or open when idle on the ground to keep engine from overheating. (Not lit constantly when using AB.)
+*SYR GAS: (oxygen pressure) not implemented
+*EL FEL: (electric fault) fault in AC circuit or generator off.
+*HYDR I, HYDR II: (hydraulic I and II) Low pressure in hydraulic circuit
+*KABIN TRYCK: (cabin pressure) Cabin pressure too low. Not implemented.
+*HUV LÅS: (canopy lock) canopy not locked.
+TANK LUFT, OLJE TRYCK, EL FEL, HYDR I and HYDR II will be lit when engine not running. But should go off when engine starts.
+
+
+Radar
+Showing a sweep and antenna azimut.
+In multiplayer the radar shows aircrafts in radar range: dist < 40 km, +-60 deg in yaw, +-30 deg in pitch and > 100 m above ground.
+Prepared for more functions but no setting input etc. implemented.
+Yellow lines are nav indicators. Not implemented
+
+Autopilot
+The autopilot is on the right side of the seat and has the following functions and controls:
+HÖJD: Altitude hold
+ATTITYD: Attitude hold- pitch and roll
+DÄMPN: Pitch and yaw-damper on. This is on in all normal flightconditions
+SVÄNG: Banks the aircraft in attitude mode
+NOS: Pitch setting in attitude mode
+FRÅN TILL: Main autopilot switch. Normally left on.
+ROLL: Roll trim elevon setting
+GIR: Rudder trim setting
+Middle mouse button zeros the slider/knob.
+IMPORTANT: The autopilot has an automatic switch to only damping if airspeed is Mach 0.95-1.05 or G-force is above 4 G or below -0.5 G. No warning is given.
+
+At present the autopilot is not as stable as it should be, especially altitude hold.
+
+Navigation radio and mode selector
+3D model right side panel below cautions. Main mode selector for navigation, AHK and radar.
+Draken does not have ordinary navigation instruments. It has a special system that was integrated in the combat command and navigation system of the Swedish airforce. A letter code was used to select navigation beacons and airbase landing system. There was two parts of the system: Anita - general navigation and Barbro - landing guidance.
+
+To simulate this and still be compatible with FG there is a file beacons.txt in the aircraft's directory. In that file you write a line for each beacon you want to use. The format is a comma separated list:
+letter code,type,frequenzy,note
+letter code: Three letters A-P that identifies the beacon. Anita (VOR, NDB) does only use the first two (you can set the last to any character you want). Barbro (ILS) uses all three.
+type: VOR, NDB or ILS.
+frequency: The beacons frequency VOR/ILS in MHz, NDB in kHz.
+note: Descriptive note. Must have at least one character.
+
+The modes sets input to course needle (cn), radar and AHK
+Modes:
+FRÅN: (Off)  No nav radio, Radar off, AHK 0, cn manual
+FÖRV: (Preselected) No nav radio, Radar off, AHK HÖJDÄNDRING, cn manual
+STRIL: (Combat command) Activates Route Manager, Radar scanning, AHK NYTT MÅL, cn direction to next waypoint.
+STRID: (Combat) No nav info, Radar scanning, AHK HÖJDÄNDRING, cn manual
+NAVRIKTN: (Navigation direction) Uses NDB/VOR set by the two letters NAV. Radar shows direction pointer, AHK HÖJDÄNDRING, cn ADF.
+NAV 400: (Navigation 400 km) Uses VOR/NDB set by the two letters NAV. Radar shows direction pointer, AHK AVST. 400 (shows 0 if NDB), cn direction to VOR.
+NAV 40: (Navigation 40 km) Uses VOR/NDB set by the two letters NAV. Radar shows direction pointer, AHK AVSTÅND 40 (shows 0 if NDB), cn direction to beacon.
+LANDN 40: (Landing 40 km) Uses NDB/VOR set by the two letters NAV. Radar shows direction pointer, AHK LANDA, cn direction to beacon.
+BARBRO: (Barbro) Uses ILS set by the three letters NAV+LANDN. Radar shows glide slope pointers, AHK BARBRO, cn direction to ILS beacon. 
+
+Special Controls and switches
+Droptank fuel valve: Right front canopy rim. Set to on (forward) when using droptanks.
+Parking brake: Center console below instrument panel to the right.
+Jettison droptanks: Left side with red protection ring.
+Canopy handle: Left side
+Start panel: Lower left instrument panel. Se below.
+Instrument and panel lighting: Left side knob above thottle. Klick to change intensity.
+
+Starting the aircraft
+Either press Shift-S and let the automatic start make the work or follow the checklist below.
+* Battery switch on. The smaller covered switch on the start panel. Click cover to open and then switch.
+* Lock canopy. Click handle. The HUV LÅS caution should now go out.
+* Turn on main fuel pump. Under the large cover on he start panel.
+* Turn on afterburner fuel pump. Leftmost switch on the start panel. The red light on the start panel is now off.
+* Turn on drop tanks fuel valve. The yellow light on the start panel is now unlit.
+* Press START button on the start panel and wait until the engine is ignited.
+* Switch on the generator. The switch next to the start button.
+All caution lights should now be unlit in a few seconds.
+ 
+
+
+Flying
+* To avoid accidents on landing is it not possible to retract landing gears if throttle < 90 %
+* Maxspeed approx: Mach 1 at low altitude Mach 1.8 at 12 000 m
+* Too long with negative G causes fuel starvation.
+* Watch alpha and speed. Drag increases fast with increasing alpha and pitch can occur at alpha > 25 deg
+* Draken has elevons, combined ailerons and elevators. Large elevon deflections decreases the availiable aileron difference.
+* The aircraft has non-linear control responce in elevation to lessen effect of small stick movements.
+* Fuel will be drawn from droptanks until they are nearly emtpy then from internal tank.
+* Implemented experimental yawing and pitching moments from vortices in stall.
+

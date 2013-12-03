@@ -1,0 +1,252 @@
+######################################################################
+##                          Douglas DC3-C47                         ##
+##                                                                  ##
+##                        Contributors file                         ##
+##          http://wiki.flightgear.org/Fr/Douglas_DC-3-C47          ##
+##                                                                  ##
+##                        Thanks to PAF team                        ##
+##                                                                  ##
+######################################################################
+
+# 04/01/2013 ==> (Helijah)
+
+- Correction d'une erreur dans le fichier all-poigneesportes
+
+# ==> (Dany93)
+
+- Animation libre de la roulette de queue
+
+######################################################################
+
+# 31/12/2012 ==> (Helijah)
+
+- Mise en conformité de toutes les entêtes xml
+
+######################################################################
+
+# 11/04/2012 ==> (Buckaroo)
+
+- New FDM
+
+######################################################################
+
+# 11/02/2012 ==> (Helijah)
+
+- Correction de plusieurs erreurs (normales inversÃ©es, textures avec canal alpha etc...)
+- RÃ© organisation des livrÃ©es suplÃ©mentaires dans des dossiers "Liveries"
+- Ajout du systÃ¨me de notation
+
+######################################################################
+
+# 13/01/2012 ==> (Patten)
+- Optimisation et texturage des 3 versions du cockpit sélectionnables (Red, Gray, Military),
+  ainsi que tous les éléments qui vont avec (Cockpit, Pedals, handle, overhead, seats, pilots, etc...)
+
+
+# 21/11/2011 ==> (F-Sig)
+- Nouveau manche
+
+######################################################################
+
+# 21/11/2011 ==> (F-JJTH)
+- Création d'une boite de dialogue pour les options du DC-3
+- Correction électrique
+- Correction du bug de démarrage
+- Création du système hydraulique complet
+- Cowl Flaps visible en MP
+- Correction d'ouverture des portes cargo / para
+
+######################################################################
+# 18/11/2011 ==> Helijah
+- Mise en fonction des gouvernails via la touche "l"
+- Modification du système d'ombre, merci à Bibi :)
+#            ==> Pat
+- Amélioration du FDM
+
+######################################################################
+
+# 09/11/2011 ==> Pat
+- Amélioration du FDM
+#            ==> Alexis
+- Ajout des masses de chargement
+
+######################################################################
+
+# 07/11/2011 ==> Christian Thiriot (Patten)
+- Version civile
+- Habillage total de l'intérieur dans des tons gris.
+- Cockpit
+- Cabine
+- Rajout de plaques vers les pieds des pilotes.
+
+######################################################################
+
+# 21/10/2011 ==> Christian Thiriot (Patten)
+- Amélioration et nettoyage de la texture cabine passagers (colors, et colorsHigh)
+- Création d'une texture cabine "Paras" en vue de l'activation de l'option "Military"
+- Amélioration des sons: cycle de démarrage, son pompe de gavage...
+- Amélioration des effets de fumée due au cycle de démarrage + proche de la réalité (cranking).
+- Texturages divers: wipers, tablettes de sièges en conformité avec les coffres à bagage, texture
+  "center-console" en vue de la version Military.
+- Création d'une texture "Paras-prop" pour les hélices de la livrée "Paras".
+- Retouches sur la livrée "Paras" roues, ect...
+
+######################################################################
+
+# 17/09/2011 ==> (Helijah)
+- Ajout des hélices à pas variable
+
+######################################################################
+
+# 07/09/2011 ==> (F-JJTH)
+- Ajout de phares d'atterrissage
+- Ajout de nav-lights
+- Ajout de strob
+- Ajout d'un anti-colision
+- Amélioration du Dual Control
+
+######################################################################
+
+# 05/09/2011 ==> (F-JJTH)
+- Correction du système électrique
+- UV Map de la cabine refait
+- Switch de l'overhead en position basse quand éteind
+
+######################################################################
+
+# 03/09/2011 ==> (F-JJTH)
+- Implémentation des nouveaux switchs de l'Overhead pour le Dual Control
+- Portes clickable
+- Prise en compte de la roue folle dans le FDM
+- Prise en compte du feathering dans le FDM
+- Optimisation des textes OSG
+- Remplissage de la partie "Help"
+
+######################################################################
+
+# 03/09/2011 ==> (patten)
+- Amélioration de la texture des sièges
+- Amélioration de la texture haute qualité de la cabine
+
+######################################################################
+
+# 02/09/2011 ==> (patten)
+- Améioration de la texture haute qualité de la cabine
+
+######################################################################
+
+# 02/09/2011 ==> (F-Sig)
+- Ajout d'objets sur la console centrale
+- Animation du trim
+
+######################################################################
+
+# 02/09/2011 ==> (F-JJTH)
+- Refonte complète de l'Overhead
+- Ajout des switchs de l'Overhead
+- Modification de l'organisation des dossiers (pour l'intégration de l'Overhead)
+- Ajout des textes Overlay (Ctrl + c) sur l'Overhead
+
+######################################################################
+
+# 31/08/2011 ==> (F-JJTH)
+- Amélioration de la rotation des roues
+- Correction du Dual Control
+- Amélioration de l'ombre
+- Correction du message d'erreur au lancement de la versino à roue
+- Ajout d'un menu pour la selection de la qualitÃ© de l'appareil
+- Ajout d'une texture haute qualité pour la cabine
+- Amélioration de Models/Interior/Cabine/cabine.ac
+
+######################################################################
+
+# 30/08/2011 ==> (Helijah)
+- Modification de la flotabilité de la version amphibie.
+- Correction des animations vue de l'intérieur.
+
+######################################################################
+
+# 29/08/2011 ==> (Helijah)
+- Ajout de la version amphibie
+- SÃ©paration de la cabine du reste de l'intérieur
+
+######################################################################
+
+# 23/08/2011 ==> (F-JJTH)
+- Suppression du réglage sonore de l'appareil
+- Ajout de 4 passagers en MP
+- Amélioration du Dual Control
+- Amélioration du systÃ¨me de parachutisme
+- Ajout du copilote lorsqu'il est connecté
+
+######################################################################
+
+# 18/08/2011 ==> (F-JJTH)
+- Amélioration du Dual Control
+- Ajout de l'ombre en MP
+- Amélioration des xml d'instruments
+
+######################################################################
+
+# 13/08/2011 ==> (F-JJTH)
+- Amélioration du Dual Control
+
+######################################################################
+
+# 07/08/2011 ==> (Alexis)
+- Animation du pilote
+
+######################################################################
+
+# 03/08/2011 ==> (Alexis)
+- Suppression de siège en double
+- Amélioration des manches et des palonniers
+
+######################################################################
+
+# 02/08/2011 ==> (F-JJTH)
+- Ajout du Dual Control
+
+######################################################################
+
+# 01/08/2011 ==> (Helijah)
+- AmÃ©lioration des instruments du tableau de bord
+
+######################################################################
+
+# 27/07/2011 ==> (Alexis)
+- CrÃ©ation d'instruments sur la tableau de bord
+- CrÃ©ation de l'instrument d'autopilotage
+
+######################################################################
+
+# 27/07/2011 ==> (F-Sig)
+- CrÃ©ation de la console centrale
+
+######################################################################
+
+# 23/06/2011 ==> (F-JJTH)
+- AmÃ©lioration du systÃ¨me Ã©lectrique
+- AmÃ©lioration des switch du panneau supÃ©rieur
+
+######################################################################
+
+# 10/06/2011 ==> (Baboon)
+- Ajout des switchs du panneau supÃ©rieur (batterie, dÃ©marreur, panel light)
+- CrÃ©ation des switch de magnetos
+- CrÃ©ation des voltmÃ¨tres
+- Ajout d'un systÃ¨me Ã©lectrique
+- CrÃ©ation de la lampe de dÃ©charge batterie
+- CrÃ©ation des sons
+
+######################################################################
+
+# 08/06/2011 ==> (Patten)
+- CrÃ©ation d'une livery "Linux"
+
+######################################################################
+
+# Janvier 2011 ==> Helijah
+
+- Modélisation d'un nouveau Dc 3 pour rendre hommage à cet avion légendaire qui
+  n'était vraiment pas mis en valeur dans FG jusque là.

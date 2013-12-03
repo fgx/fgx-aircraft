@@ -1,0 +1,67 @@
+The 1049's fuel tank system explained:
+
+The Constellation has many fuel tanks and it is the flight engineer's job to monitor them and make sure all engines are properly fed according to the flight manual. The 1049H model is built to simulate this operation, so you can get a feel for this aspect of the engineer's task. Note that for general flying you don't need to know this, just leave the preset tank levels set to 'Casual Flying' in the 1049H custom menu (ctrl-I).
+
+First, a little about the tanks, their locations and their valves. The following gives a basic idea where the tanks are located along the wing:
+
+Engines:          1   2     3   4
+            ----------------------------
+Tanks:    1A  2A  1   2  5  3   4   3A  4A
+
+1A and 4A are wing-tip tanks (when used), 5 is a centerline tank positioned in the fuselage between the wings. Wing-tip and center tanks were all optional elements for the 1049 series, though most were equipped with the center tank. Note that the current 1049H model does not come equipped with wing-tip tanks.
+
+The actual tank feed situation looks something like this:
+Engines:      1     2         3     4
+              |     |         |     |
+             ev1   ev2       ev3   ev4   :emergency engine cut-off valves
+              |     |         |     |
+             cv1...cv2...+...cv3...cv4   :cross-feed valves
+              |     |    |    |     |
+             tv1   tv2  tv5  tv3   tv4   :tank selector valves
+              |     |    |    |     |
+Tanks:      1/1A   2/2A  5   3/3A  4/4A 
+
+The tank selector valves are the right-most set of levers on the engineer's station, except for the tank 5 valve, which is located on the floor to the left of the engineer's console (with the cross-feed valve levers). Tank valves have 2 or 3 positions: off, primary tank, and for some, secondary tank. Currently only tanks 2 and 3 have secondaries (2A, 3A), but if wing-tip tanks are installed, tanks 1 and 4 have secondary tanks 1A and 4A. The center tank 5 is solitary and has no secondary. Each tank system (1/1A, 2/2A, etc.) is primarily used to feed its associated engine. So tank 3 and 3A feed engine 3. But all tanks are connected to a cross-feed line. There is no valve for this-- if the tank selector valve is open, the tank system is open to its associated engine and the cross-feed line. This allows any engine to optionally draw from other tanks.
+
+The cross-feed valves are located below and to the left of the engineer's console, on the floor behind the copilot's seat. The cross-feed valves allow an engine to draw from all open tanks rather than just the standard tank. There is a cross-feed valve for each engine. Opening a given valve allows that engine to draw from the tanks participating in cross-feed. For example, engine 1 normally draws from tank 1, but if the engine 1 cross-feed is open, it will draw evenly from all open tanks.
+
+There is an additional valve in the system, the emergency engine cut-off valves. These are located overhead, just aft of the landing lights console. They are currently not modeled but will be added in the future.
+
+
+Cross-feed examples:
+
+A common in-flight situation is to make use of the center tank. The center has no direct feed to any engine, it is linked only to the cross-feed line. So to draw from the center tank you must open one or more cross-feed valves. Make sure the center tank valve is also open. Each engine with an open cross-feed will draw evenly from each open tank. Say you want to draw only from the center tank, leaving the other tanks untouched. First, open the center tank valve, then open all engine cross-feed valves, then close all other tank valves. Be careful to do things in that order, or you may starve your engines.
+
+Assume you have a lot of fuel in tanks 1 and 4 and want to draw them down without changing the levels of the other tanks. Open the cross-feed valves for engines 2 and 3 and shut the tank valves for the center tank and tanks 2 and 3. All engines will then be drawing from tanks 1 and 4.
+
+
+How the fuel system was implemented:
+
+The system works by having engines draw from small fuel line buffer tanks, which are in turn replenished from the true tanks via nasal script according to tank and cross-feed valve settings. Engines never draw directly from true tanks, though true tanks are described in the FDM so their weight affects the flight parameters as expected. The fuel buffer tanks can be thought of as everything in the fuel lines between the cross-feed valves and the engines. They are very small, holding only a gallon or two.
+
+You can adjust in-flight fuel levels by clicking the hot-spots on the fuel gauges on upper engineer's panel. If you wish to use the property tree to fine-adjust the fuel levels under consumables/fuel, you will need to know the indexes of the actual tanks. Here are the tanks and their indexes:
+
+Tank Indexes and corresponding tanks:
+
+          Line Buffers             True Tanks
+         +------------+  +---------------------------+
+tank:    B1, B2, B3, B4, 1, 2, 3, 4, 5, 1A, 2A, 3A, 4A
+index:    0,  1,  2,  3, 4, 5, 6, 7, 8,  9, 10, 11, 12
+
+Note that you should avoid modifying the fuel levels in the buffer tanks.
+
+
+The Fuel Preset Menu:
+
+The 1049H comes with 4 fuel presets, accessible via ctrl-I. These presets are:
+
+  casual flying
+  max landing
+  max takeoff
+  empty
+
+Each preset configures a fuel load for every tank and a setting for tank valves and cross-feed valves. Casual flying gives a moderate fuel load and has all cross-feed valves open. This setting requires the least flight management and is the 1049H's default load. The max landing and max takeoff presets give more realistic settings for fuel. Max takeoff has all fuel tanks fully loaded, all tank valves set to their primary tanks, and all cross-feed valves closed. Max landing gives moderate loads for tanks 1 and 4, minimal loads for 2 and 3, and reasonably flush loads for 2A and 3A. Tank valves are set to secondary for 2 and 3, to draw from 2A and 3A. Cross-feed valves are closed. Empty is just that: all valves are off, and tanks have only residual fuel loads.
+
+For more information about fuel presets and to configure your own presets, study the Systems/Lockheed1049h-fuel-presets.xml file.
+
+

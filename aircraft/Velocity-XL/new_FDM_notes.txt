@@ -1,0 +1,94 @@
+Installation:
+
+Swap out the velocity-yasim.xml file with the new one as usual. Place the rudders.nas file in the Nasal/ directory.
+
+
+In velocity-base.xml, locate the <controls> section and add the <flight> elements as shown below:
+
+  <controls>
+    <engines>
+      <engine>
+        <mixture archive="y"> 0.65 </mixture>
+      </engine>
+    </engines>
+    <electric>
+      <battery-switch>1</battery-switch>
+      <engine>
+        <generator>1</generator>
+      </engine>
+    </electric>
+    <lighting>
+      <instrument-lights>1</instrument-lights>
+    </lighting>
+    <flight>
+      <rudder-left type="float">0</rudder-left>
+      <rudder-right type="float">0</rudder-right>
+    </flight>
+  </controls> 
+
+Also in velocity-base.xml, add the following stuff before the end of the </sim> section as shown below:
+
+  <weight n="0">
+    <name>Front Seats</name>
+    <weight-lb>180</weight-lb> 
+    <max-lb>360</max-lb>
+    <min-lb>180</min-lb>
+  </weight>
+
+  <weight n="1">
+    <name>Rear Seats/Cargo</name>
+    <weight-lb>0</weight-lb> 
+    <max-lb>420</max-lb>
+    <min-lb>0</min-lb>      
+  </weight>
+
+  </sim>
+
+And finally in velocity-base.xml, add the rudders.nas reference as shown below:
+
+  <nasal>
+    <velocity>
+      ...
+      <file>Aircraft/Velocity-XL/Nasal/rudders.nas</file>
+      ...
+    </velocity>
+  </nasal>
+
+
+In Models/velocity.xml, locate and swap in this section:
+
+  <!-- Gouverne de direction -->
+  <animation>
+    <type>rotate</type>
+    <object-name>directionG</object-name>
+    <property>/surface-positions/rudder-pos-norm-left</property>
+    <factor>20</factor>
+    <axis>
+      <x1-m>  2.594 </x1-m>
+      <y1-m> -4.646 </y1-m>
+      <z1-m>  0.033 </z1-m>
+      <x2-m>  2.928 </x2-m>
+      <y2-m> -4.646 </y2-m>
+      <z2-m>  1.146 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>directionD</object-name>
+    <property>/surface-positions/rudder-pos-norm-right</property>
+    <factor>20</factor>
+    <axis>
+      <x1-m> 2.594 </x1-m>
+      <y1-m> 4.646 </y1-m>
+      <z1-m> 0.033 </z1-m>
+      <x2-m> 2.928 </x2-m>
+      <y2-m> 4.646 </y2-m>
+      <z2-m> 1.146 </z2-m>
+    </axis>
+  </animation>
+
+
+
+This gives you passenger and cargo weight options, a slightly better fidelity FDM, and rudders that work like the real thing. Rudders deflect outboard, so the inside-turn rudder will turn outward while the other remains centered. Press ctrl-b to toggle the speedbrake function of rudders. What this does is activate both rudders to full deflection (both outboard), giving you weak speedbrakes. Note that you lose rudder control while the speedbrake function is activated.
+

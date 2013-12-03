@@ -1,0 +1,26 @@
+Anders Gidenstam  (anders(at)gidenstam.org)
+  - Submarine Scout FlightGear configuration
+  - Submarine Scout Flight Dynamics Model configuration
+  - Submarine Scout 3d model
+
+The model borrows content from the following authors' contributions
+to FlightGear:
+
+Emmanuel BARANGER
+  - Propeller. (From FlightGear/Aircraft/Vickers-Vimy)
+
+Detlef Faber
+  - Ground crew 3d model. (From FlightGear/Aircraft/F4U/)
+
+AJ MacLeod, Vivian Meazza
+  - Most 3d instruments. (From FlightGear/Aircraft/sopwithCamel/)
+
+Vivian Meazza
+  - Crew 3d model (From FlightGear/Aircraft/SpitfireIIa/)
+
+
+Dependencies
+------------
+
+Aircraft/ZLT-NT
+Aircraft/sopwithCamel

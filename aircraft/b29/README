@@ -1,0 +1,19 @@
+B-29 Superfortress.
+
+LICENSE:
+This package is released under the GNU GPL. See the file LICENSE for the
+complete license.
+All files are copyright Josh Babcock 2005 unless otherwise noted.
+
+At the moment this airplane is under heavy develpoment. The FDM is flyable but
+does not reflect the performance of the real world aircraft. The 3D model is
+also incomplete. Most of the parts are there, but many animations are missing
+and there is a lot of tweaking of materials, object order and grouping to be
+done. Instrumentation is finally done, but clickable panels are just getting
+started.
+
+For more information see the files changelog, stuff/NOTES and stuff/TODO.
+
+Aug 1 `05
+Josh
+jbabcock<at>atlantech<dot>net

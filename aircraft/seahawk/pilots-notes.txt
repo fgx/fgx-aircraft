@@ -1,0 +1,75 @@
+HAWKER SEAHAWK FGA6 PILOT'S NOTES
+
+BACKGROUND
+
+The Sea Hawk was an carrier-borne aircraft operated by the Royal Navy from the early 1950s to 1960. More information can be found here: http://www.thunder-and-lightnings.co.uk/seahawk/history.html .
+
+The Sea Hawk FGA6 was the last version to be produced for the Royal Navy with the Rolls Royce 5200 lb thrust Nene 103 engine. The aircraft modelled was operated by 898 Squadron from HMS Eagle in 1958. The aircraft, side number 472, Serial Number WV 859 was flown by Lieutenant Colin Newnes, Royal Navy.
+
+
+FDM
+
+Currently YASIM only.
+
+CONTROLS
+
+The following additional keyboard controls have been implemented:
+
+[/]: extend/retract flap lever. There are 3 positions in Up/Take Off (30 degs)/Full (86 degs). See Notes 1 and 2
+F/f: wing fold up/down and canopy open/close
+O/o: hook extend/retract (no operational function. 
+CTRL F: emergency flap lowering. Operation of this control gives a once-only lowering of the flaps to maximum. It disables the normal flap extension, and cannot be reversed.
+CTRL B: toggle speed brake lever. See Notes 1 and 2
+'U/u/CTRL U: pilot's seat raise/lower/default setting.
+k: NULL. spoiler function removed for use as part of the airbrake.
+h/H; NULL. HUD not availabale on this aircraft.
+
+Notes:
+
+1. The airbrake lever raises the airbrake in the upper wing to 20 degs, at the same time lowering the flaps to 30 degs. Moving the flap lever retracts the airbrake. If the flap lever is moved to UP and the airbrake lever is set to extend, the flaps will retact to 30 degs and the airbrakwe will be raised.
+
+2. [/] and CTRL B move the levers, NOT the surfaces. If you use joystick buttons to set the suface postions, the interlocking will not work
+
+The folowing 3D Panel controls are available:
+
+Horizontal Situation Indicator (hsi): left knob - heading bug, right knob - select input magnetic compass/directional gyro
+Altimeter: Knob - pressure setting
+Hook Switch - raise lower
+Undercarriage Selector - up/down
+
+OPERATION
+
+Start-up.
+
+The model starts with engine running at ground idle, and with brakes ON.
+
+Take-off.
+
+Select T/O flap. Maximum take off power is 7950 rpm. (NOTE: the RPM instrument is of the clock type showing true RPM NOT %n1.) The model will swing to port as it accelerates. Use differential braking (,/.) to keep straight until about 70kts IAS when there is sufficient rudder authority. Rotate gently at about 125kts IAS. 
+
+Flight.
+
+The aircraft tends to fly nose down. This can be trimmed out.
+
+Landing.
+
+Approach:
+		Glide slope		3 degs		
+Speed:          	120 kts IAS
+          	AOA:            	+7 degs
+          	Flap:           	full
+
+Touchdown:
+
+          	Speed:         	110kts IAS
+          	AoA            	+10 degs
+		Vertical Speed	-0.5 - -1.0 fps
+
+
+ACKNOWLEDGEMENTS
+
+Thanks are due to:
+
+Colin Newnes who flew the aircraft, and whose memory has been stretched to recall some obscure details, and
+Lee Elliott whose Seahawk model this is.
+

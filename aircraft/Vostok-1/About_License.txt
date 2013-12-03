@@ -1,0 +1,20 @@
+About license.
+
+"Vostok-1" as whole is distributable under terms of GPL license.
+
+Most parts of "Vostok-1", including 3d model, instrumentation logic, and fdm model is made by me and for sure can be distributed under terms of GPL license only. I wish not to distribute it any other way to avoid any law complications to me, Flight Gear community and other people. If You include it in Your product then distribute for free and allow redistribution of at least source code and files of that parts and derivatives of it.
+
+Skins or liveries of Vostok-1 is distributable as part of product under terms of GPL license.
+
+Some textures used is heavily modified textures by Mayang Murni Adnin from http://mayang.com/textures/ site.
+Original mayang.com license allows to redistribute it as part of nonpicture product without any issues.
+Original license allows to redistribute it as standalone picture with giving to end user information about original authors way similar to that document do.
+Original license forbids redistributing by way as original site do, so texture itself can not be uploaded to any textures redistribution site.
+For other questions about texture distributing solving read original license on http://mayang.com/textures/
+
+Sounds of Vostok-1 is sounds from NASA http://www.nasa.gov mostly what can be redistributable without issues. Some sounds is from other FG GPL licensed models.
+
+If You want to overwrite textures or sounds by some else images or sounds from external sources please get sure that images and sounds is freely redistributable to avoid copyright problems.
+
+With best regards,
+	Slavutinsky Victor

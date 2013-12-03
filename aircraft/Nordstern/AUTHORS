@@ -1,0 +1,40 @@
+Zeppelin LZ 121 "Nordstern" airship flight model for JSBSim.
+
+    Copyright (C) 2010  Anders Gidenstam  (anders(at)gidenstam.org)
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+  
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+  
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+
+Anders Gidenstam  (anders(at)gidenstam.org)
+  - Nordstern FlightGear configuration
+  - Nordstern Flight Dynamics Model configuration
+  - Nordstern 3d model
+
+The model borrows content from the following authors' contributions
+to FlightGear:
+
+Emmanuel BARANGER
+  - Propellers. (From FlightGear/Aircraft/Vickers-Vimy)
+
+Oliver Predelli
+  - Aircraft/Superwal/Models/Instruments/Hoehenmesser/Hoehenmesser.xml
+
+Dependencies:
+
+Aircraft/ZLT-NT         Systems/ground_handling.nas
+                        Systems/mp-network.nas
+                        Models/GroundCrew/scania-mast-truck.xml
+
+Aircraft/Superwal       Models/Instruments/Hoehenmesser/Hoehenmesser.xml

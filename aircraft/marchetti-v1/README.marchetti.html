@@ -1,0 +1,73 @@
+
+<pre>
+======================================================
+= SIAI Marchetti S.211                               =
+= for FlightGear with LaRCsim and the UIUC Aeromodel =
+=                                                    =
+= Michael Selig, et al                               =
+= <a href="http://amber.aae.uiuc.edu/~m-selig/apasim.html">http://amber.aae.uiuc.edu/~m-selig/apasim.html</a>     =
+======================================================
+
+To run, try:
+
+fgfs --aircraft=marchetti-v1-uiuc
+
+Files and directory structure required in $FG_ROOT/Aircraft/ to fly the
+model:
+
+marchetti-v1-uiuc-set.xml
+marchetti/Sounds/uiuc/marchetti-sound.xml
+UIUC/marchetti-v1/aircraft.dat
+
+These files above come with the FlightGear base package.
+
+A 3D model of this aircraft does not yet exist.
+
+Nevertheless, various 3D models can be obtained from Wolfram Kuss'
+website here:
+
+<a href="http://home.t-online.de/home/Wolfram.Kuss/">http://home.t-online.de/home/Wolfram.Kuss/</a>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Model description and updates:
+
+9/7/02 - Added in more moment to trim at cruise.  Made some slight
+         changes to gear parameters.
+
+5/27/02 - First release: v1
+
+* "Linear model" meaning that constants are use for stability
+  derivatives.  The chief drawback of this type of model is that stall
+  is not properly modeled, and as a consequence an unrealistically
+  high lift coefficient is produced when the aircraft is at a high
+  angle of attack.  As a result the aircraft can fly much more slowly
+  than in real life.
+
+* This particular aircraft has an instability when the nose is pushed
+  over with down elevator.  This instability is a consequence of using
+  the linear aerodynamics approximation.
+
+* Model largely built from: "Small twin turboprop commuter airplan"
+  data from: Roskam, J., Airplane Flight Dynamics and Automatic Flight
+  Controls, Part I, DARcorporation, Lawrence, KS, 1995, pg 508-510.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+**************************************************
+ Prof. Michael S. Selig
+ Dept. of Aerospace Engineering
+ University of Illinois at Urbana-Champaign
+ 306 Talbot Laboratory
+ 104 South Wright Street
+ Urbana, IL 61801-2935
+ (217) 244-5757 (o), (509) 691-1373 (fax)
+ m-selig@uiuc.edu
+ <a href="http://www.uiuc.edu/~m-selig">http://www.uiuc.edu/~m-selig</a>
+**************************************************
+
+</pre>
+

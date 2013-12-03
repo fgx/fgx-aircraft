@@ -1,0 +1,5 @@
+If you want to use the interior (which will slow up the loading time dramatically) then move the
+interior.xml file within this folder to your A340-600/Models/Interior folder, and replace the current Interior.xml
+file. This will load all interior objects, so you can see them in-sim, which some may prefer.
+
+Enjoy.- Liam.

@@ -1,0 +1,191 @@
+<pre>
+======================================================
+= Sopwith Camel F.1                                  =
+= WWI Fighter                                        =
+= for FlightGear with LaRCsim and the UIUC Aeromodel =
+=                                                    =
+= Flight model by:                                   =
+= Michael Selig, et al. (m-selig@uiuc.edu)           =
+= <a href="http://www.aae.uiuc.edu/m-selig/apasim.html">http://www.aae.uiuc.edu/m-selig/apasim.html</a>        =
+=                                                    =
+= External model by:                                 =
+= A.F.Scrub "Scrubby PC" (af_scrubbypc@hotmail.com)  =
+======================================================
+
+To run, try:
+
+fgfs --aircraft=sopwithCamel-v1-nl-uiuc
+
+Files and directory structure required in $FG_ROOT/Aircraft/ to fly the
+model:
+
+sopwithCamel-v1-nl-uiuc-set.xml
+sopwithCamel/Models/uiuc/sopwithCamel/cambelg0.bmp
+sopwithCamel/Models/uiuc/sopwithCamel/cambelg1.bmp
+sopwithCamel/Models/uiuc/sopwithCamel/cambelg2.bmp
+sopwithCamel/Models/uiuc/sopwithCamel/cambelg3.bmp
+sopwithCamel/Models/uiuc/sopwithCamel/cambelg4.bmp
+sopwithCamel/Models/uiuc/sopwithCamel/cambelg5.bmp
+sopwithCamel/Models/uiuc/sopwithCamel/cambelg6.bmp
+sopwithCamel/Models/uiuc/sopwithCamel/cambelg7.bmp
+sopwithCamel/Models/uiuc/sopwithCamel/cambelg8.bmp
+sopwithCamel/Models/uiuc/sopwithCamel/cambelg9.bmp
+sopwithCamel/Models/uiuc/sopwithCamel/Sop-panel.bmp
+sopwithCamel/Models/uiuc/sopwithCamel/camel.txt
+sopwithCamel/Models/uiuc/sopwithCamel/cambelg.mdl
+sopwithCamel/Models/uiuc/sopwithCamel/sopwithCamel-model.xml
+sopwithCamel/Models/uiuc/sopwithCamel/README.TXT
+sopwithCamel/Sounds/uiuc/sopwithCamel-sound.xml
+UIUC/sopwithCamel-v1-nl/aircraft.dat
+UIUC/sopwithCamel-v1-nl/CDfa-06.dat
+UIUC/sopwithCamel-v1-nl/CLfa-06.dat
+UIUC/sopwithCamel-v1-nl/Cmfa-06.dat
+UIUC/sopwithCamel-v1-nl/Cmfade-03.dat
+UIUC/sopwithCamel-v1-nl/README.sopwithCamel.html
+
+These files above come with the FlightGear base package.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Model description and updates:
+
+11/10/2002 - Notes below added
+
+* The Sopwith Camel did not have brakes.  Application of brakes in
+  FGFS will cause the aircraft to promptly nose over.  (I have added a
+  fake contact point so that the aircraft does not completely tip
+  over.)  The c.g. of the aircraft sits almost directly above the
+  wheel contact point.  There is a reason for this.  The aft fuselage
+  and tail were designed to be very light.  Thus, the tail could not
+  support much load, so the weight of the aircraft largely rests on
+  the main wheels, which again requires the c.g. to be almost directly
+  above the wheels.
+
+* WWI aircraft engines did not have a conventional throttle (at least
+  most did not).  The engines were either on or off/idle using a
+  "blip-throttle".  So it is not realistic to fly with a variable
+  throttle, which the current model allows.
+
+* To modelers, I can provide a graphic showing the c.g. location.
+
+* To those having specific knowledge of the Sopwith Camel, I am
+  interested in obtaining the following data:
+
+  [] Wing airfoil section
+
+  [] RPM when the throttle is blipped.  I am currently using 300 RPM.
+     The current aircraft uses a 150-hp Bentley B.R.1 engine, which is
+     what Capt Brown was flying on the day when he claimed to kill the
+     Baron von Richthofen (The Red Baron).
+
+  [] Engine mass characteristics on a component-by-component basis.
+     This information will help me refine the polar moment of inertia
+     that drives the gyroscopic forces.
+
+  [] On a related note, the mass of the propeller which also figures
+     into the gyroscopic forces.
+
+11/9/2002 - First release: v1-nl
+
+* Motivation: FGFS and the UIUC aero model were used to develop flight
+  models for both the Sopwith Camel and Fokker Dr.1 Triplane.  These
+  models were then used in another simulation with a collaborator,
+  Brian Fuesz.  In that simulation, guns, terrain, villages, multiple
+  planes, etc were added to simulate the last flight of the Red Baron.
+  This work was filmed for the Discovery Channel show "Unsolved
+  History: The Death of the Red Baron" scheduled to first air Dec 18,
+  2002.
+
+* A.F. Scrub (af_scrubbypc@hotmail.com) has granted FlightGear
+  permission to use and release the external model files with FlightGear
+  under the GNU GPL.
+
+* A weights and balance was performed to arrive at an allowable
+  c.g. location and from that data, mass moments of inertia were
+  calculated.
+
+* Lift, drag and pitching moment data is modeled from -180 to +180
+  deg.  In general, the aerodynamics are modeled using various
+  sources.
+
+* Apparent mass effects are modeled.
+
+* Gyroscopic forces caused by engine rotation and aircraft rotations
+  are modeled.  For an animation of how a WWI-type rotary engine works,
+  go here:<a href="http://www.keveney.com/gnome.html">http://www.keveney.com/gnome.html</a>
+  An example of gyroscopic forces, are those forces produced when one
+  tries to rotate by hand a spinning bicycle wheel.
+
+* Spin aerodynamics are not yet modeled.
+
+* The simulation starts on the ground.  Throttle up to take off or
+  alternatively, use Ctrl-U to jump up in 1000-ft increments.
+
+* Interesting flight characteristics to note:
+
+  - The Sopwith Camel was considered a "beast" to fly.  It killed 385
+    pilots while they were in training (non-combat).  In combat, 415
+    of the surviving pilots were killed while flying the Sopwith
+    Camel.  Approximately 5000 Sopwith Camels were built, and it is
+    believed that collectively 1294 enemy aircraft were destroyed.
+    
+  - In large part, the challenges to flying the Sopwith Camel involve
+    the large gyroscopic forces from the rotating engine (which
+    rotated clockwise when viewed from the cockpit).  Pulling nose up
+    causes the aircraft to yaw to the right, yaw right and it noses
+    down, nose down and it yaws left, yaw left and it noses up.  Thus
+    whatever the direction the nose goes, the airplane slews to the
+    right of that path.  This was particularly dangerous for
+    right-hand turns if not properly managed.  The initial roll to the
+    right takes place without any surprise.  But after having banked,
+    pulling up elevator to turn causes the nose to "slew" to the right
+    of the intended direction.  In this case, it leads to the nose
+    pointing down, which in turn leads to a tail skid.  This skid
+    could then easily precipitate into a spin.  Should that happen,
+    the gyroscopic forces continue to do their work.  If control is
+    recovered, during the pull out it is very easy to fly on the back
+    side of the power curve.  If that happens, the pullout is very
+    slow, and it is easy to auger-in.
+
+  - As mentioned in the current sim, spin aerodynamics are not
+    modeled, so the scenario just described will not happen.  However,
+    the skidding is most apparent.  And it is quite easy to fly into
+    the backside of the power curve from any flight attitude (there is
+    ample "elevator power").  Keeping the speed up in general is one
+    way to avoid this regime.
+
+  - Rudder authority on the Sopwith Camel was inadequate, and it only
+    increased the chances of spinning in.  Surely, the designers were
+    aware of this fact, but a larger rudder would have led to more
+    weight aft not only because of the shear mass of the tail, but
+    also because of the larger structure required to support the
+    larger airloads.  This solution surely countered the design
+    philosophy of trying to put as much weight as possible between the
+    pilot and engine, all in an attempted to increase maneuverability
+    by keeping the moments of inertia as small as possible.
+
+  - On takeoff, when the tail raises (nose down rotation) note the
+    strong yaw to the left attributable to the gyroscopic forces.
+
+  - In general, to stay coordinated in turns requires generous use of
+    the rudder.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+**************************************************
+ Prof. Michael S. Selig
+ Dept. of Aerospace Engineering
+ University of Illinois at Urbana-Champaign
+ 306 Talbot Laboratory
+ 104 South Wright Street
+ Urbana, IL 61801-2935
+ (217) 244-5757 (o), (509) 691-1373 (fax)
+ m-selig@uiuc.edu
+ <a href="http://www.aae.uiuc.edu/m-selig">http://www.aae.uiuc.edu/m-selig</a>
+**************************************************
+
+</pre>
+

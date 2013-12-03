@@ -1,0 +1,59 @@
+********************************************************************************
+Piper PA-22 "Tri-Pacer" for FlightGear
+********************************************************************************
+Authors: Robert Leda, Pawel Luchowski
+License: GPL (see file "COPYING" for details)
+********************************************************************************
+
+SPECIFICATIONS:
+
+Model                    PA-22-160
+Engine                 Lyc O-320-B
+Hp & RPM                160 @ 2700
+Gross Weight (Lbs.)           2000
+Empty Weight (Lbs.)           1110
+Wingspan (Ft.)                  29.3
+Wing Area (Sq. Ft.)            147.5
+Length Ft.                      20.6
+Height In.                     100
+Propeller Dia. In.              74
+Power Loading Lbs./hp           12.5 
+Wing Loading Lbs./sq ft         13.5
+Baggage Cap. Lbs.              100
+Fuel Cap. US Gal.               36
+
+PERFORMANCE:
+
+Maximum Speed mph              141
+Cruise mph:75% @ sl            125
+Cruise mph:75% @ 7000          134 
+Stall Speed mph                 49*
+Takeoff Run ft.               1120*
+Landing Roll ft.               500*
+Rate of Climb ft/min           800
+Service Ceiling ft          16,500
+Cruising Range s/mi            500
+
+                      * flaps down
+
+********************************************************************************
+
+Airplane in this package is based on PA-22 model from year 1959 with original
+instrument panel (in IFR configuration), full equipment (including arm rest :)
+or AKO64 autopilot) and four original livery variants. The only exception from
+the rule is radio panel which contains more up to date avionics with VOR and ADF
+indicators placed there for better accessibility.
+
+I would like to thank Pawel Luchowski for his great help in this project
+(especially for creating electrical system and doors script). I would also like
+to thank QF52 who helped me with tutorials. Last but not least would like to
+thank all FlightGear community for inspiration. Many TriPacer's elements are
+inspired or based on solutions found in such aircrafts as: bo105, c172p, dhc2, 
+DR400 or pa24-250.
+
+If you have any questions or suggestions, you can contact me at this address:
+erobo<at>wp<dot>pl
+
+
+                                                       Robert 'erobo' Leda
+

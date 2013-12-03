@@ -1,0 +1,12 @@
+jully 2007
+- changed volume & pitch of some sounds
+
+june 2007
+- updated the fdm to the version of jsbsim
+- updated gear compression param to suppress shacking
+- animated rolling wheels
+- a few adjustment to the geometry of some parts
+- yokes can be hidden
+- cold & hot start should work better
+- uv map nearly redone
+- new texture

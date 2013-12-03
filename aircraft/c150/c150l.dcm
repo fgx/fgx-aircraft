@@ -1,0 +1,1715 @@
+*
+*   File : C150L.dat
+*
+*   Purpose : This is an input file for the Digital Datcom program.
+*
+*   Author : Harald JOHNSEN
+*
+*   This file is copied to the file 'FOR005.DAT', and then the comments
+*   are striped out of it. The DATCOM program is then executed, and the 
+*   results are contained in the file 'FOR006.DAT'. Other output formats
+*   are also generated.
+*
+*
+*   Model-Specific notes:
+*      o The CG locations were based on the empty aircraft. When we get the
+*        model up, change this as required.
+*
+*
+*   General Notes :
+*      1. In general, we aren't concerned with anything faster than the 
+*         subsonic speed regime. DATCOM can handle transonic, supersonic, 
+*         and hypersonic, so check the book for more information.
+*
+*      2. DATCOM pg 47 states :
+* 
+*           "In general, the eight flap types defined using SYMFLP
+*           (variable FTYPE) are assumed to be located on the most
+*           aft lifting surface, either horizontal tail or wing if 
+*           a horizontal tail is not defined."
+* 
+*         We are going to assume that this means that we will have to
+*         perform a wing-body-vertical_tail analysis in order to get
+*         the flap effects, then add the horizontal tail in order to 
+*         get it's effects and trim points. The first case is used
+*         ONLY to get the flap effects.
+*
+*      3. The page references below are from The USAF Stability and 
+*         Control Digital DATCOM, volume 1, Users Manual, April 1979
+*
+*
+
+************************
+*   List of Command Card
+************************
+*
+*   Note : Command cards MUST start in column 1. They may appear in
+*          any order, with the exception of NEXT CASE.
+
+
+*   The contents of each applicatble namelist is dumped for the case in 
+*   the input system of units. (Very useful to see input parameter
+*   values).
+*NAMELIST
+
+*   Preserve the input data for the case to be used in the following 
+*   cases. This would be useful if multiple or comparison cases
+*   are built.
+*SAVE
+
+*   Sets the system units of measure. Options are FT, IN, M, CM
+DIM FT
+
+*   Terminates the reading of input cards and begins execution of
+*   the case. Case data are destroyed following execution of a case,
+*   unless the SAVE card is present.
+*NEXT CASE
+
+*   Trim calculations will be performed for each subsonic Mach number 
+*   within the case. A vehicle may be trimmed by deflecting a control
+*   device on the wing or horizontal tail or by deflecting an all-moveable
+*   horizontal stabilizer.
+*TRIM
+
+*   Provides dynamic-derivative results in addition to the standard
+*   static-derivative output
+DAMP
+
+*   Provides a case identification that is printed as part of the
+*   output header.
+* CASEID we set it below based on the configuration
+
+*   Prints the contents of the named arrays in the foot-pound-second
+*   system. See Appendix C for list of arrays and their contents.
+*
+*   DUMP CASE will print all the arrays that are used during case
+*             execution prior to the conventional output. (Not particularily
+*             useful, as all data is in nasty arrays)
+*   DUMP INPT will print dump of all input data blocks used for the case.
+*             (also not useful)
+*   DUMP IOM will print all the output arrays for the case. (not useful)
+*   DUMP ALL will print all program arrays, even if not used for the case.
+*            (surprisingly, not useful)
+* DUMP ALL
+
+*   Defines the output units of measure for the static and dynamic
+*   stability derivatives, either RAD or DEG. The following parameters
+*   are affected: CLa, Cma, Cyb, Cnb, Clb, CLq, Cmq, Clp, Cyp, Cnp,
+*   Cnr, Clr, CLad, CMad. JSBSim XML output is also switched between 
+*   degrees and radians for alpha, beta, etc.
+DERIV RAD
+
+*   Provides auxiliary and partial outputs at each Mach number in the
+*   case. These outputs are automatically provided for all cases at
+*   transonic Mach numbers.
+*
+*      Flight Conditions
+*         Mach number, Altitude, Velocity, Pressure, Temperature,
+*         Reynolds number
+*
+*      Reference dimensions
+*         Reference area, Long. reference length, Lat reference length,
+*         Horiz. moment ref. center, Vert. moment ref. center.
+*         Also, if NACA cards are used, airfoil dimensions are output
+*
+*      Basic body properties
+*         Wetted area, XCG, ZCG, Base area, Zero lift drag, Base drag,
+*         Friction drag, Pressure drag
+*
+* PART
+
+*    This command provides configuration build-up data. Conventional
+*    static and dynamic stability data are output for all of the 
+*    applicable basic configuration combinations shown in Table 2, 
+*    page 7.  Note: This generates a lot of tables, for the body
+*    alone, wing alone, ..., body-wing, body-wing-hor-tail, ...,
+*    and then finally the total table, which is probably what all 
+*    that we really want. This option, however, will be useful
+*    when the DATCOM input data is being fine-tuned, to see the
+*    effects of minor aircraft parameter changes.
+*BUILD
+
+*   Causes data generated by the program to be written to logical 
+*   unit 13, which can be retained for input to the Plot Module.
+*   (Looks like it dumps the data arrays out in column format. Not
+*   too useful).
+*PLOT
+
+
+
+
+
+**********************  
+*  Flight Conditions *
+**********************
+
+*   NMACH   Number of Mach numbers or velocities to be run, max of 20
+*           Note: This parameter, along with NALT, may affect the
+*           proper setting of the LOOP control parameter. 
+ $FLTCON NMACH=1.0$
+
+*   MACH    Array(20) Values of freestream Mach number   
+*   VINF    Array(20) Values of freestream speed (unit: l/t)
+ $FLTCON MACH(1)=0.135$
+
+
+
+*   NALPHA  Number of angles of attack to be run, max of 20
+ $FLTCON NALPHA=20.0$
+
+*   ALSCHD  Array(20) Values of angles of attack, in ascending order
+ $FLTCON ALSCHD(1)= -16.0, -8.0, -6.0, -4.0, -2.0, 0.0, 2.0,  4.0,  8.0,
+      9.0, 10.0, 12.0, 14.0, 16.0, 18.0, 19.0, 20.0, 21.0, 22.0, 24.0$
+
+*   RNNUB   Array(20) Reynolds number per unit length
+*           Freestream Reynolds numbers. Each array element must 
+*           correspond to the respective Mach number/freestream 
+*           speed input, use LOOP=1.0
+*$FLTCON RNNUB(1)=2.28E6$    ! This is calculated for us.
+
+
+
+
+
+*   NALT    Number of atmospheric conditions to be run, max of 20
+*           input as either altitude or pressure and temperature
+*           Note: This parameter, along with NMACH, may affect the
+*           proper setting of the LOOP control parameter. 
+ $FLTCON NALT=1.0$
+
+*   ALT     Array(20) Values of geometric altitude
+*           Number of altitude and values. Note, Atmospheric conditions 
+*           are input either as altitude or pressure and temperature. (MAX 20)
+*   PINF    Array(20) Values of freestream Static Pressure
+*   TINF    Array(20) Values of freestream Temperature
+ $FLTCON ALT(1)=0.0$
+
+
+*   HYPERS  =.true.  Hypersonic analysis at all Mach numbers > 1.4
+*$FLTCON HYPERS=1.0$
+
+
+*   STMACH  Upper limit of Mach numbers for subsonic analysis
+*           (0.6<STMACH<0.99), Default to 0.6 if not input.
+
+*   TSMACH  Lower limit of Mach number for Supersonic analysis 
+*           (1.01<=TSMACH<=1.4)  Default to 1.4
+ $FLTCON STMACH=0.6$
+ $FLTCON TSMACH=1.4$
+
+*   TR      Drag due to lift transition flag, for regression analysis
+*           of wing-body configuration.
+*           = 0.0 for no transition (default)
+*           = 1.0 for transition strips or full scale flight
+ $FLTCON TR=1.0$
+
+*   WT      Vehicle Weight
+ $FLTCON WT=1400.0$
+
+*   GAMMA   Flight path angle
+*$FLTCON GAMMA=$
+
+*   LOOP    Program Looping Control
+*              1 = vary altitude and mach together, default)
+*              2 = vary Mach, at fixed altitude
+*              3 = vary altitude, at fixed Mach
+ $FLTCON LOOP=1.0$
+
+
+
+
+*************************  
+*  Reference Parameters *   pg 29
+*************************
+
+*   ROUGFC  Surface roughness factor, equivalent sand roughness, default
+*           to 0.16e-3 inches (Natural sheet metal)
+*           0.02/0.08E-3 - Polished metal or wood
+*           0.16E-3  - Natural sheet metal
+*           0.25E-3  - Smooth matte paint, carefully applied
+*           0.40E-3  - Standard camouflage paint, average application
+ $OPTINS ROUGFC=0.25E-3$
+
+
+*   SREF    Reference area value of theoretical wing area used by program
+*           if not input
+* $OPTINS SREF=160.0$
+
+*   CBARR   Longitudinal reference length value of theoritcal wing
+*           Mean Aerodynamic Chord used by program if not input
+* $OPTINS CBARR=6.75$
+
+*   BLREF   Lateral reference length value of wing span used by program
+* $OPTINS BLREF=32.0$
+
+
+
+
+
+******************************************
+* Group II     Synthesis Parameters
+******************************************
+*
+*   page 33
+*
+*   XCG     Longitudinal location of cg (moment ref. center)
+* I measured this to be at about 22.68, which really screwed up the 
+* Cm-basic curve. Calculating it from XW and 0.26 %MAC yields 20.8.
+* Sim model has 23.5 with different reference (-1.6), adjusted is 21.9.
+* Keep in mind that total cg movement on Citation is about .8 feet 
+ $SYNTHS XCG=5.5$ ! xnp around 5.6
+
+*   ZCG     Vertical location of CG relative to reference plane
+ $SYNTHS ZCG=0.0$ ! CHECK
+
+*   XW      Longitudinal location of theoretical wing apex (where
+*           leading edge would intersect long axis)
+ $SYNTHS XW=4.5$
+
+*   ZW      Vertical location of theoretical wing apex relative to
+*           reference plane
+ $SYNTHS ZW=2.0$
+
+*   ALIW    Wing root chord incident angle measured from reference plane
+ $SYNTHS ALIW=1.0$ ! CHECK 3.0 (3.75)
+
+*   XH      Longitudinal location of theoretical horizontal tail apex. 
+*           If HINAX is input, XH and ZH are evaluated at zero incidence.
+ $SYNTHS XH=17.4$
+
+*   ZH      Vertical location of theoretical horizontal tail apex
+*           relative to reference plane. If HINAX is input, XH and ZH
+*           are evaluated at zero incidence.
+ $SYNTHS ZH=-0.3$
+
+*   ALIH    Horizontal tail root chord incidence angle measured from
+*           reference plane
+ $SYNTHS ALIH=0.0$
+
+*   XV      Longitudinal location of theoretical vertical tail apex
+ $SYNTHS XV=17.8$
+
+*   ZV      Vertical location of theoretical vertical tail apex
+*           This kinda makes sense only for twin tails that are canted 
+ $SYNTHS ZV=0.0$
+
+*   XVF     Longitudinal location of theoretical ventral fin apex
+*$SYNTHS XVF=20.4$
+* $SYNTHS XVF=18.0$
+
+*   ZVF     Vertical location of theoretical ventral fin apex
+*           This kinda makes sense only for twin tails that are canted 
+*$SYNTHS ZVF=6.2$
+
+*   SCALE   Vehicle scale factor (multiplier to input dimensions)
+ $SYNTHS SCALE=1.0$
+
+*   VERTUP  Vertical panel above reference plane (default=true)
+ $SYNTHS VERTUP=.TRUE.$
+
+*   HINAX   Longitudinal location of horizontal tail hinge axis.
+*           Required only for all-moveable horizontal tail trim option.
+*$SYNTHS HINAX=17.9$
+
+
+
+**********************************  
+*  Body Configuration Parameters *
+**********************************
+
+*  page 36
+
+*  Here is an error message output by DIGDAT concerning body geometry:
+
+*   IN NAMELIST BODY, ONLY THE FOLLOWING COMBINATIONS OF VARIABLES CAN BE USED
+*   FOR A CIRCULAR BODY, SPECIFY X AND R OR X AND S
+*   FOR AN ELLIPTICAL BODY, SPECIFY X AND R OR X AND S, AND THE VARIABLE ELLIP
+*   FOR OTHER BODY SHAPES X, R, S, AND P MUST ALL BE SPECIFIED
+
+*   NX      Number of longitudinal body stations at which data is
+*           specified, max of 20
+ $BODY NX=13.0$
+
+*   X       Array(20) Longitudinal distance measured from arbitray location
+ $BODY X(1)=0.0,0.0,0.10,0.18,0.45,0.7,1.42,2.88,4.6,8.2,10.6,
+ 19.6,19.6$
+
+*   R       Array(20) Planform half width at station Xi. See note above.
+ $BODY R(1)=0.0,1.0,1.16,1.23,1.35,1.39,1.46,1.58,1.66,1.66,1.4,
+ 0.34,0.0$
+
+*   ZU      Array(20) Z-coordinate at upper body surface at station Xi
+*           (positive when above centerline)
+*           [Only required for subsonic asymmetric bodies]
+ $BODY ZU(1)=0.1,0.3,0.6,0.66,0.73,0.77,0.87,0.94,2.25,2.25,0.67,
+ -0.07,-0.6$
+
+*   ZL      Array(20) Z-coordinate at lower body surface at station Xi
+*           (negative when below centerline)
+*           [Only required for subsonic asymmetric bodies]
+ $BODY ZL(1)=0.1,-0.5,-0.97,-1.22,-1.42,-1.57,-1.73,-1.93,-2.04,-1.9,-1.7,
+ -1.04,-0.6$
+
+*   BNOSE   Nosecone type  1.0 = conical (rounded), 2.0 = ogive (sharp point)
+*           [Not required in subsonic speed regime]
+* $BODY BNOSE=1.0$
+
+*   BTAIL   Tailcone type  1.0 = conical, 2.0 = ogive, omit for lbt = 0
+*           [Not required in subsonic speed regime]
+* $BODY BTAIL=1.0$
+
+*   BLN     Length of body nose
+*           Not required in subsonic speed regime
+* $BODY BLN=5.1$
+
+*   BLA     Length of cylindrical afterbody segment, =0.0 for nose alone
+*           or nose-tail configuration
+*           Not required in subsonic speed regime
+* $BODY BLA=0.0$ ! 9.8
+
+*   DS      Nose bluntness diameter, zero for sharp nosebodies
+*           [Hypersonic speed regime only]
+*$BODY DS=$
+
+*   ITYPE   1.0 = straight wing, no area rule
+*           2.0 = swept wing, no area rule (default)
+*           3.0 = swept wing, area rule
+ $BODY ITYPE=1.0$
+
+*   METHOD  1.0 = Use existing methods (default)
+*           2.0 = Use Jorgensen method
+ $BODY METHOD=1.0$
+
+
+
+
+
+
+*********************************
+*  Planform Variable Parameters *   pg 37-38
+*********************************
+
+*  Note : These parameters are repeated for common blocks
+*          WGPLNF
+*          HTPLNF
+*          VTPLNF   
+*          VFPLNF
+*  However, not all the parameters are used in each one of the blocks.
+*
+
+
+**********************************
+*         Wing planform variables   pg 37-38
+**********************************
+
+*   CHRDTP  Tip chord
+ $WGPLNF CHRDTP=3.63$
+
+*   SSPNOP  Semi-span outboard panel. Not required for straight 
+*           tapered planform.
+ $WGPLNF SSPNOP=9.30$
+
+*   SSPNE   Semi-span exposed panel, See diagram on pg 37.
+ $WGPLNF SSPNE=14.7$
+
+*   SSPN    Semi-span theoretical panel from theoretical root chord
+ $WGPLNF SSPN=16.5$
+
+*   CHRDBP  Chord at breakpoint. Not required for straight 
+*           tapered planform.
+ $WGPLNF CHRDBP=5.26$
+
+*   CHRDR   Chord root
+ $WGPLNF CHRDR=5.26$
+
+*   SAVSI   Inboard panel sweep angle
+ $WGPLNF SAVSI=0.0$
+
+*   SAVSO   Outboard panel sweep angle
+ $WGPLNF SAVSO=6.0$ ! I don't understand, should be zero but then it's wrong on 3d vue
+
+*   CHSTAT  Reference chord station for inboard and outboard panel 
+*           sweep angles, fraction of chord
+ $WGPLNF CHSTAT=0.25$       ! CHECK what's that
+
+*   TWISTA  Twist angle, negative leading edge rotated down (from 
+*           exposed root to tip)
+ $WGPLNF TWISTA=0.0$
+
+*   SSPNDD  Semi-span of outboard panel with dihedral
+*$WGPLNF SSPNDD=$
+
+*   DHDADI  Dihedral angle of inboard panel
+ $WGPLNF DHDADI=0.0$
+
+*   DHDADO  Dihedral angle of outboard panel. If DHDADI=DHDADO only 
+*           input DHDADI
+*$WGPLNF DHDADO=$
+
+*   TYPE    1.0 - Straight tapered planform
+*           2.0 - Double delta planform (aspect ratio <= 3)
+*           3.0 - Cranked planform (aspect ratio > 3)
+ $WGPLNF TYPE=1.0$
+
+
+
+**********************************************
+*  Wing Sectional Characteristics Parameters *
+**********************************************
+
+*  The section aerodynamic characteristics for these surfaces are
+*  input using either the sectional characteristics namelists WGSCHR,
+*  HTSCHR, VTSCHR and VFSCHR and/or the NACA control cards. Airfoil
+*  characteristics are assummed constant for each panel of the planform.
+*
+*  To avoid having to input all the airfoil sectional characteristics,
+*  you can specify the NACA airfoil designation.
+*
+*NACA x y zzzzzz
+*
+*   where:
+*      column 1-4   NACA
+*             5     any deliminator
+*             6     W, H, V, or F  Planform for which the airfoil
+*                                  designation applies:  Wing, Horizontal
+*                                  tail, Vertical tail, or Ventral fin.
+*             7     any deliminator
+*             8     1,4,5,6,S      Type of airfoil section: 1-series, 
+*                                  4-digit, 5-digit, 6-series, or Supersonic
+*             9     any deliminator
+*            10-80  Designation, columns are free format, blanks are ignored
+
+
+**************************************
+*       Wing Sectional Characteristics  pg 39-40
+**************************************
+
+
+*   Note : Only one airfoil section can be defined, so we're going to
+*          with the airfoil at the root. The actual airfoil is a
+*          5-series modified (23016-5), but I'm not really sure how
+*          to get the -5 part in, and what it means, and where the max
+*          thickness is. The tip is NACA 23012.
+*        
+NACA W 4 2412		! 
+
+
+*   TOVC    Maximum airfoil section thickness fraction of chord
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$WGSCHR TOVC=$
+
+*   DELTAY  Difference between airfoil ordinates at 6% and 15% chord, 
+*           percent chord (% correct ???)
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$WGSCHR DELTAY=$
+
+*   XOVC    Chord location of maximum airfoil thickness, fraction of chord
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$WGSCHR XOVC=$
+
+*   CLI     Airfoil section design lift coefficient
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$WGSCHR CLI=$
+
+*   ALPHAI  Angle of attack at section design lift coefficient, deg
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$WGSCHR ALPHAI=$
+
+*   CLALPA  Airfoil section lift curve slope dCl/dAlpha, per deg (array 20)
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$WGSCHR CLALPA(1)=$
+
+*   CLMAX   Airfoil section maximum lift cofficient (array 20)
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$WGSCHR CLMAX(1)=$
+
+*   CMO     Section zero lift pitching moment coefficient
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$WGSCHR CMO=$
+
+*   LERI    Airfoil leading edge radius, fraction of chord
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$WGSCHR LERI=$
+
+*   LERO    RLE for outboard panel, fraction of chord
+*           [Required input]. 
+*           Not required for straight tapered planforms.
+*$WGSCHR LERO=$
+
+*   CAMBER  Cambered airfoil flag flag
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$WGSCHR CAMBER=$
+
+*   TOVCO   t/c for outboard panel
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*           Not required for straight tapered planforms.
+*$WGSCHR TOVCO=$
+
+*   XOVCO   (x/c)max for outboard panel
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*           Not required for straight tapered planforms.
+*$WGSCHR XOVCO=$
+
+*   CMOT    Cmo for outboard panel
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*           Not required for straight tapered planforms.
+*$WGSCHR CMOT=$
+
+*   CLMAXL  Airfoil maximum lift coefficient at mach = 0.0
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$WGSCHR CLMAXL=$
+
+*   CLAMO   Airfoil section lift curve slope at Mach=0.0, per deg
+*           [Not required for subsonic speed regime. Required input 
+*            for transonic speed regime, user supplied or computed if 
+*            NACA card supplied]
+*$WGSCHR CLAMO=$
+
+*    TCEFF  Planform effective thickness ratio, fraction of chord
+*           [Not required for subsonic speed regime. Required input 
+*            for transonic speed regime, user supplied or computed if 
+*            NACA card supplied]
+*$WGSCHR TCEFF=$
+
+*   KSHARP  Wave-drag factor for sharp-nosed airfoil section, not
+*           input for round-nosed airfoils
+*           [Not required for subsonic speed regime. Required input 
+*            for transonic speed regime, user supplied or computed if 
+*            NACA card supplied]
+*$WGSCHR KSHARP=$
+
+*   SLOPE   Airfoil surface slope at 0,20,40,60,80 and 100% chord, deg.
+*           Positive when the tangent intersects the chord plane forward 
+*           of the reference chord point
+*           [Not required for subsonic speed regime. Required input 
+*            for transonic speed regime, user supplied or computed if 
+*            NACA card supplied]
+*$WGSCHR SLOPE(1)=$
+
+*   ARCL    Aspect ratio classification (see table 9, pg 41)
+*           [Optional input]
+*$WGSCHR ARCL=$
+
+*   XAC     Section Aerodynamic Center, fraction of chord
+*           [Optional input, computed by airfoil section module if airfoil
+*            defined with NACA card or section coordinates]
+*$WGSCHR XAC=$
+
+*   DWASH   Subsonic downwash method flag
+*           = 1.0  use DATCOM method 1
+*           = 2.0  use DATCOM method 2
+*           = 3.0  use DATCOM method 3
+*           Supersonic, use DATCOM method 2 
+*           [Optional input]
+*           See figure 9 on page 41.
+*$WGSCHR DWASH=$
+
+*   YCM     Airfoil maximum camber, fraction of chord
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$WGSCHR YCM=$
+
+*   CLD     Conical camber design lift coefficient for M=1.0 design
+*           see NACA RM A55G19 (default to 0.0)
+*           [Required input]
+*$WGSCHR CLD=$
+
+*   TYPEIN  Type of airfoil section coordinates input for airfoil
+*           section module
+*           = 1.0  upper and lower surface coordinates (YUPPER and YLOWER)
+*           = 2.0 Mean line and thickness distribution (MEAN and THICK)
+*           [Optional input]
+*$WGSCHR TYPEIN=$
+
+*   NPTS    Number of section points input, max = 50.0
+*           [Optional input]
+*$WGSCHR NPTS=$
+
+*   XCORD   Abscissas of inputs points, TYPEIN=1.0 or 2.0, XCORD(1)=0.0
+*           XCORD(NPTS)= 1.0 required.
+*           [Optional input]
+*$WGSCHR XCORD=$
+
+*   YUPPER  Ordinates of upper surface, TYPEIN=1.0, fraction of chord, and
+*           requires YUPPER(1)=0.0 and YUPPER(NPTS)=0.0
+*           [Optional input]
+*$WGSCHR YUPPER=$
+
+*   YLOWER  Ordinates of lower surface, TYPEIN=1.0, fraction of chord,
+*           and requires YLOWER(1)=0.0 and YLOWER(NPTS)=0.0
+*           [Optional input]
+*$WGSCHR YLOWER=$
+
+*   MEAN    Ordinates of mean line, TYPEIN=2.0, fraction of chord, and
+*           requires MEAN(1)=0.0 and MEAN(NPTS)=0.0
+*           [Optional input]
+*$WGSCHR MEAN=$
+
+*   THICK   Thickness distribution, TYPEIN=2.0, fraction of chord, and
+*           requires THICK(1)=0.0 and THICK(NPTS)=0.0
+*           [Optional input]
+*$WGSCHR THICK=$
+
+
+*************************************************************************
+* At this point, we want to save this case, as this is the basic fuselage
+* and wing build-up. Before we can add a tail, we have to run the flaps
+* and ailerons, as these always act on the aftmost horizontal surface.
+*************************************************************************
+
+*   Preserve the input data for the case to be used in the following 
+*   cases. This would be useful if multiple or comparison cases
+*   are built.
+*SAVE
+
+
+
+
+
+******************************
+*    Ground effects parameters
+******************************
+
+*   NGH     Number of ground heights to be run, maximum of 10.
+* $GRNDEF NGH=10.0$
+
+*   GRDHT   Values of ground heights. Ground heights equal altitude
+*           of reference plane relative to ground. Ground effect output
+*           may be obtained at a maximum of ten different ground heights.
+*           According to the DATCOM, the ground effects become neglible
+*           when the ground height exceeds the wing span. Through
+*           testing, there is a minimal effect up to twice the wing
+*           span, so to keep our tables smooth, let's make the last
+*           point 1.5b, and the output adds a point at 2b of 0.0. The
+*           smallest value should NOT be 0.0, which would be the wing
+*           sitting on the ground. It should be the height of the wing
+*           with the aircraft sitting on the ground.
+*
+* $GRNDEF GRDHT=5.0,10.0,15.0,20.0,25.0,30.0,35.0,40.0,50.0,60.0$
+
+SAVE
+
+
+******************************************
+*    Symetrical Flap Deflection parameters
+******************************************
+* DATCOM pg 47 states :
+* 
+*    "In general, the eight flap types defined using SYMFLP
+*     (variable FTYPE) are assumed to be located on the most
+*     aft lifting surface, either horizontal tail or wing if 
+*     a horizontal tail is not defined."
+* 
+*   FTYPE   Flap type
+*              1.0  Plain flaps
+*              2.0  Single slotted flaps
+*              3.0  Fowler flaps
+*              4.0  Double slotted flaps
+*              5.0  Split flaps
+*              6.0  Leading edge flap
+*              7.0  Leading edge slats
+*              8.0  Krueger
+ $SYMFLP FTYPE=2.0$ ! CHECK
+
+*   NDELTA  Number of flap or slat deflection angles, max of 9
+ $SYMFLP NDELTA=9.0$
+*
+*   DELTA   Flap deflection angles measured streamwise
+*           (NDELTA values in array)
+ $SYMFLP DELTA(1)=0.0,5.0,10.0,15.0,20.0,25.0,30.0,35.0,40.0$
+
+*   PHETE   Tangent of airfoil trailine edge angle based on ordinates at
+*           90 and 99 percent chord
+ $SYMFLP PHETE=0.0522$      ! CHECK
+
+*   PHETEP  Tangent of airfoil trailing edge angle based on ordinates at
+*           95 and 99 percent chord
+ $SYMFLP PHETEP=0.0391$     ! CHECK
+
+*   CHRDFI  Flap chord at inboard end of flap, measured parallel to
+*           longitudinal axis
+ $SYMFLP CHRDFI=1.32$
+
+*   CHRDFO  Flap chord at outboard end of flap, measured parallel to
+*           longitudinal axis
+ $SYMFLP CHRDFO=1.32$
+
+*   SPANFI  Span location of inboard end of flap, measured perpendicular
+*           to vertical plane of symmetry
+ $SYMFLP SPANFI=1.70$
+
+*   SPANFO  Span location of outboard end of flap, measured perpendicular
+*           to vertical plane of symmetry
+ $SYMFLP SPANFO=6.75$
+
+*   CPRMEI  Total wing chord at inboard end of flap (translating devices 
+*           only) measured parallel to longitudinal axis
+*           (NDELTA values in array)
+*              Single-slotted, Fowler, Double-slotted, leading-edge
+*              slats, Krueger flap, jet flap
+* 
+*   BIG GUESS HERE, as I don't know the characteristics of how the
+*   flaps move. Guess at max of 4 inches gap at full deflection.
+ $SYMFLP CPRMEI(1)=8.1,8.1,8.2,8.2,8.3,8.3,8.3,8.4,8.4$
+
+*   CPRMEO  Total wing chord at outboard end of flap (translating devices
+*           only) measured parallel to longitudinal axis
+*           (NDELTA values in array)
+*              Single-slotted, Fowler, Double-slotted, leading-edge
+*              slats, Krueger flap, jet flap
+* 
+*   BIG GUESS HERE, as I don't know the characteristics of how the
+*   flaps move. Guess at max of 4 inches gap at full deflection.
+ $SYMFLP CPRMEO(1)=3.7,3.7,3.8,3.8,3.9,3.9,3.9,4.0,4.0$
+
+*   CAPINS                           (double-slotted flaps only)
+*           (NDELTA values in array)
+*$SYMFLP CAPINS$
+
+*   CAPOUT                           (double-slotted flaps only)
+*           (NDELTA values in array)
+*$SYMFLP CAPOUT$
+
+*   DOSDEF                           (double-slotted flaps only)
+*           (NDELTA values in array)
+*$SYMFLP DOSDEF$
+
+*   DOBCIN                           (double-slotted flaps only)
+*$SYMFLP DOBCIN
+
+*   DOBCOT                           (double-slotted flaps only)
+*$SYMFLP DOBCOT$
+
+*   SCLD    Increment in section lift coefficient due to
+*           deflecting flap to angle DELTA[i]      (optional)
+*           (NDELTA values in array)
+*$SYMFLP SCLD$
+
+*   SCMD    Increment in section pitching moment coefficient due to
+*           deflecting flap to angle DELTA[i]      (optional)
+*           (NDELTA values in array)
+*$SYMFLP SCMD$
+
+*   CB      Average chord of the balance    (plain flaps only)
+*$SYMFLP CB=$
+
+*   TC      Average thickness of the control at hinge line
+*                                           (plain flaps only)
+*$SYMFLP TC=0.3$
+
+*   NTYPE   Type of nose
+*              1.0  Round nose flap
+*              2.0  Elliptic nose flap
+*              3.0  Sharp nose flap
+ $SYMFLP NTYPE=1.0$                     ! Guess
+
+*   JETFLP  Type of flap
+*              1.0  Pure jet flap
+*              2.0  IBF
+*              3.0  EBF
+*$SYMFLP JETFLP$
+
+*   CMU     Two-dimensional jet efflux coefficient
+*$SYMFLP CMU$
+
+*   DELJET  Jet deflection angle
+*           (NDELTA values in array)
+*$SYMFLP DELJET$
+
+*   EFFJET  EBF Effective jet deflection angle
+*           (NDELTA values in array)
+*$SYMFLP EFFJET$
+
+
+
+
+**********************************************************************
+* At this point, we are going to terminate the case so that we can get 
+* the flap effects. We can't save this data, as we are
+* also going to do control surfaces on the horizontal tail.
+**********************************************************************
+
+*   Terminates the reading of input cards and begins execution of
+*   the case.
+CASEID FLAPS: Cessna 150 L Aircraft
+NEXT CASE
+
+
+
+*************************************************************
+*    Asymmetrical Control Deflection parameters : Ailerons
+*************************************************************
+
+*   STYPE   Type
+*              1.0  Flap spoiler on wing
+*              2.0  Plug spoiler on wing
+*              3.0  Spoiler-slot-deflection on wing
+*              4.0  Plain flap aileron
+*              5.0  Differentially deflected all moveable horizontal tail
+ $ASYFLP STYPE=4.0$
+
+*   NDELTA  Number of control deflection angles, required for all controls,
+*           max of 9
+ $ASYFLP NDELTA=9.0$
+
+*   DELTAL  Defelction angle for left hand plain flap aileron or left
+*           hand panel all moveable horizontal tail, measured in
+*           vertical plane of symmetry
+ $ASYFLP DELTAL(1)=-21.0,-15.0,-10.0,-5.0,0.0,5.0,10.0,15.0,21.0$
+
+*   DELTAR  Defelction angle for right hand plain flap aileron or right
+*           hand panel all moveable horizontal tail, measured in
+*           vertical plane of symmetry
+ $ASYFLP DELTAR(1)=21.0,15.0,10.0,5.0,0.0,-5.0,-10.0,-15.0,-21.0$
+
+*   SPANFI  Span location of inboard end of flap or spoiler control,
+*           measured perpendicular to vertical plane of symmetry
+ $ASYFLP SPANFI=6.75$
+
+*   SPANFO  Span location of outboard end of flap or spoiler control,
+*           measured perpendicular to vertical plane of symmetry
+ $ASYFLP SPANFO=15.65$
+
+*   PHETE   Tangent of airfoil trailing edge angle based on ordinates
+*           at x/c - 0.90 and 0.99
+ $ASYFLP PHETE=0.00$      ! CHECK 
+
+*   CHRDFI  Aileron chord at inboard end of plain flap aileron,
+*           measured parallel to longitudinal axis
+ $ASYFLP CHRDFI=0.786$
+
+*   CHRDFO  Aileron chord at outboard end of plain flap aileron,
+*           measured parallel to longitudinal axis
+ $ASYFLP CHRDFO=0.786$
+
+*   DELTAD  Projected height of deflector, spoiler-slot-deflector
+*           control, fraction of chord
+*$ASYFLP DELTAD(1) $
+
+*   DELTAS  Projected height of spoiler, flap spoiler, plug spoiler and
+*           spoiler-slot-deflector control; fraction of chord
+*$ASYFLP DELTAS(1) $
+
+*   XSOC    Distance from wing leading edge to spoiler lip measured
+*           parallel to streamwise wng chord, flap and plug spoilers,
+*           fraction of chord
+*$ASYFLP XSOC(1) $
+
+*   XSPRME  Distance from wing leading edge to spoiler hinge line
+*           measured parallel to streamwise chord, flap spoiler,
+*           plug spoiler and spoiler-slot-deflector control, fraction 
+*           of chord
+*$ASYFLP XSPRME $
+
+*   HSOC    Projected height of spoiler measured from and normal to
+*           airfoil mean line, flap spoiler, plug spoiler and spoiler-
+*           slot-reflector, fraction of chord
+*$ASYFLP HSOC(1) $
+
+
+**********************************************************************
+* At this point, we are going to terminate the case so that we can get 
+* the aileron effects.
+**********************************************************************
+
+*   Terminates the reading of input cards and begins execution of
+*   the case. Case data are destroyed following execution of a case,
+*   unless the SAVE card is present.
+CASEID AILERONS: Cessna 150 L Aircraft
+SAVE
+NEXT CASE
+
+
+
+
+*********************************************
+*         Horizontal Tail planform variables   pg 37-38
+*********************************************
+
+*   CHRDTP  Tip chord
+ $HTPLNF CHRDTP=2.13$
+
+*   SSPNOP  Semi-span outboard panel. Not required for straight 
+*           tapered planform.
+*$HTPLNF SSPNOP=$
+
+*   SSPNE   Semi-span exposed panel
+ $HTPLNF SSPNE=3.6$
+
+*   SSPN    Semi-span theoretical panel from theoretical root chord
+ $HTPLNF SSPN=3.9$
+
+*   CHRDBP  Chord at breakpoint
+*$HTPLNF CHRDBP=$
+
+*   CHRDR   Chord root
+ $HTPLNF CHRDR=4.00$
+
+*   SAVSI   Inboard panel sweep angle
+ $HTPLNF SAVSI=0.0$ ! CHECK
+
+*   CHSTAT  Reference chord station for inboard and outboard panel 
+*           sweep angles, fraction of chord
+ $HTPLNF CHSTAT=0.25$ ! CHECK
+
+*   TWISTA  Twist angle, negative leading edge rotated down (from 
+*           exposed root to tip)
+ $HTPLNF TWISTA=-3.0$		! Guess
+
+*   SSPNDD  Semi-span of outboard panel with dihedral
+*$HTPLNF SSPNDD=$
+
+*   DHDADI  Dihedral angle of inboard panel
+ $HTPLNF DHDADI=0.0$		! Average value used
+
+*   DHDADO  Dihedral angle of outboard panel. If DHDADI=DHDADO only 
+*           input DHDADI
+*$HTPLNF DHDADO=$
+
+*   TYPE    1.0 - Straight tapered planform
+*           2.0 - Double delta planform (aspect ratio <= 3)
+*           3.0 - Cranked planform (aspect ratio > 3)
+ $HTPLNF TYPE=1.0$
+
+*   SHB     Portion of fuselage side area that lies between Mach lines 
+*           originating from leading and trailing edges of horizontal 
+*           tail exposed root chord (array 20).
+*           Only required for supersonic and hypersonic speed regimes.
+*$HTPLNF SHB(1)=$
+
+*   SEXT     Portion of extended fueslage side area that lies between 
+*            Mach lines originating from leading and trailing edges of 
+*            horizontal tail exposed root chord (array 20)
+*           Only required for supersonic and hypersonic speed regimes.
+*$HTPLNF SEXT(1)=$
+
+*   RLPH    Longitudinal distance between CG and centroid of Sh(B) 
+*           positive aft of CG
+*           Only required for supersonic and hypersonic speed regimes.
+*$HTPLNF RLPH(1)=$
+
+
+NACA H 4 0012	! Citation is 0010 at root, 0008 at tip
+
+
+
+******************************************
+*         Vertical Tail planform variables   pg 37-38
+******************************************
+
+*   CHRDTP  Tip chord
+ $VTPLNF CHRDTP=2.13$
+
+*   SSPNOP  Semi-span outboard panel
+*$VTPLNF SSPNOP=$
+
+*   SSPNE   Semi-span exposed panel
+ $VTPLNF SSPNE=3.6$
+
+*   SSPN    Semi-span theoretical panel from theoretical root chord
+ $VTPLNF SSPN=3.9$
+
+*   CHRDBP  Chord at breakpoint
+*$VTPLNF CHRDBP=1.16$
+
+*   CHRDR   Chord root
+ $VTPLNF CHRDR=4.00$
+
+*   SAVSI   Inboard panel sweep angle
+ $VTPLNF SAVSI=5.0$ ! CHECK
+
+*   SAVSO   Outboard panel sweep angle
+* $VTPLNF SAVSO=$
+
+*   CHSTAT  Reference chord station for inboard and outboard panel 
+*           sweep angles, fraction of chord
+ $VTPLNF CHSTAT=0.0$
+
+*   TYPE    1.0 - Straight tapered planform
+*           2.0 - Double delta planform (aspect ratio <= 3)
+*           3.0 - Cranked planform (aspect ratio > 3)
+ $VTPLNF TYPE=1.0$
+
+*   SVWB    Portion of exposed vertical panel area that lies between 
+*           Mach lines emanating from leading and trailing edges of 
+*           wing exposed root chord (array 20)
+*           Only required for supersonic and hypersonic speed regimes.
+*$VTPLNF SVWB(1)=$
+
+*   SVB     Area of exposed vertical panel not influenced by wing or 
+*           horizontal tail (array 20)
+*           Only required for supersonic and hypersonic speed regimes.
+*$VTPLNF SVB(1)=$
+
+*   SVHB    Portion of exposed vertical panel area that lies between Mach 
+*           lines emanating from leading and and trailing edges of 
+*           horizontal tail exposed root chord (array 20)
+*           Only required for supersonic and hypersonic speed regimes.
+*$VTPLNF SVHB(1)=$
+
+
+NACA V 4 0012	! Citation is 0012 at root, 0008 at tip
+
+
+
+******************************************
+*         Vertical Fin planform variables     pg 37-38
+******************************************
+
+*   CHRDTP  Tip chord
+* $VFPLNF CHRDTP=0.0$    ! Will this value work?
+
+*   SSPNOP  Semi-span outboard panel
+*$VFPLNF SSPNOP=$
+
+*   SSPNE   Semi-span exposed panel
+* $VFPLNF SSPNE=1.9$
+
+*   SSPN    Semi-span theoretical panel from theoretical root chord
+* $VFPLNF SSPN=3.4$
+
+*   CHRDBP  Chord at breakpoint
+*$VFPLNF CHRDBP=$
+
+*   CHRDR   Chord root
+* $VFPLNF CHRDR=13.0$
+
+*   SAVSI   Inboard panel sweep angle
+* $VFPLNF SAVSI=80.0$
+
+*   CHSTAT  Reference chord station for inboard and outboard panel 
+*           sweep angles, fraction of chord
+* $VFPLNF CHSTAT=0.0$
+
+*   DHDADO  Dihedral angle of outboard panel. If DHDADI=DHDADO only 
+*           input DHDADI
+* $VFPLNF DHDADO=0.0$
+
+*   DHDADO  Dihedral angle of outboard panel. If DHDADI=DHDADO only 
+*           input DHDADI
+*$VFPLNF DHDADO=$
+
+*   TYPE    1.0 - Straight tapered planform
+*           2.0 - Double delta planform (aspect ratio <= 3)
+*           3.0 - Cranked planform (aspect ratio > 3)
+* $VFPLNF TYPE=1.0$
+
+*   SVWB    Portion of exposed vertical panel area that lies between 
+*           Mach lines emanating from leading and trailing edges of 
+*           wing exposed root chord (array 20)
+*           Only required for supersonic and hypersonic speed regimes.
+*$VFPLNF SVWB(1)=$
+
+*   SVB     Area of exposed vertical panel not influenced by wing or 
+*           horizontal tail (array 20)
+*           Only required for supersonic and hypersonic speed regimes.
+*$VFPLNF SVB(1)=$
+
+*   SVHB    Portion of exposed vertical panel area that lies between Mach 
+*           lines emanating from leading and and trailing edges of 
+*           horizontal tail exposed root chord (array 20)
+*           Only required for supersonic and hypersonic speed regimes.
+*$VFPLNF SVHB(1)=$
+
+
+
+
+*************************************************
+*       Horizontal Tail Sectional Characteristics  pg 39-40
+*************************************************
+
+*   Note : a lot of tails are 009 airfoils. It's probably a good guess
+*          unless you know otherwise.
+*
+
+*   TOVC    Maximum airfoil section thickness fraction of chord
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR TOVC=$
+
+*   DELTAY  Difference between airfoil ordinates at 6% and 15% chord, 
+*           percent chord (% correct ???)
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR DELTAY=$
+
+*   XOVC    Chord location of maximum airfoil thickness, fraction of chord
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR XOVC=$
+
+*   CLI     Airfoil section design lift coefficient
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR CLI=$
+
+*   ALPHAI  Angle of attack at section design lift coefficient, deg
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR ALPHAI=$
+
+*   CLALPA  Airfoil section lift curve slope dCl/dAlpha, per deg (array 20)
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR CLALPA(1)=$
+
+*   CLMAX   Airfoil section maximum lift cofficient (array 20)
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR CLMAX(1)=$
+
+*   CMO     Section zero lift pitching moment coefficient
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR CMO=$
+
+*   LERI    Airfoil leading edge radius, fraction of chord
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR LERI=$
+
+*   LERO    RLE for outboard panel, fraction of chord
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR LERO=$
+
+*   CAMBER  Cambered airfoil flag flag
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR CAMBER=$
+
+*   TOVCO   t/c for outboard panel
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR TOVCO=$
+
+*   XOVCO   (x/c)max for outboard panel
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR XOVCO=$
+
+*   CMOT    Cmo for outboard panel
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR CMOT=$
+
+*   CLAMO   Airfoil section lift curve slope at Mach=0.0, per deg
+*           [Not required for subsonic speed regime. Required input 
+*            for transonic speed regime, user supplied or computed if 
+*            NACA card supplied]
+*$HTSCHR CLAMO=$
+
+*    TCEFF  Planform effective thickness ratio, fraction of chord
+*           [Not required for subsonic speed regime. Required input 
+*            for transonic speed regime, user supplied or computed if 
+*            NACA card supplied]
+*$HTSCHR TCEFF=$
+
+*   KSHARP  Wave-drag factor for sharp-nosed airfoil section, not
+*           input for round-nosed airfoils
+*           [Not required for subsonic speed regime. Required input 
+*            for transonic speed regime, user supplied or computed if 
+*            NACA card supplied]
+*$HTSCHR KSHARP=$
+
+*   ARCL    Aspect ratio classification (see table 9, pg 41)
+*           [Optional input]
+*$HTSCHR ARCL=$
+
+*   XAC     Section Aerodynamic Center, fraction of chord
+*           [Optional input, computed by airfoil section module if airfoil
+*            defined with NACA card or section coordinates]
+*$HTSCHR XAC=$
+
+*   YCM     Airfoil maximum camber, fraction of chord
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR YCM=$
+
+*   CLD     Conical camber design lift coefficient for M=1.0 design
+*           see NACA RM A55G19 (default to 0.0)
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$HTSCHR CLD=$
+
+*   TYPEIN  Type of airfoil section coordinates input for airfoil
+*           section module
+*           = 1.0  upper and lower surface coordinates (YUPPER and YLOWER)
+*           = 2.0 Mean line and thickness distribution (MEAN and THICK)
+*           [Optional input]
+*$HTSCHR TYPEIN=$
+
+*   NPTS    Number of section points input, max = 50.0
+*           [Optional input]
+*$HTSCHR NPTS=$
+
+*   XCORD   Abscissas of inputs points, TYPEIN=1.0 or 2.0, XCORD(1)=0.0
+*           XCORD(NPTS)= 1.0 required.
+*           [Optional input]
+*$HTSCHR XCORD=$
+
+*   YUPPER  Ordinates of upper surface, TYPEIN=1.0, fraction of chord, and
+*           requires YUPPER(1)=0.0 and YUPPER(NPTS)=0.0
+*           [Optional input]
+*$HTSCHR YUPPER=$
+
+*   YLOWER  Ordinates of lower surface, TYPEIN=1.0, fraction of chord,
+*           and requires YLOWER(1)=0.0 and YLOWER(NPTS)=0.0
+*           [Optional input]
+*$HTSCHR YLOWER=$
+
+*   MEAN    Ordinates of mean line, TYPEIN=2.0, fraction of chord, and
+*           requires MEAN(1)=0.0 and MEAN(NPTS)=0.0
+*           [Optional input]
+*$HTSCHR MEAN=$
+
+*   THICK   Thickness distribution, TYPEIN=2.0, fraction of chord, and
+*           requires THICK(1)=0.0 and THICK(NPTS)=0.0
+*           [Optional input]
+*$HTSCHR THICK=$
+
+
+
+
+
+
+***********************************
+*    Elevator Deflection parameters
+***********************************
+* DATCOM pg 47 states :
+* 
+*    "In general, the eight flap types defined using SYMFLP
+*     (variable FTYPE) are assumed to be located on the most
+*     aft lifting surface, either horizontal tail or wing if 
+*     a horizontal tail is not defined."
+* 
+* So, does this mean that a flap cannot be added to a 
+* wing-body-tail configuration??? Additionally, does this mean
+* that the elvator is treated as a flap?
+
+*   FTYPE   Flap type
+*              1.0  Plain flaps
+*              2.0  Single slotted flaps
+*              3.0  Fowler flaps
+*              4.0  Double slotted flaps
+*              5.0  Split flaps
+*              6.0  Leading edge flap
+*              7.0  Leading edge slats
+*              8.0  Krueger
+ $SYMFLP FTYPE=1.0$
+
+*   NDELTA  Number of flap or slat deflection angles, max of 9
+ $SYMFLP NDELTA=9.0$
+*
+*   DELTA   Flap deflection angles measured streamwise
+*           (NDELTA values in array)
+ $SYMFLP DELTA(1)=-26.0,-17.0,-10.0,-5.0,0.0,5.0,9.0,13.0,17.0$
+
+*   PHETE   Tangent of airfoil trailine edge angle based on ordinates at
+*           90 and 99 percent chord
+ $SYMFLP PHETE=0.0522$      ! value in SPROB.IN for plain flaps
+
+*   PHETEP  Tangent of airfoil trailing edge angle based on ordinates at
+*           95 and 99 percent chord
+ $SYMFLP PHETEP=0.0523$     ! value in SPROB.IN for plain flaps
+
+*   CHRDFI  Flap chord at inboard end of flap, measured parallel to
+*           longitudinal axis
+ $SYMFLP CHRDFI=1.50$      ! scaled from three-view drawing
+
+*   CHRDFO  Flap chord at outboard end of flap, measured parallel to
+*           longitudinal axis
+ $SYMFLP CHRDFO=1.02$     ! scaled from three-view drawing
+
+*   SPANFI  Span location of inboard end of flap, measured perpendicular
+*           to vertical plane of symmetry
+ $SYMFLP SPANFI=0.8$       ! scaled from three-view drawing
+
+*   SPANFO  Span location of outboard end of flap, measured perpendicular
+*           to vertical plane of symmetry
+ $SYMFLP SPANFO=4.6$       ! scaled from three-view drawing
+
+*   CPRMEI  Total wing chord at inboard end of flap (translating devices 
+*           only) measured parallel to longitudinal axis
+*           (NDELTA values in array)
+*              Single-slotted, Fowler, Double-slotted, leading-edge
+*              slats, Krueger flap, jet flap
+* 
+*$SYMFLP CPRMEI(1)=$
+
+*   CPRMEO  Total wing chord at outboard end of flap (translating devices
+*           only) measured parallel to longitudinal axis
+*           (NDELTA values in array)
+*              Single-slotted, Fowler, Double-slotted, leading-edge
+*              slats, Krueger flap, jet flap
+* 
+*$SYMFLP CPRMEO(1)=$
+
+*   CAPINS                           (double-slotted flaps only)
+*           (NDELTA values in array)
+*$SYMFLP CAPINS$
+
+*   CAPOUT                           (double-slotted flaps only)
+*           (NDELTA values in array)
+*$SYMFLP CAPOUT$
+
+*   DOSDEF                           (double-slotted flaps only)
+*           (NDELTA values in array)
+*$SYMFLP DOSDEF$
+
+*   DOBCIN                           (double-slotted flaps only)
+*$SYMFLP DOBCIN
+
+*   DOBCOT                           (double-slotted flaps only)
+*$SYMFLP DOBCOT$
+
+*   SCLD    Increment in section lift coefficient due to
+*           deflecting flap to angle DELTA[i]      (optional)
+*           (NDELTA values in array)
+*$SYMFLP SCLD$
+
+*   SCMD    Increment in section pitching moment coefficient due to
+*           deflecting flap to angle DELTA[i]      (optional)
+*           (NDELTA values in array)
+*$SYMFLP SCMD$
+
+*   CB      Average chord of the balance    (plain flaps only)
+ $SYMFLP CB=0.84$ ! CHECK
+
+*   TC      Average thickness of the control at hinge line
+*                                           (plain flaps only)
+ $SYMFLP TC=0.3$          ! CHECK
+
+*   NTYPE   Type of nose
+*              1.0  Round nose flap
+*              2.0  Elliptic nose flap
+*              3.0  Sharp nose flap
+ $SYMFLP NTYPE=1.0$
+
+*   JETFLP  Type of flap
+*              1.0  Pure jet flap
+*              2.0  IBF
+*              3.0  EBF
+*$SYMFLP JETFLP$
+
+*   CMU     Two-dimensional jet efflux coefficient
+*$SYMFLP CMU$
+
+*   DELJET  Jet deflection angle
+*           (NDELTA values in array)
+*$SYMFLP DELJET$
+
+*   EFFJET  EBF Effective jet deflection angle
+*           (NDELTA values in array)
+*$SYMFLP EFFJET$
+
+
+
+
+
+
+**************************************
+*       Vertical Tail Sectional Characteristics  pg 39-40
+**************************************
+
+*   Note : a lot of tails are 009 airfoils. It's probably a good guess
+*          unless you know otherwise.
+*
+
+*   TOVC    Maximum airfoil section thickness fraction of chord
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$VTSCHR TOVC=$
+
+*   XOVC    Chord location of maximum airfoil thickness, fraction of chord
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$VTSCHR XOVC=$
+
+*   CLALPA  Airfoil section lift curve slope dCl/dAlpha, per deg (array 20)
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$VTSCHR CLALPA(1)=$
+
+*   LERI    Airfoil leading edge radius, fraction of chord
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$VTSCHR LERI=$
+
+*   LERO    RLE for outboard panel, fraction of chord
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$VTSCHR LERO=$
+
+*   TOVCO   t/c for outboard panel
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$VTSCHR TOVCO=$
+
+*   XOVCO   (x/c)max for outboard panel
+*           [Required input, user supplied or computed by airfoil
+*            section module if airfoil defined with NACA card or
+*            section coordinates]
+*$VTSCHR XOVCO=$
+
+*    TCEFF  Planform effective thickness ratio, fraction of chord
+*           [Not required for subsonic speed regime. Required input 
+*            for transonic speed regime, user supplied or computed if 
+*            NACA card supplied]
+*$VTSCHR TCEFF=$
+
+*   KSHARP  Wave-drag factor for sharp-nosed airfoil section, not
+*           input for round-nosed airfoils
+*           [Not required for subsonic speed regime. Required input 
+*            for transonic speed regime, user supplied or computed if 
+*            NACA card supplied]
+*$VTSCHR KSHARP=$
+
+*   ARCL    Aspect ratio classification (see table 9, pg 41)
+*           [Optional input]
+*$VTSCHR ARCL=$
+
+*   TYPEIN  Type of airfoil section coordinates input for airfoil
+*           section module
+*           = 1.0  upper and lower surface coordinates (YUPPER and YLOWER)
+*           = 2.0 Mean line and thickness distribution (MEAN and THICK)
+*           [Optional input]
+*$VTSCHR TYPEIN=$
+
+*   NPTS    Number of section points input, max = 50.0
+*           [Optional input]
+*$VTSCHR NPTS=$
+
+*   XCORD   Abscissas of inputs points, TYPEIN=1.0 or 2.0, XCORD(1)=0.0
+*           XCORD(NPTS)= 1.0 required.
+*           [Optional input]
+*$VTSCHR XCORD=$
+
+*   YUPPER  Ordinates of upper surface, TYPEIN=1.0, fraction of chord, and
+*           requires YUPPER(1)=0.0 and YUPPER(NPTS)=0.0
+*           [Optional input]
+*$VTSCHR YUPPER=$
+
+*   YLOWER  Ordinates of lower surface, TYPEIN=1.0, fraction of chord,
+*           and requires YLOWER(1)=0.0 and YLOWER(NPTS)=0.0
+*           [Optional input]
+*$VTSCHR YLOWER=$
+
+*   MEAN    Ordinates of mean line, TYPEIN=2.0, fraction of chord, and
+*           requires MEAN(1)=0.0 and MEAN(NPTS)=0.0
+*           [Optional input]
+*$VTSCHR MEAN=$
+
+*   THICK   Thickness distribution, TYPEIN=2.0, fraction of chord, and
+*           requires THICK(1)=0.0 and THICK(NPTS)=0.0
+*           [Optional input]
+*$VTSCHR THICK=$
+
+
+*******
+*  Experimental data input block comes next, but I decided not to
+*  type all of this stuff in at this point. It is all defined on page 45.
+*******
+
+
+
+
+*****************************************************
+*   Propulsion parameters for Propeller Power Effects
+*****************************************************
+
+*   AIETLP  Angle of incidence of engine thrust axis, deg
+* $PROPWR AIETLP=0.0$
+
+*   NENGSP  Number of engines (1 or 2 only)
+* $PROPWR NENGSP=1.0$
+
+*   THSTCP  Thrust coefficient 2T/PV^2 Sref
+
+*   PHALOC  Axial location of propeller hub
+* $PROPWR PHALOC=0.0$
+
+*   PHVLOC  Vertical location of propeller hub
+* $PROPWR PHVLOC=0.0$
+
+*   PRPRAD  Propeller radius
+* $PROPWR PRPRAD=5.75$
+
+*   ENGFCT  Empirical normal force factor
+*           Not required if blade widths are input.
+
+*   BWAPR3  Blade width at 0.3 propeller radius
+*           Not required if empirical normal force factor is input.
+*$PROPWR BWAPR3$
+
+*   BWAPR6  Blade width at 0.6 propeller radius
+*           Not required if empirical normal force factor is input.
+*$PROPWR BWAPR6$
+
+*   BWAPR9  Blade width at 0.9 propeller radius
+*           Not required if empirical normal force factor is input.
+*$PROPWR BWAPR9$
+
+*   NOPBPE  Number of propeller blades per engine
+* $PROPWR NOPBPE=2.0$
+
+*   BAPR75  Blade angle at 0.75 propeller radius
+*$PROPWR BAPR75$       !  18.0 ?     ! Do I have to input this?
+
+*   YP      Lateral location of engine
+* $PROPWR YP=0.0$
+
+*   CROT    .true.  Counter rotation propeller, 
+*           .false. Non counter rotating
+*                       Is this clockwise/counterclockwise?
+
+
+
+
+*********************************
+*    Jet Power Effects parameters  pg 51
+*********************************
+*************************************************
+*     Low-Aspect Ratio Wing, Wing-Body parameters
+*************************************************
+***************************************
+*     Transverse-Jet Control parameters
+***************************************
+**************************************************
+*     Flap Control at Hypersonic Speeds parameters
+**************************************************
+*****************************
+*     Control Tabs parameters
+*****************************
+* DATCOM User's manual, pg 68/69
+
+
+*   TTYPE   Type
+*              1.0  Tab Control
+*              2.0  Trim Tab
+*              3.0  Both
+*$CONTAB TTYPE$
+
+*   CFITC   Control tab inboard chord
+*$CONTAB CFITC$
+
+*   CFOTC   Control tab outboard chord
+*$CONTAB CFOTC$
+
+*   BITC    Control tab inboard span location
+*$CONTAB BITC$
+
+*   BOTC    Control tab outboard span location
+*$CONTAB BOTC$
+
+*   CFITT   Trim tab inboard chord
+*$CONTAB CFITT$
+
+*   CFOTT   Trim tab outboard chord
+*$CONTAB CFOTT$
+
+*   BITT    Trim tab inboard span location
+*$CONTAB BITT$
+
+*   BOTT    Trim tab outboard span location
+*$CONTAB BOTT$
+
+*   B1      Ch(delta) for control tab
+*$CONTAB B1$
+
+*   B2      Ch(delta) for trim tab
+*$CONTAB B2$
+
+*   B3      Ch(alpha) for control tab
+*$CONTAB B3$
+
+*   B4      Ch(alpha) for trim tab
+*$CONTAB B4$
+
+*   D1      see table 11, pg 70-71
+*$CONTAB D1$
+
+*   D2      see table 11, pg 70-71
+*$CONTAB D2$
+
+*   D3      see table 11, pg 70-71
+*$CONTAB D3$
+
+*   GCMAX   Maximum Stick gearing
+*$CONTAB GCMAX$
+
+*   KS      Tab spring effectiveness
+*$CONTAB KS$
+
+*   RL      Aerodynamic boost link ratio (RL >  0). 
+*           To input RL  infinity, set RL < 0
+*$CONTAB RL$
+
+*   BGR     Control tab gear ratio
+*$CONTAB BGR$
+
+*   DELR    -DELTAtc(max)/DELTAc(max) for a maximum control deflection
+*           The value of DELR is positive because DELTAtc(max) and
+*           DELTAc(max) will have opposite signs.
+*           When R(L)   0, DELR = 1.0
+*$CONTAB DELR$
+
+* DUMP ALL
+* DAMP
+
+
+CASEID TOTAL: Cessna 150 L Aircraft
+* NEXT CASE
+
+*   End of File

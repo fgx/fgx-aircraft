@@ -1,0 +1,10 @@
+dc8-63.xml
+Primary JSBSim FDM description.
+
+dc8-63-set.xml
+FlightGear aircraft config.
+
+Models/dc8-63.xml
+Aircraft model config.
+
+

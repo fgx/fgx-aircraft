@@ -1,0 +1,14 @@
+About "Vostok-1" project.
+
+There is no reason in real Vostok-1 flight exact reproducing because it's can not be reproduced at all. Risky jump into unknown can not be reproduced as safety safe computer simulation, not because of safety but because of "unknown" and "reproducing" difference of principle. For sure You know what that flight was. So even exact reproducing of it could not give to You that unknown and feeling of that unknown. That flight can not be reproduced in main, so it means it could not be reproduced at all.
+
+Meaning of "Vostok-1" project is give to You some simplified view of main low Earth orbit spaceflight features by manualization of most important processes what was fully automatized in real Vostok-1. That would allow You to know what real spaceflight could be by knowing of what it can not be in any case, as result of Your mistakes mainly. But it gives to You possibility get to know some unknown. It's not exact reproduction, but if it reproduces that main then it reproduces that flight to You somehow, even if it's impossible really. Of course it's possible with some additions and modifications only, so "Vostok-1" differs from original Vostok-1.
+
+Main difference is caused by fact what currently Flight Gear have some inner limitations which restricts possibility of flying beyond 150km. Because of it normal flight could be suborbital only on the score of fast braking in middle atmosphere conditions. So atmosphere reactions of "Vostok-1" was modified and it acts on 125km altitude as if it was 300km. Orbital flight could be produced "normally" as result, but as other result of modification deorbit path is significantly shorter and gotta be started later, so original flight can not be reproduced exactly. Hope it will be corrected shortly.
+
+Other great difference is what some great features, as cosmonaut ejection and separated landing is not implemented still. Hope it will be added fast, wishlist is pretty big. In other terms Vostok-1 and "Vostok-1" are similar mostly. At least it's was intended to be that way.
+
+As commonly, read documentation in craft /Documentation dir before starting simulator. Otherwise flight will be short.
+
+With best wishes,
+	Slavutisky Victor

@@ -1,0 +1,211 @@
+<pre>
+======================================================
+= Fokker Dr.1                                        =
+= WWI Fighter                                        =
+= for FlightGear with LaRCsim and the UIUC Aeromodel =
+=                                                    =
+= Flight model by:                                   =
+= Michael Selig, et al. (m-selig@uiuc.edu)           =
+= <a href="http://www.aae.uiuc.edu/m-selig/apasim.html">http://www.aae.uiuc.edu/m-selig/apasim.html</a>        =
+======================================================
+
+To run, try:
+
+fgfs --aircraft=fkdr1-v1-nl-uiuc
+
+Files and directory structure required in $FG_ROOT/Aircraft/ to fly the
+model:
+
+fkdr1-v1-nl-uiuc-set.xml
+fkdr1/Sounds/uiuc/fkdr1-sound.xml
+UIUC/fkdr1-v1-nl/aircraft.dat
+UIUC/fkdr1-v1-nl/CDfa-03.dat
+UIUC/fkdr1-v1-nl/CLfa-03.dat
+UIUC/fkdr1-v1-nl/Cmfa-03.dat
+UIUC/fkdr1-v1-nl/Cmfade-01.dat
+
+These files above come with the FlightGear base package.
+
+To add a 3D external model, read the file:
+
+~/Aircraft/UIUC/beech99/README.beech99.html
+
+as an example to follow.  A Fokker Dr.1 model file that does work is
+fokdr1m2.zip from http://www.flightsim.com.  (The fuselage for this
+model is too wide in the cockpit region.)
+
+There are several variants of this which can also be used, namely
+these files:
+
+  dr-1cfs.zip
+  dr1mp98.zip
+  dr1mpcfs.zip
+  fkdr1blk.zip
+  fokdr-15.zip
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Model description and updates:
+
+11/22/2002 - Expanded data to +-180 deg.
+
+11/10/2002 - First release: v1-nl
+
+* Motivation: FGFS and the UIUC aero model were used to develop flight
+  models for both the Sopwith Camel and Fokker Dr.1 Triplane.  These
+  models were then used in another simulation with a collaborator,
+  Brian Fuesz.  In that simulation, guns, terrain, villages, multiple
+  planes, etc were added to simulate the last flight of the Red Baron.
+  This work was filmed for the Discovery Channel show "Unsolved
+  History: The Death of the Red Baron" scheduled to first air Dec 18,
+  2002.
+
+* A weights and balance was performed to arrive at an allowable
+  c.g. location and from that data, mass moments of inertia were
+  calculated.
+
+* Lift, drag and pitching moment data is modeled from -90 to +90 deg.
+  Because the aerodynamics are not modeled from -180 to +180 deg, the
+  aircraft will sometimes twitch when coming out of a tail slide as it
+  passed through 90 deg.
+
+* In general, the aerodynamics are modeled using various sources.
+
+* Apparent mass effects are modeled.
+
+* Gyroscopic forces caused by engine rotation and aircraft rotations
+  are modeled.  For an animation of how a WWI-type rotary engine
+  works, go here:<href="http://www.keveney.com/gnome.html">http://www.keveney.com/gnome.html</a>
+  An example of gyroscopic forces, are those forces produced when one
+  tries to rotate by hand a spinning bicycle wheel.
+
+* Spin aerodynamics are not yet modeled.
+
+* The simulation starts on the ground.  Throttle up to take off or
+  alternatively, use Ctrl-U to jump up in 1000-ft increments.
+
+* The Fokker Dr.1 did not have brakes.  Application of brakes in FGFS
+  will cause the aircraft to promptly nose over.  (I have added a fake
+  contact point ahead of the aircraft to avoid completely tipping
+  over.)  The c.g. of the aircraft sits almost directly above the
+  wheel contact point.  There is a reason for this.  The aft fuselage
+  and tail were designed to be very light.  Thus, the tail could not
+  support much load, so the weight of the aircraft largely rests on
+  the main wheels, which again requires the c.g. to be almost directly
+  above the wheels.
+
+* WWI aircraft engines did not have a conventional throttle (at least
+  most did not).  The engines were either on or off/idle using a
+  "blip-throttle".  So it is not realistic to fly with a variable
+  throttle, which the current model allows.
+
+* To modelers, I can provide a graphic showing the c.g. location.
+
+* Something I have not yet modeled is rudder ineffectiveness on roll
+  out and touch down.  When the aircraft is sitting on the wheels and
+  tail skid, the angle of attack of the wing is so high that it is
+  mostly stalled and the flow off the aft fuselage is also not well
+  behaved.  The result is that there is not much dynamic pressure
+  (flow speed) on the vertical stabilizer, so there is little rudder
+  authority in this condition.  As a point of interest, why would the
+  designers settle for this result?  It's because of the rotary
+  engine.  The max speed is limited to 1200 rpm because of the
+  otherwise higher stresses on the rotary engine parts.  To obtain the
+  necessary thrust at such a low rpm, a large diameter ~8.5 ft
+  propeller was required.  With such a large diameter propeller and
+  short stubby fuselage, the aircraft sat nose high.
+
+* Interesting flight characteristics to note:
+
+  - Just as with the Sopwith Camel and other WWI vintage aircraft, the
+    gyroscopic forces of the engine tend to couple the aerodynamic
+    controls.  For example, pulling up will cause the aircraft to not
+    only nose up but also yaw to the right, requiring left rudder to
+    coordinate.  A more general discussion of this effect can be found
+    in the file: ~/Aircraft/UIUC/sopwithCamel/README.sopwithCamel.html
+
+    It should be added, however, that the engine polar moment of
+    inertia of the Dr.1 is approximately half that of the Camel.  The
+    effect of the gyroscopic forces is not exactly "half" because the
+    aerodynamics that resist these motions are somewhat different
+    between the two aircraft.  Nevertheless, when flying, the effects
+    of the gyroscopic forces are appreciably less than those on the
+    Sopwith Camel.
+
+  - I have a sense that there needs to be more yaw damping, but I
+    cannot justify it just yet.  So I am sticking w/ the computed
+    figures.  Also, the pilot report (URL below) makes mention of the
+    fact that one needs to be on the rudder all of the time, which
+    suggests poor yaw damping.
+
+  - On takeoff, there is a tendency for the wing to dip and drag on
+    the ground.  The same thing happens on landing.  This is not an
+    artifact of some modeling approximations, but in fact the Fokker
+    Triplane was known to "dip" a wing on takeoff and landing.  The
+    solution was to add the "axe handles" or wooden pool skids at the
+    tips of the lower wing.  The pilot's solution to avoid it in the
+    first place is to use cross controls: right aileron and left
+    rudder and vice versa until level again.
+
+  - The ailerons on the Fokker triplane were "heavy", meaning that
+    considerable stick force was required to maneuver.  For this
+    reason, "elephant ears" were used on the tips of the ailerons for
+    mass balance.  The trouble with putting the mass balance at the
+    wings tips is that on the side with the aileron down, the upwash
+    around the wing impinges on the balance horn and this produces
+    high drag.  On the other aileron in the up position, it is more
+    aligned with the upwash coming around the wing tip, so there is
+    little added drag.  As a result of this rather large difference in
+    drag, strong adverse yaw is the outcome.  For instance, a left
+    roll with the right wing aileron going down produces high drag at
+    the tip of the right wing.  As a consequence, this yaws the
+    airplane to the right, opposite the intended direction of the
+    turn.  There were three variations on the design of the "elephant
+    ears" and I speculate that it was driven by this substantial
+    adverse yaw problem.  Smaller "elephant ears" produced less
+    adverse yaw, which is good, but they also provided less balance
+    and therefore higher stick force, which is bad.  My guess is that
+    it was a case of "pick your poison".  Generally, with the adverse
+    yaw problem generous use of the rudder is required when banking to
+    turn.
+
+* Some pilot reports based on full scale replicas:
+  <a href="http://rwebs.net/avhistory/flight.htm">http://rwebs.net/avhistory/flight.htm</a>
+  <a href="http://www.airandspacemagazine.com/asm/web/special/ethell/pirep1.html">http://www.airandspacemagazine.com/asm/web/special/ethell/pirep1.html</a>
+
+
+* To those having specific knowledge of the Fokker Dr.1, I am
+  interested in obtaining the following data:
+
+  [] RPM when the throttle is blipped.  I am currently using 300 RPM.
+     The current aircraft uses a 110-hp Uberursel UR-2, which I
+     believe is what is Baron von Richthofen (The Red Baron) was
+     flying on the day when he was shot down.
+
+  [] Engine mass characteristics on a component-by-component basis.
+     This information will help me refine the polar moment of inertia
+     that drives the gyroscopic forces.
+
+  [] On a related note, the mass of the propeller which also figures
+     into the gyroscopic forces.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+**************************************************
+ Prof. Michael S. Selig
+ Dept. of Aerospace Engineering
+ University of Illinois at Urbana-Champaign
+ 306 Talbot Laboratory
+ 104 South Wright Street
+ Urbana, IL 61801-2935
+ (217) 244-5757 (o), (509) 691-1373 (fax)
+ m-selig@uiuc.edu
+ <a href="http://www.aae.uiuc.edu/m-selig">http://www.aae.uiuc.edu/m-selig</a>
+**************************************************
+
+</pre>
+

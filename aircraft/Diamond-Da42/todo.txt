@@ -1,0 +1,17 @@
+todo
+
+palonnier
+---------------------
+electrical
+
+relier les circuit breakers pour les autres elements (com,nav,dme,adf,pfd,mfd,etc ...)
+
+---------------------
+icing : faire le model 3d, le nasal qui gere le degres de givrage et le fdm
+
+le fdm
+simuler le givrage dans le fdm (et son degivrage)
+replacer les masses dans yasim
+
+zkv1000
+faire de ecu test

@@ -1,0 +1,21 @@
+Fichier à modifier pour Rembrandt
+
+Files to change for Rembrandt
+
+Models/m2000-5.xml 
+
+Models/lights/beacon.xml
+Models/lights/GreenLight.xml
+Models/lights/light-cone.xml
+Models/lights/RedLight.xml
+Models/lights/StrobeGreen.xml
+Models/lights/StrobeRed.xml
+Models/lights/StrobeRed2.xml
+Models/lights/StrobeWhite.xml
+Models/lights/WhiteLight.xml
+
+Models/Interior/interior.xml
+
+Models/Interior/Panel/Instruments/Revi/revi.xml
+
+This is not definitive, but it can fly with Rembrandt 
