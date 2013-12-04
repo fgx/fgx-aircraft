@@ -26,11 +26,11 @@ Bugs on browsers other than Chrome need not be reported until such as the work s
 
 
 ### Aircraft Read Me
-See [FGx Aircraft Read Me]( aircraft/readme.md)
+See [FGx Aircraft Read Me]( https://github.com/fgx/fgx-aircraft/blob/gh-pages/aircraft/readme.md )
 
 
 ### Aircraft Viewer Read Me
-See [FGx Aircraft Viewer Read Me]( aircraft-viewer/readme.md)
+See [FGx Aircraft Viewer Read Me]( https://github.com/fgx/fgx-aircraft/tree/gh-pages/aircraft-viewer )
 
 
 
