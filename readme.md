@@ -1,9 +1,27 @@
-FGx Aircraft 
+![FGx Logo]( http://fgx.github.io/fgx-cap-40x30.png) FGx Aircraft 
 ============
 
-Latest revision of aircraft viewer: [Fgx Aircraft Viewer R2](http://fgx.github.io/fgx-aircraft/aircraft-viewer/r2/aircraft-viewer.html)
+
+
+Cropped `iframe` view of the FGx Aircraft Viwer:		
+<iframe src="http://fgx.github.io/fgx-aircraft/aircraft-viewer/r2/aircraft-viewer.html" width=100% height=300px>
+There is an `iframe` here. It is not visible when viewed on github.com/fgx. To view, please go to fgx.github.io.
+</iframe>
+
+## Concept
+This objective of this project is to make available as Three.js JSON files all the aircraft and other 3D models that are created for FlightGear.
+
+As JSON files the aircraft may be easily displayed and manipulated in a browser.
+
+Here is a trypical example of the code:
+
+[Santos-Dumont 14bis]( http://fgx.github.io/fgx-aircraft/aircraft/14bis/14bis.js )
+
+All the aircraft have a GPL 2 license and and may be linked to form this project.
 
 ## Project Links
+
+Latest revision of aircraft viewer: [Fgx Aircraft Viewer R2]( http://fgx.github.io/fgx-aircraft/aircraft-viewer/r2/aircraft-viewer.html )
 
 You have two ways of viewing the FGx Aircraft files:  
 
@@ -22,6 +40,7 @@ A mouse or other pointing device with a scroll wheel is also highly recommended 
 The apps here may work in the FireFox browser, but most likely will not work with Safari or Internet Explorer. 
 The apps here are currently being and tested with the Google Chrome browser. 
 Bugs on browsers other than Chrome need not be reported until such as the work settles down and an effort to support more browsers is initiated.
+
 
 
 
