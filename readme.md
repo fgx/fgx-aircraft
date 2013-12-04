@@ -26,11 +26,11 @@ Bugs on browsers other than Chrome need not be reported until such as the work s
 
 
 ### Aircraft Read Me
-See [FGx Aircraft Read Me](../aircraft/readme.md)
+See [FGx Aircraft Read Me]( aircraft/readme.md)
 
 
 ### Aircraft Viewer Read Me
-See [FGx Aircraft Viewer Read Me](../aircraft-viewer/readme.md)
+See [FGx Aircraft Viewer Read Me]( aircraft-viewer/readme.md)
 
 
 
@@ -41,10 +41,12 @@ copyright &copy; 2013 FGx authors ~ All work herein is under the [GPL 2.0 Licens
 ### Change Log
 
 2013-12-03 ~ Theo
+
 * Add Aircraft Read Me
 * Add Aircraft Viewer Read me
 
 2013-12-02 ~ Theo
+
 * Viewer renamed to 'FGx Aircraft Viewer'
 * Viewer moved to its own folder
 * Viewer loads aircraft via dropdown list
@@ -53,5 +55,6 @@ copyright &copy; 2013 FGx authors ~ All work herein is under the [GPL 2.0 Licens
 * Geoff r1 text moved to separate read me.
 
 2013-11-18? ~ Theo
+
 * R1 folders and files added
 

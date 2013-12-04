@@ -11,12 +11,14 @@ There is a rudimentary aircraft viewer: [FGx Aircraft Viewer]( ../aircraft-viewe
  
 
 ### Issues
+
 * Dropdown list fails completely in Firefox - though next and previous buttons both work.
 
 ### Source Code
 [github.com/fgx/fgx-aircraft](https://github.com/fgx/fgx-aircraft/tree/gh-pages/ )
 
 ### Aircraft Road Map
+
 * Priority: complete movement of each aircraft into appropriate directory
 * Agree a naming convention for aircraft files and their folders. See below for thoughts.
 
@@ -54,6 +56,7 @@ This section begins to outline suggestions for a naming convention.
 * Wikipedia entries have many eyes; tend to get things properly disambiguated 
 
 #### Normal webbish convention
+
 * make it as easy as possible for a human to type 
 * all lower case
 * short as possible
@@ -83,6 +86,7 @@ The directory for each model contains the read me and license for the aircraft a
 ### Change Log
 
 2013-12-03 ~ Theo
+
 * Added this Read Me
 * 400+ folders added. Titles and content (thumbnails, read me, license etc) brought over from FlightGear source on Gitorious
 * 300+ JSON models moved into appropriate folder
