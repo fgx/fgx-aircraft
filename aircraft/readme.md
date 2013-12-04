@@ -1,5 +1,5 @@
-FGx Aircraft Read Me
-====================
+![FGx Logo]( http://fgx.github.io/fgx-cap-40x30.png) FGx Aircraft Data Read Me
+==============================================================================
 
 This directory contains the data files for 430+ aircraft imprted from FlightGear files and converted to Three.js JSON format.
 Every aircrafy has its own directory which apart from the JSON data file contains read me, license, thumbbnails, splash screen 
@@ -13,6 +13,10 @@ There is a rudimentary aircraft viewer: [FGx Aircraft Viewer]( ../aircraft-viewe
 ### Issues
 
 * Dropdown list fails completely in Firefox - though next and previous buttons both work.
+* Missing aircraft include:
+	* Cessna p172 Skyhawk ~ the most popular plabe ever made
+	* DC-10
+	* A-320 
 
 ### Source Code
 [github.com/fgx/fgx-aircraft](https://github.com/fgx/fgx-aircraft/tree/gh-pages/ )
