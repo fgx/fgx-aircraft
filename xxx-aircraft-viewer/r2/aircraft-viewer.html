@@ -106,7 +106,7 @@
 		mesh.castShadow = true;
 		scene.add( mesh );
 
-		aircrafts = requestFile( '../../aircraft/aircraft.csv' );
+		aircrafts = requestFile( '../../data/aircraft.csv' );
 		aircrafts = aircrafts.split(/\r\n|\n/);
 // console.log( aircrafts );
 		loader = new THREE.JSONLoader();
@@ -136,7 +136,7 @@
 			id = aircrafts.length - 1;
 		}
 		selAircraft.selectedIndex = id;
-		var aircraftData = '../../aircraft/' + aircrafts[ id ];
+		var aircraftData = '../../data/' + aircrafts[ id ];
 		loader.load( aircraftData, function( geometry ) {
 			addAircraft( geometry );
 		});
