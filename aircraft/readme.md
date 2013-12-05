@@ -52,10 +52,10 @@ This section begins to outline suggestions for a naming convention.
 #### Follow Wikipedia
 
 * Examples:
-	from: 14bis
-	to: Santos-Dumont_14-bis
-	from: T-4
-	to: Kawasaki_T-4  << and not http://en.wikipedia.org/wiki/Sukhoi_T-4
+	* from: 14bis
+	* to: Santos-Dumont_14-bis
+	* from: T-4
+	* to: Kawasaki_T-4  << and not http://en.wikipedia.org/wiki/Sukhoi_T-4
 	
 * Wikipedia entries have many eyes; tend to get things properly disambiguated 
 
@@ -88,6 +88,10 @@ The directory for each model contains the read me and license for the aircraft a
 
 
 ### Change Log
+
+2013-12-05 ~ Theo
+
+* Completed moving aircraft .JS files to their proper folders
 
 2013-12-04 ~ Theo
 
