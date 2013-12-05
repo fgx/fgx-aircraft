@@ -14,7 +14,7 @@ There is a rudimentary aircraft viewer: [FGx Aircraft Viewer]( ../aircraft-viewe
 
 * Dropdown list fails completely in Firefox - though next and previous buttons both work.
 * Missing aircraft include:
-	* Cessna p172 Skyhawk ~ the most popular plabe ever made
+	* Cessna p172 Skyhawk ~ the most popular plane ever made
 	* DC-10
 	* A-320 
 
@@ -88,6 +88,11 @@ The directory for each model contains the read me and license for the aircraft a
 
 
 ### Change Log
+
+2013-12-04 ~ Theo
+
+* Moved a dozen or so data files into their apprprate directories
+ 
 
 2013-12-03 ~ Theo
 

@@ -10,9 +10,9 @@ There is an `iframe` here. It is not visible when viewed on github.com/fgx. To v
 ## Concept
 The objective of this project is to make available as [Three.js JSON] ( https://github.com/mrdoob/three.js/wiki/JSON-Model-format-3.1 ) files all the aircraft and other 3D models that are created for FlightGear.
 
-As Three.js JSON files the aircraft may be easily displayed and manipulated in a browser.
+As Three.js JSON files, the aircraft may be easily displayed and manipulated in a browser.
 
-Here is a trypical example of the code:
+Here is a typical example of the code:
 
 [Santos-Dumont 14bis]( http://fgx.github.io/fgx-aircraft/aircraft/14bis/14bis.js )
 
@@ -27,7 +27,7 @@ Latest revision of aircraft viewer: [Fgx Aircraft Viewer R2]( http://fgx.github.
 You have two ways of viewing the FGx Aircraft files:  
 
 * Code hosted on GitHub: [fgx.github.io/fgx-aircraft]( http://fgx.github.io/fgx-aircraft/ "view the files as apps." ) <input value="<< You are now probably here." size=28 style="font:bold 12pt monospace;border-width:0;" >  
-* Source code on GitHub: [github.com/fgx/fgx-aircraft/]( https://github.com/fgx/fgx-aircraft/ "View the files as source code." ) <scan style=display:none ><< You are now probably here.</scan>
+* Source code on GitHub: [github.com/fgx/fgx-aircraft]( https://github.com/fgx/fgx-aircraft/ "View the files as source code." ) <scan style=display:none ><< You are now probably here.</scan>
 
 
 ### System Requirements
@@ -58,6 +58,10 @@ copyright &copy; 2013 FGx authors ~ All work herein is under the [GPL 2.0 Licens
 
 
 ### Change Log
+
+2013-12-04 ~ Theo
+
+* Added iframe view of viewer and other text to main read me.
 
 2013-12-03 ~ Theo
 
