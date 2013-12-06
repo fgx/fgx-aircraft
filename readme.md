@@ -9,16 +9,17 @@ Cropped `iframe` view of the FGx Aircraft Overview app:
 There is an `iframe` here. It is not visible when viewed on github.com/fgx. To view, please go to fgx.github.io.
 </iframe>
 
-See also [Read Me Data]( readme-data.md). Text from this read me file will be brought here and edited in due course.
+
+See also [Read Me Data]( http://fgx.github.io/fgx-aircraft/readme-data.md). Text from this read me file will be brought here and edited in due course.
 
 ## Concept
-The objective of this project is to make available as [Three.js JSON] ( https://github.com/mrdoob/three.js/wiki/JSON-Model-format-3.1 ) files all the aircraft and other 3D models that are created for FlightGear.
+The objective of this project is to make available as [Three.js JSON]( https://github.com/mrdoob/three.js/wiki/JSON-Model-format-3.1 ) files all the aircraft and other 3D models that are created for FlightGear.
 
 As Three.js JSON files, the aircraft may be easily displayed and manipulated in a browser.
 
 Here is a typical example of the code:
 
-[Santos-Dumont 14bis]( http://fgx.github.io/fgx-aircraft/aircraft/14bis/14bis.js )
+[Santos-Dumont 14bis]( http://fgx.github.io/fgx-aircraft/data/14bis/14bis.js )
 
 All the aircraft have a GPL 2 license and and may be linked to from this project.
 
@@ -26,8 +27,10 @@ A longer term objective might be to accept models from any source and create a v
 
 ## Project Links
 
-Latest revision of FGx Aircraft Loader: [Fgx Aircraft Viewer R2]( http://fgx.github.io/fgx-aircraft-loader/loade-one.html )
-Latest revision of FGx Aircraft Overview: [Fgx Aircraft Viewer R2]( http://fgx.github.io/fgx-aircraft-overview/r3/aircraft-overview.html )
+Latest revisions
+
+* [FGx Aircraft Loader]( http://fgx.github.io/fgx-aircraft-loader/load-one.html )
+* [FGx Aircraft Overview R3]( http://fgx.github.io/fgx-aircraft-overview/r3/aircraft-overview.html )
 
 You have two ways of viewing the FGx Aircraft files:  
 
@@ -48,16 +51,6 @@ The apps here are currently being and tested with the Google Chrome browser.
 Bugs on browsers other than Chrome need not be reported until such as the work settles down and an effort to support more browsers is initiated.
 
 
-
-### Aircraft Read Me
-See [FGx Aircraft Read Me]( https://github.com/fgx/fgx-aircraft/blob/gh-pages/aircraft/readme.md )
-
-
-### Aircraft Viewer Read Me
-See [FGx Aircraft Viewer Read Me]( https://github.com/fgx/fgx-aircraft/tree/gh-pages/aircraft-viewer )
-
-
-
 ### Copyright and License
 copyright &copy; 2013 FGx authors ~ All work herein is under the [GPL 2.0 License](https://github.com/fgx/fgx-aircraft/blob/gh-pages/license.md)
 
@@ -65,6 +58,12 @@ copyright &copy; 2013 FGx authors ~ All work herein is under the [GPL 2.0 Licens
 
 
 ### Change Log
+
+2013-12-05 ~ Theo
+
+* Geoff's and Theo's viewer move to new repos
+* Files cleaned here
+
 
 2013-12-04 ~ Theo
 
