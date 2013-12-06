@@ -1,11 +1,15 @@
 ![FGx Logo]( http://fgx.github.io/fgx-cap-40x30.png) FGx Aircraft Read Me
 =========================================================================
 
+2013-12-05: many changes today. lots of repos moving about. not everything is right yet.
 
-Cropped `iframe` view of the FGx Aircraft Viewer:		
-<iframe src="http://fgx.github.io/fgx-aircraft/aircraft-viewer/r2/aircraft-viewer.html" width=100% height=300px>
+
+Cropped `iframe` view of the FGx Aircraft Overview app:		
+<iframe src="http://fgx.github.io/fgx-aircraft-overview/r3/aircraft-overview.html" width=100% height=300px>
 There is an `iframe` here. It is not visible when viewed on github.com/fgx. To view, please go to fgx.github.io.
 </iframe>
+
+See also [Read Me Data]( readme-data.md). Text form this read me file wil be brought here and edited in due course.
 
 ## Concept
 The objective of this project is to make available as [Three.js JSON] ( https://github.com/mrdoob/three.js/wiki/JSON-Model-format-3.1 ) files all the aircraft and other 3D models that are created for FlightGear.
@@ -55,6 +59,8 @@ See [FGx Aircraft Viewer Read Me]( https://github.com/fgx/fgx-aircraft/tree/gh-p
 
 ### Copyright and License
 copyright &copy; 2013 FGx authors ~ All work herein is under the [GPL 2.0 License](https://github.com/fgx/fgx-aircraft/blob/gh-pages/license.md)
+
+
 
 
 ### Change Log
