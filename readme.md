@@ -9,7 +9,7 @@ Cropped `iframe` view of the FGx Aircraft Overview app:
 There is an `iframe` here. It is not visible when viewed on github.com/fgx. To view, please go to fgx.github.io.
 </iframe>
 
-See also [Read Me Data]( readme-data.md). Text form this read me file wil be brought here and edited in due course.
+See also [Read Me Data]( readme-data.md). Text from this read me file will be brought here and edited in due course.
 
 ## Concept
 The objective of this project is to make available as [Three.js JSON] ( https://github.com/mrdoob/three.js/wiki/JSON-Model-format-3.1 ) files all the aircraft and other 3D models that are created for FlightGear.
@@ -26,7 +26,8 @@ A longer term objective might be to accept models from any source and create a v
 
 ## Project Links
 
-Latest revision of aircraft viewer: [Fgx Aircraft Viewer R2]( http://fgx.github.io/fgx-aircraft/aircraft-viewer/r2/aircraft-viewer.html )
+Latest revision of FGx Aircraft Loader: [Fgx Aircraft Viewer R2]( http://fgx.github.io/fgx-aircraft-loader/loade-one.html )
+Latest revision of FGx Aircraft Overview: [Fgx Aircraft Viewer R2]( http://fgx.github.io/fgx-aircraft-overview/r3/aircraft-overview.html )
 
 You have two ways of viewing the FGx Aircraft files:  
 
