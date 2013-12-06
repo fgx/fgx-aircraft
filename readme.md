@@ -63,6 +63,7 @@ copyright &copy; 2013 FGx authors ~ All work herein is under the [GPL 2.0 Licens
 
 * Geoff's and Theo's viewer move to new repos
 * Files cleaned here
+* Directory 'aircraft' renamed to 'data' because './aircraft/aircraft' seemed lame
 
 
 2013-12-04 ~ Theo
