@@ -59,6 +59,12 @@ copyright &copy; 2013 FGx authors ~ All work herein is under the [GPL 2.0 Licens
 
 ### Change Log
 
+2013-12-06 ~ Theo
+
+* seymour in folder
+* splash.txt created in aircrat dir
+* aircraft.txt created in aircrat dir
+
 2013-12-05 ~ Theo
 
 * Geoff's and Theo's viewer move to new repos
