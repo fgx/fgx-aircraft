@@ -1,11 +1,9 @@
 ![FGx Logo]( http://fgx.github.io/fgx-cap-40x30.png) FGx Aircraft Read Me
 =========================================================================
 
-2013-12-05: many changes today. lots of repos moving about. not everything is right yet.
-
 
 Cropped `iframe` view of the FGx Aircraft Overview app:		
-<iframe src="http://fgx.github.io/fgx-aircraft-overview/r3/aircraft-overview.html" width=100% height=300px>
+<iframe src="http://fgx.github.io/fgx-aircraft-overview/r4/aircraft-overview.html" width=100% height=300px>
 There is an `iframe` here. It is not visible when viewed on github.com/fgx. To view, please go to fgx.github.io.
 </iframe>
 
@@ -30,7 +28,7 @@ A longer term objective might be to accept models from any source and create a v
 Latest revisions
 
 * [FGx Aircraft Loader]( http://fgx.github.io/fgx-aircraft-loader/load-one.html )
-* [FGx Aircraft Overview R3]( http://fgx.github.io/fgx-aircraft-overview/r3/aircraft-overview.html )
+* [FGx Aircraft Overview R3]( http://fgx.github.io/fgx-aircraft-overview/r4/aircraft-overview.html )
 
 You have two ways of viewing the FGx Aircraft files:  
 
