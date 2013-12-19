@@ -12,12 +12,12 @@ There is an `iframe` here. It is not visible when viewed on github.com/fgx. To v
 The objective of this project is to make available as [Three.js JSON]( https://github.com/mrdoob/three.js/wiki/JSON-Model-format-3.1 ) files 
 all the aircraft and other 3D models that are created for FlightGear.
 
-This repository currently contains the data files for 430+ aircraft and other vehicles imprted from FlightGear files and converted to Three.js JSON format.
+This repository currently contains the data files for 430+ aircraft and other vehicles imported from FlightGear files and converted to Three.js JSON format.
 
-Every aircraft has its own directory which apart from the JSON data file contains read me, license, thumbbnails, splash screen 
+Every aircraft has its own directory which apart from the JSON data file contains read me, license, thumbnails, splash screen 
 and any other text files found in the original source code directories.
 
-This is the prime reposotory for aircraft data for use by FGx Globe and other apps in the pipeline.
+This is the prime repository for aircraft data for use by FGx Globe and other apps in the pipeline.
 
  
 ## Features
@@ -53,7 +53,7 @@ See also the Read Me files for the browser / viewers for details on features and
 ## Issues
 
 * <s>~~Priority: complete movement of each aircraft into appropriate directory~~</s> Fixed
-* Dropdown list fails completely in Firefox - though next and previous buttons both work.
+* Dropdown list fails completely in FireFox - though next and previous buttons both work.
 * Missing aircraft include:
 	* Cessna p172 Skyhawk ~ the most popular plane ever made
 	* DC-10
@@ -65,11 +65,11 @@ See also the Read Me files for the browser / viewers for details on features and
 
 Geoff's work and success in converting hundreds FlightGear aircraft from AC format to Three.js JSON format is quite extraordinary.
 
-The current set of models, while fun to browse, nonetheless suffere from issues including:
+The current set of models, while fun to browse, nonetheless suffer from issues including:
 
 * Aircraft with missing or superfluous elements
 * Varying scale
-* Duplicatte vertices
+* Duplicate vertices
 
 With a bit of thought and some hours of labor it will be possible either edit the models or edit Geoff's converter
 so that the models form a coherent collection and are truly usable.
@@ -95,11 +95,11 @@ Items that need attention include the following:
 
 ### Action Items
 
-* Creae a CSV file. File to list every model in the FlightGear fgdata directories
-* Start populatling list with categries listed above, including whether models exists in FGx Aircraft
-* Examine data in fgdata to determine what parameters can be inferred algorimically including scale, units and base point.
+* Create a CSV file. File to list every model in the FlightGear fgdata directories
+* Start populating list with categories listed above, including whether models exists in FGx Aircraft
+* Examine data in fgdata to determine what parameters can be inferred algorithmically including scale, units and base point.
 * Decide who should write Python utility to eliminate duplicate vertices using Python - or see if Geoff's converter could be tweaked to do this.
-
+* Ascertain which models might need work in Blender. Decide who does what.
 
 
 ### Aircraft Files and Folders Naming Convention << Request for Comments
@@ -109,7 +109,7 @@ This makes it difficult to know which plane is in which folder.
 This section begins to outline suggestions for a naming convention.
 
 
-#### Follow Wikipedia Naming Convention
+### Follow Wikipedia Naming Convention
 
 * Examples:
 	* from: 14bis
@@ -119,7 +119,7 @@ This section begins to outline suggestions for a naming convention.
 	
 * Wikipedia entries have many eyes; tend to get things properly disambiguated 
 
-#### Normal Webbish Naming Convention
+### Normal Webbish Naming Convention
 
 * make it as easy as possible for a human to type 
 * all lower case
@@ -129,13 +129,13 @@ This section begins to outline suggestions for a naming convention.
 It would be better to make it so that nobody ever feels like typing
 
 
-### Tips
+## Tips
 To create CSV file of aircraft quickly:
 
     dir *.js /s /b > aircraft.csv
 	
 	
-### System Requirements
+## System Requirements
 In order to view the files on this site you will need a device and browser that provides good support for [WebGL](http://get.webgl.org/)
 WebGL is the JavaScript API for rendering interactive 3D graphics and 2D graphics within any compatible web browser without the use of plug-ins. 
 
@@ -148,11 +148,11 @@ The apps here are currently being built and tested with the Google Chrome browse
 Bugs on browsers other than Chrome need not be reported until such time as the work settles down and an effort to support more browsers is initiated.
 
 
-### Copyright and License
+## Copyright and License
 copyright &copy; 2013 FGx authors ~ All work herein is under the [GPL 2.0 License](https://github.com/fgx/fgx-aircraft/blob/gh-pages/license.md)
 
 
-### Aircraft Copyright and License
+## Aircraft Copyright and License
 This repository is at an early and volatile stage. Not all licensing requirements may have been fully met let alone identified. It is the intension of the authors to play fair and all such requirements will either be met or the feature in question will turned off.
 
 The original data for each aircraft is derived from the models obtained the 'Aircraft' directory here: https://gitorious.org/fg/fgdata/
@@ -163,7 +163,7 @@ The directory for each model contains the read me and license for the aircraft a
 
 
 
-### Change Log
+## Change Log
 
 2013-12-18 ~ Theo
 
