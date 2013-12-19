@@ -2,7 +2,7 @@
 ==============================================================================
 
 This directory contains the data files for 430+ aircraft imprted from FlightGear files and converted to Three.js JSON format.
-Every aircrafy has its own directory which apart from the JSON data file contains read me, license, thumbbnails, splash screen 
+Every aircraft has its own directory which apart from the JSON data file contains read me, license, thumbbnails, splash screen 
 and any other text files found in the original source code directories.
 
 This is the prime reposotory for aircraft data for use by FGx Globe and other apps in the pipeline.
@@ -10,13 +10,6 @@ This is the prime reposotory for aircraft data for use by FGx Globe and other ap
 There is a rudimentary aircraft viewer: [FGx Aircraft Viewer]( ../aircraft-viewer/r2/aircraft-viewer.html )
  
 
-### Issues
-
-* Dropdown list fails completely in Firefox - though next and previous buttons both work.
-* Missing aircraft include:
-	* Cessna p172 Skyhawk ~ the most popular plane ever made
-	* DC-10
-	* A-320 
 
 ### Source Code
 [github.com/fgx/fgx-aircraft](https://github.com/fgx/fgx-aircraft/tree/gh-pages/ )
