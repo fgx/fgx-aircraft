@@ -165,6 +165,13 @@ The directory for each model contains the read me and license for the aircraft a
 
 ## Change Log
 
+2015-01-05 ~ Theo
+
+* Added Geoff's usage01.txt
+* Updated aircraft.csv
+	* Added usage column
+	* Added usage figures for aircraft with 10+ usages
+
 2013-12-18 ~ Theo
 
 * Combined the two read me files
