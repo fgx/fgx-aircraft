@@ -3,7 +3,7 @@
 
 
 Cropped `iframe` view of the FGx Aircraft Overview app:		
-<iframe src="http://fgx.github.io/fgx-aircraft-overview/r4/aircraft-overview.html" width=100% height=300px>
+<iframe src="http://fgx.github.io/fgx-aircraft-overview/latest/" width=100% height=300px>
 There is an `iframe` here. It is not visible when viewed on github.com/fgx. To view, please go to fgx.github.io.
 </iframe>
 
