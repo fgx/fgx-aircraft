@@ -52,10 +52,11 @@ See also the Read Me files for the browser / viewers for details on features and
 
 ## Issues
 
+
 * <s>~~Priority: complete movement of each aircraft into appropriate directory~~</s> Fixed
 * Dropdown list fails completely in FireFox - though next and previous buttons both work.
 * Missing aircraft include:
-	* Cessna p172 Skyhawk ~ the most popular plane ever made
+	* Cessna p172 Skyhawk ~ the most popular plane ever made << 2014 fixed
 	* DC-10
 	* A-320 
 
@@ -95,8 +96,7 @@ Items that need attention include the following:
 
 ### Action Items
 
-* Create a CSV file. File to list every model in the FlightGear fgdata directories
-* Start populating list with categories listed above, including whether models exists in FGx Aircraft
+
 * Examine data in fgdata to determine what parameters can be inferred algorithmically including scale, units and base point.
 * Decide who should write Python utility to eliminate duplicate vertices using Python - or see if Geoff's converter could be tweaked to do this.
 * Ascertain which models might need work in Blender. Decide who does what.
@@ -167,6 +167,9 @@ The directory for each model contains the read me and license for the aircraft a
 
 2015-01-05 ~ Theo
 
+* Examined aircraft from numbers only through the end of C. 
+All aircraft that were examined were aligned with their length along the X-axis and were pointed so that their nose was in negative X.
+* Added blank thumbnail.jpg file to operations and weapons folders
 * Added Geoff's usage01.txt
 * Updated aircraft.csv
 	* Added usage column
@@ -178,11 +181,14 @@ The directory for each model contains the read me and license for the aircraft a
 * Expanded read me file
 * Fixed Wright Flyer being in wrong directory
 
+* Created a CSV file. File to list every model in the FlightGear fgdata directories
+* Started populating list with categories listed above, including whether models exists in FGx Aircraft
+
 2013-12-06 ~ Theo
 
 * seymour in folder
-* splash.txt created in aircrat dir
-* aircraft.txt created in aircrat dir
+* splash.txt created in aircraft dir
+* aircraft.txt created in aircraft dir
 
 2013-12-05 ~ Theo
 
