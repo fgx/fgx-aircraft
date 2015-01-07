@@ -161,6 +161,10 @@ The directory for each model contains the read me and license for the aircraft a
 
 ## Change Log
 
+2015-01-07 ~ Theo
+
+* started 777 series to JSON
+
 2015-01-06 ~ Theo
 
 * Update readme text and links
