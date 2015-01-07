@@ -1,4 +1,4 @@
-![FGx Logo]( http://fgx.github.io/images/fgx-cap-40x30.png) FGx Aircraft Read Me
+![FGx Logo]( http://fgx.github.io/images/fgx-cap-40x30.png) [FGx Aircraft Read Me]( index.html )
 ================================================================================
 
 
@@ -78,13 +78,9 @@ so that the models form a coherent collection and are truly usable.
 Items that need attention include the following:
 
 * Agree a naming convention for aircraft files and their folders. See below for thoughts.
-
-* Meld duplicate vertices and redefine normals for each aircraft using Blender. 
-	* This much reduces file sizes and de-facets the skins of the aircraft
-	* Perhaps we can build Python utility to help
 * Ascertain original scale and rescale planes so they are all at the same scale
-* Point all planes in the same direction
 * Agree a suitable base point (the nose or most forward point of the body of an aircraft?) and apply to each aircraft
+
 * Build a CSV table that includes relevant data for each plane for each plane with; 
 	* Link to source in fgdata on Gitorious
 	* Link to entry on Wikipedia
@@ -98,7 +94,7 @@ Items that need attention include the following:
 
 
 * Examine data in fgdata to determine what parameters can be inferred algorithmically including scale, units and base point.
-* Decide who should write Python utility to eliminate duplicate vertices using Python - or see if Geoff's converter could be tweaked to do this.
+
 * Ascertain which models might need work in Blender. Decide who does what.
 
 
@@ -164,6 +160,24 @@ The directory for each model contains the read me and license for the aircraft a
 
 
 ## Change Log
+
+2015-01-06 ~ Theo
+
+* Update readme text and links
+* Update CSV, filled in more data for c172p
+
+Removed following from road map as merging vertices, etc can be handled easily in Three.js
+
+* Meld duplicate vertices and redefine normals for each aircraft using Blender. 
+	* This much reduces file sizes and de-facets the skins of the aircraft
+	* Perhaps we can build Python utility to help
+* Decide who should write Python utility to eliminate duplicate vertices using Python - or see if Geoff's converter could be tweaked to do this.
+
+
+Removed following from road map - looks like all point towards -X
+
+* Point all planes in the same direction
+
 
 2015-01-05 ~ Theo
 
