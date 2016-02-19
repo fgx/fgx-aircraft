@@ -626,7 +626,7 @@ Known problems OSG
 The following artefacts are supposed to be solved by OSG :
 - panels swaping too early.
 - instrument transparent through layer with alpha (steward view).
-- transparency order of blinking anti-collision light over wing.
+- opacity order of blinking anti-collision light over wing.
 
 
 Secondary problems

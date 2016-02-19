@@ -152,7 +152,7 @@ Press "l"-key (l like "L"etter)
 
 8. Additional informations:
 Like many french helicopters the hydraulics are to weak for acrobatic and heavy maneuvers.
-Maneuvers with high g-loads (high rotor loads) will lead to jackstall or also known as hydraulic transparency.
+Maneuvers with high g-loads (high rotor loads) will lead to jackstall or also known as hydraulic opacity.
 Forces from the rotor are feed back to the cyclic controls, and can lock them. So in some certain flightstates there will be no control, 
 which is very dangerous. 
 The Gazelle and the Squirrel are "famous" for this behaviour and have been involved in some fatal accidents.
